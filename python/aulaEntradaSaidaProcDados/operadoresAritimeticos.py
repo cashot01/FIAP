@@ -9,7 +9,7 @@ divisão inteira //
 modulo(resto da divisão) %
 exponenciação **
 """
-valor1 = 10
-valor2 = 3
-resposta =  valor1 - valor2
-print("resposta: {}".format(resposta))
+n1 = float(input("n1: "))
+n2 = float(input("n2: "))
+med = (n1 + n2)/2
+print("media: {}".format(med))
