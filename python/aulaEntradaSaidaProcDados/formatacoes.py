@@ -17,4 +17,3 @@ print(f"Senhor {nome}, vc tem {idade} anos e ganha R$ {salario}") #usando print 
 
 
 
-
