@@ -1,0 +1,19 @@
+/*CSS externo*/
+h1 {
+    background-color: yellow;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p{
+    color: #0080007a;
+    font-weight: bold;
+}
+
+#primeiro{
+    color: rgb(255, 192, 203);
+}
+
+.noticia{
+    color: rgba(210, 105, 30, 0.993);
+}
