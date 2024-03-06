@@ -22,13 +22,3 @@ a:hover{
     color: #571A8B;
     text-decoration: underline;
 }
-
-#siteFavorito{
-    color: black;
-    text-decoration: none;
-}
-
-#siteFavorito:hover{
-    color: #571A8B;
-    text-decoration: underline;
-}
