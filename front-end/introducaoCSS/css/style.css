@@ -17,10 +17,10 @@ p{
     font-weight: bold;
 }
 
-#primeiro{
+#primeiro{   /* id #(jogo da velha)*/
     color: rgb(255, 192, 203);
 }
 
-.noticia{
+.noticia{ /* class .(ponto final) */
     color: rgba(210, 105, 30, 0.993);
 }
