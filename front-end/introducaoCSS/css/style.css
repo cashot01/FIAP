@@ -1,4 +1,11 @@
 /*CSS externo*/
+
+body{
+    background-image: url("../imagens/praia.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left center; 
+}
 h1 {
     background-color: yellow;
     text-align: center;
