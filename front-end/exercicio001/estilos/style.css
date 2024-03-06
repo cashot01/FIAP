@@ -1,0 +1,14 @@
+body{
+    background-color: lightblue;
+}
+
+h1{
+    background-color: gray;
+    border-radius: 30px;
+    text-align: center;
+}
+
+p{
+    font-weight: 600;
+    text-align: justify;
+}
