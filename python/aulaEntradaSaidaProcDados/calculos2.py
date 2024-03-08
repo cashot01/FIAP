@@ -1,4 +1,6 @@
 #ex2 
+import os
+os.system("cls")
 a = -1
 b= 2
 c = 3
