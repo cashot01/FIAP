@@ -8,6 +8,7 @@ os.system("cls")
 # |-5 | -> 5
 
 original = int(input("nº: "))
+modulo = original
 if original < 0:
-    num = original * -1
-print(f"|{original}| -> {num}")
+    modulo = original * -1
+print(f"|{original}| -> {modulo}")
