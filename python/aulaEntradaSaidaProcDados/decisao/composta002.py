@@ -7,7 +7,9 @@ venda com o desconto.
 """
 
 valor = float(input("valor: "))
-if valor >= 20:
+cupom = str(input("""Cupom de desconto valido somente para compra a partir de R$20,00
+                  tem o cupom: """))
+if valor >= 20 and cupom == "s":
     desconto20 = valor - 20
     print(f"desconto de R$20.00 , valor final: R$ {desconto20:.2f} ")
 else:
