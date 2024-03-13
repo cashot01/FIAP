@@ -11,4 +11,8 @@ public class Conta {
         saldo += valor;
     }
 
+    public void sacar(double valor){
+        saldo -= valor;
+    }
+
 }
