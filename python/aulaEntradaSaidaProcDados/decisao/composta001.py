@@ -6,5 +6,5 @@ if valor > 500:
     desconto12 = valor - (valor * 0.12)
     print(f"valor maior que 500 , 12% desconto, R$ {desconto12:.2f}")
 else:
-    desconto6 = valor - (valor * 0.6)
+    desconto6 = valor - (valor * 0.06)
     print(f"valor até 500 , 6% desconto, R$ {desconto6:.2f}")
