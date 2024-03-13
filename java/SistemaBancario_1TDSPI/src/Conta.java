@@ -17,7 +17,7 @@ public class Conta {
         if(chequeEspecialHabilitado){
             saldo -= valor;
         }
-        else(saldo < valor || saldo == 0){
+        else if (saldo < valor || saldo == 0){
             System.out.println("VC tá LISO!!!!");
         }
         else {
