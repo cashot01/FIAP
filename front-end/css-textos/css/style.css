@@ -17,6 +17,13 @@ a{
     height: 200px; 
     min-height: 200px; /*mais usado, largura minima*/
     overflow: auto;
+    border-style: solid;
+    border-width: 5px;
+    /*quando tem só 1 aplica nos 4cantos(top, bottom, left, right);
+    quando tem 2 , 1º valor(top, bottom), 2º valor(left, right)
+    quando tem 3, 1º valor(top), 2º valor(right), 3º valor(bottom), e no 4º duplica right */
+    border-color: green red blue violet;
+    /* border: 3px solid green; - forma short hand */
 }
 
 .paragr1{
