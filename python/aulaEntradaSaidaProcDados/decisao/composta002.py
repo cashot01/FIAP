@@ -7,12 +7,7 @@ venda com o desconto.
 """
 
 valor = float(input("valor: "))
-cupom = int(input("""vc tem o cupom de desconto? 
-                  cupom valido somente se o valor da compra for no minimo R$ 20,00
-                   [1]Tenho
-                   [2]Não tenho 
-                  selecione opção 1 ou 2: """))
-if cupom == 1 and valor >= 20:
+if valor >= 20:
     desconto20 = valor - 20
     print(f"desconto de R$20.00 , valor final: R$ {desconto20:.2f} ")
 else:
