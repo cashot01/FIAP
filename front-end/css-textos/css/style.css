@@ -2,10 +2,21 @@
 h1{
     text-align: center;
     text-decoration: underline red double;
+    background-color: aquamarine;
 }
 
 a{
     text-decoration: none;
+    background-color: burlywood;
+}
+
+.box1{
+    background-color: yellow;
+    width: 40%;
+    /* max-width: 40%; */ /*mais usado, altura maxima*/
+    height: 200px; 
+    min-height: 200px; /*mais usado, largura minima*/
+    overflow: auto;
 }
 
 .paragr1{
