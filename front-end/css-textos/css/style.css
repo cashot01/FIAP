@@ -8,9 +8,19 @@ h1{
 a{
     text-decoration: none;
     background-color: burlywood;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
 }
 
-.box1{
+a:hover{
+    text-decoration: underline;
+    color: blue;
+    background-color: red;
+}
+
+div{
     background-color: yellow;
     width: 40%;
     /* max-width: 40%; */ /*mais usado, altura maxima*/
@@ -24,6 +34,19 @@ a{
     quando tem 3, 1º valor(top), 2º valor(right), 3º valor(bottom), e no 4º duplica right */
     border-color: green red blue violet;
     /* border: 3px solid green; - forma short hand */
+    padding: 10px;
+    margin: 20px auto;
+    box-shadow: 5px 0px 3px ;
+    border-radius: 20px;
+    
+}
+
+.box1{
+    box-sizing: border-box;
+}
+
+.box2{
+    box-sizing: content-box;
 }
 
 .paragr1{
