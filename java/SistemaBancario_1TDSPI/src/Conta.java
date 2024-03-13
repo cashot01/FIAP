@@ -3,6 +3,8 @@ public class Conta {
 
     private double saldo = 0.00;
 
+    private boolean chequeEspecialHabilitado = false;
+
     public void exibirSaldo(){
         System.out.println("o saldo da conta é: "+ saldo);
     }
@@ -12,7 +14,10 @@ public class Conta {
     }
 
     public void sacar(double valor){
-        if(saldo < valor || saldo == 0){
+        if(chequeEspecialHabilitado){
+            saldo -= valor;
+        }
+        else(saldo < valor || saldo == 0){
             System.out.println("VC tá LISO!!!!");
         }
         else {
