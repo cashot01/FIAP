@@ -13,9 +13,12 @@ public class Conta {
 
     public void sacar(double valor){
         if(saldo < valor || saldo == 0){
-            
+            System.out.println("VC tá LISO!!!!");
         }
-        saldo -= valor;
+        else {
+            saldo -= valor;
+        }
+
     }
 
 }
