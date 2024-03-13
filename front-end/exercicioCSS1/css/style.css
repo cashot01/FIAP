@@ -1,0 +1,34 @@
+.esportes>h2{
+    font-weight: 900;
+    font-size: 50px;
+    text-decoration: none;
+    border-style: solid ;
+    border-color: darkblue;
+}
+
+.esportes>h2:hover{
+    text-decoration: underline green;
+    background-color: aqua;
+    color: aliceblue;
+    border-color: gray;
+
+}
+
+.esportes{
+    background-color: lightcoral;
+    padding: 15px;
+    margin: 35px 10px;
+    border-radius: 40px;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: justify;
+}
+
+.negocios{
+    background-color: darkmagenta;
+    text-align: right;
+    margin: 75px;
+    text-transform: capitalize;
+    letter-spacing: 10px;
+    word-spacing: 10px;
+}
