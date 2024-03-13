@@ -5,8 +5,13 @@ public class Conta {
 
     private boolean chequeEspecialHabilitado = false;
 
-    public void exibirSaldo(){
-        System.out.println("o saldo da conta é: "+ saldo);
+    public double exibirSaldo(){
+        return saldo;
+    }
+
+    public boolean alterarStatusCheque(boolean status){
+        chequeEspecialHabilitado = status;
+        return chequeEspecialHabilitado;
     }
 
     public void depositar(double valor){

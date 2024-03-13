@@ -5,6 +5,7 @@ public class Main {
         System.out.println("o numero da conta é: "+ novaConta.numero);
         novaConta.depositar(10.0);
         novaConta.sacar(2.00);
-        novaConta.exibirSaldo();
+        var saldo = novaConta.exibirSaldo();
+        System.out.println(saldo);
     }
 }
