@@ -12,6 +12,9 @@ public class Conta {
     }
 
     public void sacar(double valor){
+        if(saldo < valor || saldo == 0){
+            
+        }
         saldo -= valor;
     }
 
