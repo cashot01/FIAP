@@ -6,6 +6,6 @@ public class Main {
         novaConta.depositar(10.0);
         novaConta.sacar(2.00);
         var saldo = novaConta.exibirSaldo();
-        System.out.println(saldo);
+        System.out.println("Saldo: R$"+saldo);
     }
 }
