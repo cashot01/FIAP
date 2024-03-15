@@ -21,8 +21,10 @@ elif n == 8:
 elif n == 9 :
     print("Set")
 elif n == 10:
-    print("Nov")
+    print("Out")
 elif n == 11 :
-    print("")
-else n == 12 :
-    print("")
+    print("Nov")
+elif n == 12 :
+    print("Dec")
+else:
+    print("nº invalido")
