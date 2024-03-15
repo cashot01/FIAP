@@ -8,7 +8,7 @@ if valor > 500:
 else:
     valor = valor * 0.94
     print(f"Valor: R$ {valor:.2f}")
-cupom = str(input("cupom: "))
+cupom = str(input("cupom (s / n): "))
 if cupom == "s":
     valor = valor - 20
     print(f"Valor: R$ {valor:.2f}")
