@@ -126,7 +126,7 @@ elif n3 == n2 == n1:
     elif media < 4: 
         print("Status: REPROVADO")
 
-elif n1 < (n3 == n2):
+elif n1 > (n3 == n2):
     maiornota = n3
     segundanota = n2
     print(f"""
