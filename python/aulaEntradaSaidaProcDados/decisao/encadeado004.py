@@ -115,6 +115,22 @@ if (n1 >= 0 and n1 <= 10) and (n2 >= 0 and n2 <= 10) and (n3 >= 0 and n3 <= 10):
         elif media < 4: 
             print("Status: REPROVADO")
 
+    elif n1 == n2 == n3:
+        maiornota = n3
+        segundanota = n2
+        print(f"""
+            Maior nota...: {n3}
+            2ª maior nota: {n2}
+        """)
+        media = (n3 + n2) / 2
+        print(f"Media: {media}")
+        if media >= 6:
+            print("Status: PASSOU")
+        elif 5.9 >= media and media >= 4:
+            print("Status: EXAME")
+        elif media < 4: 
+            print("Status: REPROVADO")
+
 
 # NOTAS INVALIDAS
 else:
