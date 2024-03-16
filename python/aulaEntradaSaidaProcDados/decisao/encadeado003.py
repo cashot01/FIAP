@@ -26,9 +26,9 @@ elif n2 > n1 > n3:
         2ª maior nota: {n1}""")
     maiornota = n2
     segundanota = n1
-    media = (n1 + n2)/ 2
+    media = (n2 + n1)/ 2
     print(f"Media: {media}")
-    
+
 elif n2 > n3 > n1:
     print(f"""
         maior nota...: {n2}
