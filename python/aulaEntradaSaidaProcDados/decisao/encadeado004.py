@@ -15,11 +15,108 @@ elif n2 >= 0 and n2 <= 10:
 elif n3 >= 0 and n3 <= 10:
     print(f"Nota Valida: {n3}")
 
+# MEDIA DAS 2 MAIORES NOTAS + Status (passou , exame, reprovado)
+elif n1 > n2 > n3:
+    maiornota = n1
+    segundanota = n2
+    print(f"""
+        Maior nota...: {n1}
+        2ª maior nota: {n2}
+    """)
+    media = (n1 + n2) / 2
+    print(f"Media: {media}")
+    if media >= 6:
+        print("Status: PASSOU")
+    elif 5.9 >= media and media >= 4:
+        print("Status: EXAME")
+    elif media < 4: 
+        print("Status: REPROVADO")
+
+elif n1 > n3 > n2:
+    maiornota = n1
+    segundanota = n3
+    print(f"""
+        Maior nota...: {n1}
+        2ª maior nota: {n3}
+    """)
+    media = (n1 + n3) / 2
+    print(f"Media: {media}")
+    if media >= 6:
+        print("Status: PASSOU")
+    elif 5.9 >= media and media >= 4:
+        print("Status: EXAME")
+    elif media < 4: 
+        print("Status: REPROVADO")
+
+elif n2 > n1 > n3:
+    maiornota = n2
+    segundanota = n1
+    print(f"""
+        Maior nota...: {n2}
+        2ª maior nota: {n1}
+    """)
+    media = (n2 + n1) / 2
+    print(f"Media: {media}")
+    if media >= 6:
+        print("Status: PASSOU")
+    elif 5.9 >= media and media >= 4:
+        print("Status: EXAME")
+    elif media < 4: 
+        print("Status: REPROVADO")
+
+elif n2 > n3 > n1:
+    maiornota = n2
+    segundanota = n3
+    print(f"""
+        Maior nota...: {n2}
+        2ª maior nota: {n3}
+    """)
+    media = (n2 + n3) / 2
+    print(f"Media: {media}")
+    if media >= 6:
+        print("Status: PASSOU")
+    elif 5.9 >= media and media >= 4:
+        print("Status: EXAME")
+    elif media < 4: 
+        print("Status: REPROVADO")
+
+elif n3 > n1 > n2:
+    maiornota = n3
+    segundanota = n1
+    print(f"""
+        Maior nota...: {n3}
+        2ª maior nota: {n1}
+    """)
+    media = (n3 + n1) / 2
+    print(f"Media: {media}")
+    if media >= 6:
+        print("Status: PASSOU")
+    elif 5.9 >= media and media >= 4:
+        print("Status: EXAME")
+    elif media < 4: 
+        print("Status: REPROVADO")
+
+elif n3 > n2 > n1:
+    maiornota = n3
+    segundanota = n2
+    print(f"""
+        Maior nota...: {n3}
+        2ª maior nota: {n2}
+    """)
+    media = (n3 + n2) / 2
+    print(f"Media: {media}")
+    if media >= 6:
+        print("Status: PASSOU")
+    elif 5.9 >= media and media >= 4:
+        print("Status: EXAME")
+    elif media < 4: 
+        print("Status: REPROVADO")
+
+        
 # NOTAS INVALIDAS
 else:
     print("TODAS NOTAS INVALIDAS, digite notas validas (0 até 10)")
 
-# MEDIA DAS 2 MAIORES NOTAS + Status (passou , exame, reprovado)
 if n1 > n2 > n3:
     maiornota = n1
     segundanota = n2
