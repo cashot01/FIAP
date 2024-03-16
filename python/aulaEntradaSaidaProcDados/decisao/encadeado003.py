@@ -2,6 +2,7 @@
 n1 = float(input("nota 1: "))
 n2 = float(input("nota 2: "))
 n3 = float(input("nota 3: "))
+
 if n1 > n2 > n3:
     maiornota = n1
     segundanota = n2
@@ -48,6 +49,15 @@ elif n3 > n1 > n2:
     print(f"Media: {media}")
 
 elif n3 > n2 > n1:
+    maiornota = n3
+    segundanota = n2
+    print(f"""
+        maior nota...: {n3}
+        2ª maior nota: {n2}""")
+    media = (n3 + n2)/ 2
+    print(f"Media: {media}")
+
+elif n1 == n2 == n3:
     maiornota = n3
     segundanota = n2
     print(f"""
