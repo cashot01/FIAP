@@ -8,7 +8,7 @@ media =  (n1 + n2)/ 2
 print(f"Media: {media}")
 if media >= 6:
     print("PASSOU")
-elif  5.9 >= media  :
+elif  5.9 >= media and media >= 4 :
     print("EXAME")
 elif media < 4:
     print("REPROVADO")
