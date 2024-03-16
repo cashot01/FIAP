@@ -6,8 +6,14 @@ n2 = float(input("nota 2: "))
 n3 = float(input("nota 3: "))
 
 # NOTAS VALIDAS
-if (n1 >= 0 and n1 <= 10) and (n2 >= 0 and n2 <= 10) and (n3 >= 0 and n3 <= 10) :
-    print("TODAS NOTAS VALIDAS")
+if n1 >= 0 and n1 <= 10:
+    print(f"Nota Valida: {n1}")
+
+elif n2 >= 0 and n2 <= 10:
+    print(f"Nota valida: {n2}")
+
+elif n3 >= 0 and n3 <= 10:
+    print(f"Nota Valida: {n3}")
 
 # NOTAS INVALIDAS
 else:
