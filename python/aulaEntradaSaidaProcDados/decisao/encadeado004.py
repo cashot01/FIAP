@@ -32,12 +32,12 @@ if n1 > n2 > n3:
 
 elif n1 > n3 > n2:
     maiornota = n1
-    segundanota = n2
+    segundanota = n3
     print(f"""
         Maior nota...: {n1}
-        2ª maior nota: {n2}
+        2ª maior nota: {n3}
     """)
-    media = (n1 + n2) / 2
+    media = (n1 + n3) / 2
     print(f"Media: {media}")
     if media >= 6:
         print("Status: PASSOU")
@@ -126,7 +126,7 @@ elif n3 == n2 == n1:
     elif media < 4: 
         print("Status: REPROVADO")
 
-elif (n3 == n2)  != n1:
+elif n1 < (n3 == n2):
     maiornota = n3
     segundanota = n2
     print(f"""
@@ -142,14 +142,14 @@ elif (n3 == n2)  != n1:
     elif media < 4: 
         print("Status: REPROVADO")
         
-elif (n3 == n2)  != n1:
-    maiornota = n3
+elif ((n1 == n2) > n3):
+    maiornota = n1
     segundanota = n2
     print(f"""
-        Maior nota...: {n3}
+        Maior nota...: {n1}
         2ª maior nota: {n2}
     """)
-    media = (n3 + n2) / 2
+    media = (n1 + n2) / 2
     print(f"Media: {media}")
     if media >= 6:
         print("Status: PASSOU")
