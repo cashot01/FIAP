@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class Conta {
     public void depositar(double valor){
         saldo += valor;
         System.out.println("Deposito de: R$"+ valor + " com sucesso");
+        historicoMovimentacao.add("Deposito de: R$"+ valor +"realizado em "+ LocalDateTime.now());
     }
 
     public void sacar(double valor){
@@ -40,8 +42,13 @@ public class Conta {
         else {
             saldo -= valor;
             System.out.println("Saque de: R$"+ valor);
+            historicoMovimentacao.add("Saque de: R$"+ valor + "feito em "+ LocalDateTime.now());
         }
 
+    }
+
+    public List<String> apresentarExtrato(){
+        return historicoMovimentacao;
     }
 
 }

@@ -10,6 +10,11 @@ public class Main {
         System.out.println("Saldo atual: R$"+novaConta.exibirSaldo());
         novaConta.sacar(100);
         System.out.println("Saldo atual: R$"+novaConta.exibirSaldo());
+
+        novaConta.depositar(1578);
+
+        System.out.println("Extrato Bancario: "+novaConta.apresentarExtrato());
+
         System.out.println("Sistema Bancario Encerrando");
     }
 }
