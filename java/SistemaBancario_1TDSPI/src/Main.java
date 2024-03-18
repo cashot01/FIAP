@@ -5,6 +5,7 @@ public class Main {
         // coloca o nº da conta
         novaConta.numero = "0001";
         novaConta.sacar(100);
+        System.out.println("Saldo atual: R$"+novaConta.exibirSaldo());
         novaConta.depositar(1000.0);
         System.out.println("Saldo atual: R$"+novaConta.exibirSaldo());
         novaConta.sacar(100);
