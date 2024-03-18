@@ -10,5 +10,5 @@ if media >= 6:
     print("PASSOU")
 elif  5.9 >= media and media >= 4 :
     print("EXAME")
-elif media < 4:
+else:
     print("REPROVADO")
