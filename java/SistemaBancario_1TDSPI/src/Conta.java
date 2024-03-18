@@ -1,4 +1,5 @@
 public class Conta {
+    // propriedades
     public String numero; // nº de conta não tem calculo, por isso string
 
     private double saldo = 0.00;
@@ -8,6 +9,8 @@ public class Conta {
     public double exibirSaldo(){
         return saldo;
     }
+
+    // metodos
 
     public boolean alterarStatusCheque(boolean status){
         chequeEspecialHabilitado = status;
