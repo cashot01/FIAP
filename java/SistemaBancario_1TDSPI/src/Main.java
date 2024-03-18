@@ -4,9 +4,12 @@ public class Main {
         var novaConta = new Conta();
         novaConta.numero = "0001";
         System.out.println("o numero da conta é: "+ novaConta.numero);
-        novaConta.depositar(10.0);
-        novaConta.sacar(2.00);
-        var saldo = novaConta.exibirSaldo();
-        System.out.println("Saldo: R$"+saldo);
+        // novaConta.sacar(100);
+        System.out.println("Saldo atual: R$"+ novaConta.exibirSaldo());
+        novaConta.depositar(1000.0);
+        System.out.println("Saldo atual: R$"+novaConta.exibirSaldo());
+        novaConta.sacar(100);
+        System.out.println("Saldo atual: R$"+novaConta.exibirSaldo());
+        System.out.println("Sistema Bancario Encerrando");
     }
 }
