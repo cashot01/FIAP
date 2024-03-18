@@ -178,6 +178,11 @@ if n1 >= 0 and n1 <= 10:
 
 #elif n3 < 0 or n3 > 10:
    # print(f"Nota invalida: {n3}")
+                    
+        else:
+            print(f"NOTA INVALIDA: {n3}")
+    else:
+        print(f"Nota INVALIDA: {n2}")
 
 else:
     print(f"Nota INVALIDA: {n1}")
