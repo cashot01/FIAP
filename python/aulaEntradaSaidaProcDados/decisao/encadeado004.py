@@ -168,16 +168,6 @@ if n1 >= 0 and n1 <= 10:
                 elif media < 4: 
                     print("Status: REPROVADO")
 
-            
-
-#elif n1 < 0 or n1 > 10:
-    #print(f"Nota INVALIDA: {n1}")
-
-#elif n2 < 0 or n2 > 10:
-   # print(f"Nota invalida: {n2}")
-
-#elif n3 < 0 or n3 > 10:
-   # print(f"Nota invalida: {n3}")
                     
         else:
             print(f"NOTA INVALIDA: {n3}")
