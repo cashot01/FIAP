@@ -1,5 +1,5 @@
 public class Conta {
-    public String numero;
+    public String numero; // nº de conta não tem calculo, por isso string
 
     private double saldo = 0.00;
 
