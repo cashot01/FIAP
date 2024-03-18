@@ -6,11 +6,12 @@ public class Conta {
 
     private boolean chequeEspecialHabilitado = false;
 
+    // métodos
+
     public double exibirSaldo(){
+
         return saldo;
     }
-
-    // metodos
 
     public boolean alterarStatusCheque(boolean status){
         chequeEspecialHabilitado = status;
