@@ -26,6 +26,8 @@ public class Conta {
         if(chequeEspecialHabilitado){
             saldo -= valor;
         }
+        // 2 barras em pé (||) - ou
+        // 2 E comercial (&&) - and
         else if (saldo < valor || saldo == 0){
             System.out.println("VC tá LISO!!!!");
         }
