@@ -1,0 +1,61 @@
+*{ /* asterisco - configuração global */
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    height: 2000px;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    border:  2px solid black;
+}
+
+.box1{
+    background-color: blueviolet;
+    width: 100%;
+    /* position: fixed;
+    top: 150px;
+    left: 150px;
+    z-index: 2;  */
+    /*coloca na frente do outros elementos*/
+    /*z-index - eixo da profundidade*/
+}
+
+.box2{
+    background-color: rgba(255, 127, 80, 0.377);
+    width: 25%;
+    height: 600px;
+    /* position: relative; /*deixa o lugar dele reservado, se move apartir do lugar dele*/
+    /*position absolute - fica relativo a pagina*/
+    /*position fixed - fixo na janela do navegador*/
+    /* position: fixed;
+    top: 200px; /*cima pra baixo
+    left: 200px; /*esquerda pra direita
+    z-index: 1; */
+    float: left;
+}
+
+.box3{
+    background-color: aqua;
+    width: 50%;
+    height: 600px;
+    /* position: fixed;
+    top: 250px;
+    left: 250px; */ 
+    float: left;
+}
+
+.box4{
+    background-color: chartreuse;
+    width: 25%;
+    height: 600px;
+    float: left;
+}
+
+.box5{
+    background-color: black;
+}
