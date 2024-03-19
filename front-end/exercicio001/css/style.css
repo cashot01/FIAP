@@ -1,14 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Mirza&display=swap');
+
 body{
-    background-color: lightblue;
-}
+    font-family: "Mirza", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-h1{
-    background-color: gray;
-    border-radius: 30px;
+  h1{
     text-align: center;
-}
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 10px;
+  }
 
-p{
-    font-weight: 600;
+  img{
+   display: block;
+   margin: auto;
+  }
+
+  p{
     text-align: justify;
-}
+    text-indent: 50px;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+
+
+
+    
+
