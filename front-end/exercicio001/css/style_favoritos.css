@@ -1,2 +1,12 @@
 /*se imagem for retangular - altura 200px*
-se for quadrada - 200px por 200px/
+se for quadrada - 200px por 200px*/
+h1{
+    text-align: center;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid;
+}
