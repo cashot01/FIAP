@@ -39,7 +39,42 @@ body{
   .adm:hover{
     color: red;
   }
+
+  .ads:hover{
+    color: #008000;
+  }
+
+  .engComput:hover{
+    color: #0000FF;
+  }
+
+  .engMeca:hover{
+    color: #EE82EE;
+  }
+
+  .bancoDados:hover{
+    color: #FFA500;
+  }
+
+  .gestaoTI:hover{
+    color: #DC143C;
+  }
   
+  .jogos:hover{
+    color: #228B22;
+  }
+
+  .sistemInfo:hover{
+    color: #00CED1;
+  }
+
+  .sistemInternet:hover{
+    color: #483D8B;
+  }
+
+  .redeComp:hover{
+    color: #8B008B;
+  }
 
 
 
