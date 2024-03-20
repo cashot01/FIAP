@@ -28,7 +28,7 @@ public class Carro {
     }
 
     public void previsaoDeAutonomia(){
-        double autonomia = quilometragem / combustivelNoTanque;
+        double autonomia = combustivelNoTanque / consumoPorKm;
         System.out.println("Autonomia de: "+ autonomia+ " Km");
     }
 
