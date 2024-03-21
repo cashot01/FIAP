@@ -10,11 +10,12 @@ n1 = float(input("n1: "))
 n2 = float(input("n2: "))
 n3 = float(input("n3: "))
 if ((n1 + n2) > n3) and ((n1 + n3) > n2) and ((n2 + n3) > n1):
-    if n1 == n2 == n3:
+    print("Forma um triangulo")
+    if n1 == n2 and n1== n3 and n2 == n3:
         print("Triangulo EQUILATERO")
-    elif ((n1 == n2) != n3) and ((n1 == n3) != n2) and ((n2 == n3) != n1):
+    elif n1 == n2 or n1 == n3 or n2 == n3:
         print("Triangulo ISOCELES")
-    else:
+    elif n1 != n2 or n1 != n3 or n2 != n3 :
         print("Triangulo ESCALENO")
 else:
     print("não forma triangulo")
