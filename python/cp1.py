@@ -7,27 +7,27 @@ if salario > 0:
     print(f"Faltas: {faltas}")
     if salario <= (salarioMin * 2):
         reajuste = salario + (salario * 0.06)
-        print(f"Salario: {reajuste:.2f}")
-        print(f"Faltas: {faltas}")
+        print(f"Salario...: {reajuste:.2f}")
+        print(f"Faltas....: {faltas}")
 
         if faltas <= 0:
             bonus = 1000
-            print(f"Bônus: {bonus:.2f}")
+            print(f"Bônus.: {bonus:.2f}")
         else:
             bonus = 0
-            print(f"Bônus: {bonus:.2f}")
+            print(f"Bônus.: {bonus:.2f}")
 
     elif salario <= (salarioMin * 5):
         reajuste = salario + (salario * 0.04)
-        print(f"Salario: {reajuste:.2f}")
-        print(f"Faltas: {faltas}")
+        print(f"Salario...: {reajuste:.2f}")
+        print(f"Faltas....: {faltas}")
 
         if faltas <= 0:
             bonus = 1000
-            print(f"Bônus: {bonus:.2f}")
+            print(f"Bônus.: {bonus:.2f}")
         else:
             bonus = 0
-            print(f"Bônus: {bonus:.2f}")
+            print(f"Bônus.: {bonus:.2f}")
 
     else:
         reajuste = salario + (salario * 0.02)
