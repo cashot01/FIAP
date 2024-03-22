@@ -38,7 +38,7 @@ elif n3 > n1 > n2:
           2º numero: {n1} 
           3º numero: {n3}""")   
     
-elif n3 > n2 > n1:
+else:
     print(f"""
           ORDEM CRESCENTE
           1º numero: {n1} 
