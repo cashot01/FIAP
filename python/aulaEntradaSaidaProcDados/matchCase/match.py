@@ -27,6 +27,7 @@ match opcao:
         print("Alterando")
     case 4:
         print("Excluindo")
+    # case _: (se for diferente dos outros cases, seria um else)
     case _:
         print("Opção invalida")
 
