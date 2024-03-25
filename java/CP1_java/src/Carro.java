@@ -29,7 +29,7 @@ public class Carro {
     }
 
     public double previsaoDeAutonomia(){
-        return  consumoPorKm * combustivelNoTanque;
+        return  combustivelNoTanque * consumoPorKm;
     }
 
 
