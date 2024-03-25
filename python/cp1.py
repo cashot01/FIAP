@@ -6,8 +6,8 @@ if salario > 0:
     faltas = int(input("Qtd. de faltas: "))
     if salario <= (salarioMin * 2):
         reajuste = salario + (salario * 0.06)
+        print(f"Salário: {salario}")
         print(f"Salario reajustado...: {reajuste:.2f}")
-        print(f"Faltas....: {faltas}")
 
         if faltas <= 0:
             bonus = 1000
@@ -18,8 +18,8 @@ if salario > 0:
 
     elif salario <= (salarioMin * 5):
         reajuste = salario + (salario * 0.04)
+        print(f"Salário: {salario}")
         print(f"Salario reajustado...: {reajuste:.2f}")
-        print(f"Faltas....: {faltas}")
 
         if faltas <= 0:
             bonus = 1000
@@ -30,8 +30,8 @@ if salario > 0:
 
     else:
         reajuste = salario + (salario * 0.02)
+        print(f"Salário: {salario}")
         print(f"Salario reajustado...: {reajuste:.2f}")
-        print(f"Faltas....: {faltas}")
 
         if faltas <= 0:
             bonus = 1000
