@@ -4,7 +4,6 @@ salarioMin  = 1320
 salario = float(input("Salario: R$ "))
 if salario > 0:
     faltas = int(input("Qtd. de faltas: "))
-    print(f"Faltas: {faltas}")
     if salario <= (salarioMin * 2):
         reajuste = salario + (salario * 0.06)
         print(f"Salario reajustado...: {reajuste:.2f}")
