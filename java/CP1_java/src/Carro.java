@@ -17,19 +17,19 @@ public class Carro {
         return combustivelNoTanque;
     }
     public void dirigir(double quilometros){
-        if (combustivelNoTanque < quilometros/consumoPorKm){
+        double combustivelNecessario = quilometros / consumoPorKm;
+        if (combustivelNoTanque < combustivelNecessario){
             System.out.println("Você tem que abastecer o tanque");
         }
         else {
-            combustivelNoTanque -= quilometros/consumoPorKm;
+            combustivelNoTanque -= combustivelNecessario;
             quilometragem += quilometros;
             System.out.println("O carro percorreu "+ quilometros +"Km");
         }
     }
 
-    public void previsaoDeAutonomia(){
-        double autonomia = combustivelNoTanque / consumoPorKm;
-        System.out.println("Autonomia de: "+ autonomia+ " Km");
+    public double previsaoDeAutonomia(){
+        return  consumoPorKm * combustivelNoTanque;
     }
 
 
