@@ -1,6 +1,6 @@
 import os
 os.system("cls")
-salarioMin  = 1320
+salarioMin  = 1302
 salario = float(input("Salario: R$ "))
 if salario > 0:
     faltas = int(input("Qtd. de faltas: "))
