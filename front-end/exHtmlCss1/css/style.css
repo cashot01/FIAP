@@ -44,6 +44,21 @@ a:hover{
     padding: 10px;
 }
 
+.materiaPrincipal{
+    width: 50%;
+    float: left;
+}
+
+.materiaSecundaria{
+    width: 25%;
+    float: left;
+}
+
+.propagandas{
+    width: 25%;
+    float: left;
+}
+
 img{
     position: relative;
     margin: 10px;
@@ -51,5 +66,5 @@ img{
 
 h2{
     text-align: center;
-    padding: 15px;
+    padding: 13px;
 }
