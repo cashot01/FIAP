@@ -16,7 +16,8 @@ body{
   }
 
   .conteudo{
-    margin: 50px;
+    max-width: 75%;
+    margin: auto;
   }
 
   img{
