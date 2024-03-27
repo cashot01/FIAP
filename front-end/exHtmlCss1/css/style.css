@@ -74,7 +74,6 @@ p{
 .propaganda1{
     width: 12.5%;
     margin: 10px;
-    box-sizing: border-box;
     border: 2px solid black;
     float: left; 
 }
