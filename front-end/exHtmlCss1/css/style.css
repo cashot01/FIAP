@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100%;
+    height: 100%;
+}
+
 
 .titulo{
     background-color: lightseagreen;
@@ -31,7 +36,6 @@ h1{
 
 a{
     text-decoration: none;
-    margin: 10px;
 }
 
 a:hover{
@@ -39,9 +43,9 @@ a:hover{
 }
 
 .conteudo{
-    margin: 10px;
+    width: 100%;
     padding: 10px;
-    box-sizing: border-box;
+    /* box-sizing: border-box;  */
 }
 
 p{
@@ -56,7 +60,7 @@ p{
 
 .materiaSecundaria{
     width: 25%;
-    height: 400px;
+    /* height: 400px; */
     float: left;
 }
 
@@ -70,8 +74,9 @@ p{
 .propaganda1{
     width: 12.5%;
     margin: 10px;
+    box-sizing: border-box;
     border: 2px solid black;
-     float: left; 
+    float: left; 
 }
 
 .propaganda2{
@@ -88,12 +93,12 @@ p{
 
 img{
     position: relative;
-    margin: 10px;
+    margin: 5px;
 }
 
 h2{
     text-align: center;
-    padding: 13px;
+    padding: 10px;
 }
 
 
@@ -104,6 +109,8 @@ h2{
 footer{
     color: white;
     background-color: black;
+    width: 100%;
     text-align: center;
     padding: 5px;
+    margin: 0;
 }
