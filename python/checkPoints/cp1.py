@@ -1,46 +1,49 @@
 import os
 os.system("cls")
-# salarioMin  = 1302
-# salario = float(input("Salario: R$ "))
+# salario = float(input("Digite seu salário: R$ "))
+# salarioMin = 1320
 # if salario > 0:
-#     faltas = int(input("Qtd. de faltas: "))
-#     if salario <= (salarioMin * 2):
-#         reajuste = salario + (salario * 0.06)
-#         print(f"Salário: {salario}")
-#         print(f"Salario reajustado...: {reajuste:.2f}")
-
+#     print(f"Salario: R$ {salario:.2f}")
+#     if salario <= (salarioMin *2):
+#         faltas = int(input("Qtd. de faltas: "))
+#         reajuste = salario + (salario * 0.0645)
+#         print(f"Salario...........:  {salario:.2f}")
+#         print(f"Salário reajustato:  {reajuste:.2f}")
 #         if faltas <= 0:
-#             bonus = 1000
-#             print(f"Bônus.: {bonus:.2f}")
+#             bonus = 1000.00
+#             print(f"Bônus.........: {bonus:.2f}")
 #         else:
-#             bonus = 0
-#             print(f"Bônus.: {bonus:.2f}")
+#             bonus = 00.00
+#             print(f"Bônus..........:  {bonus:.2f}")
 
-#     elif salario <= (salarioMin * 5):
-#         reajuste = salario + (salario * 0.04)
-#         print(f"Salário: {salario}")
-#         print(f"Salario reajustado...: {reajuste:.2f}")
-
+#     elif salario <= (salarioMin *5):
+#         faltas = int(input("Qtd. de faltas: "))
+#         reajuste = salario + (salario * 0.0455)
+#         print(f"Salario...........:  {salario:.2f}")
+#         print(f"Salário reajustato:  {reajuste:.2f}")
 #         if faltas <= 0:
-#             bonus = 1000
-#             print(f"Bônus.: {bonus:.2f}")
+#             bonus = 1000.00
+#             print(f"Bônus..........: {bonus:.2f}")
 #         else:
-#             bonus = 0
-#             print(f"Bônus.: {bonus:.2f}")
+#             bonus = 00.00
+#             print(f"Bônus..........: {bonus:.2f}")
 
+#     #if salario > (salarioMin *5):
 #     else:
-#         reajuste = salario + (salario * 0.02)
-#         print(f"Salário: {salario}")
-#         print(f"Salario reajustado...: {reajuste:.2f}")
-
-#         if faltas <= 0:
-#             bonus = 1000
-#             print(f"Bônus.: {bonus:.2f}")
+#         faltas = int(input("Qtd. de faltas: "))
+#         reajuste = salario + (salario * 0.0289)
+#         print(f"Salario...........:  {salario:.2f}")
+#         print(f"Salário reajustato:  {reajuste:.2f}")
+#         if faltas == 0:
+#             bonus = 1000.00
+#             print(f"Bônus.........: {bonus:.2f}")
 #         else:
-#             bonus = 0
-#             print(f"Bônus.: {bonus:.2f}")
+#             bonus = 00.00
+#             print(f"Bônus..........: {bonus:.2f}")
+    
+    
 # else:
-#     print("Salario INVALIDO")
+#     print("ERRO! Digite um salário positivo!")
 
 # Leitura do salário
 salario = float(input("Salário: "))
