@@ -34,6 +34,7 @@ public class Main {
         while (true) {
             System.out.println("Digite a opção desejada: ");
             System.out.println("1 - Cadastrar Carro");
+            System.out.println("2 - Cadastrar caminhão");
             System.out.println("2 - Abastecer Carro");
             System.out.println("3 - Dirigir Carro");
             System.out.println("4 - Previsão de autonomia");
