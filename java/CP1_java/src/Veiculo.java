@@ -7,7 +7,8 @@ public class Veiculo {
 
     public String modelo;
 
-    private double combustivelNoTanque;
+    protected double combustivelNoTanque;
+    // protected  - serve para usar em outras classes, nos "filhos"
 
-    private double quilometragem;
+    protected double quilometragem;
 }

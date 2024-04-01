@@ -1,10 +1,5 @@
-public class Carro {
-    public String marca;
-    public int ano;
-    public double consumoPorKm;
-    public String modelo;
-    private double combustivelNoTanque;
-    private double quilometragem;
+public class Carro extends Veiculo {
+
 
     public void abastecer(double litros){
         combustivelNoTanque += litros;
