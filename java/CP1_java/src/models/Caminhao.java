@@ -11,6 +11,31 @@ public class Caminhao extends Veiculo {
 
     private double pesoTotal;
 
+    public int getEixos() {
+        return eixos;
+    }
+
+    public double getCapacidadeDeCarga() {
+        return capacidadeDeCarga;
+    }
+
+    public double getPesoTotal() {
+        return pesoTotal;
+    }
+
+    public Caminhao(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Caminhao{" +
+                "eixos=" + eixos +
+                ", capacidadeDeCarga=" + capacidadeDeCarga +
+                ", pesoTotal=" + pesoTotal +
+                "} " + super.toString();
+    }
+
     public void adicionarUnidadeDeEixo(){
         if(eixos >= EIXOS_MAXIMOS){
             System.out.println("o caminhão ja atingiu a capacidade maxima dos eixos");

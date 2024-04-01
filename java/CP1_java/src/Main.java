@@ -16,14 +16,14 @@ public class Main {
     public static Carro cadastrarCarro(){
         var carro = new Carro();
         System.out.println("Digite a marca do carro: ");
-        carro.marca = scanner.nextLine();
+        carro.setMarca(scanner.nextLine()); // set é semelhante ao =, mas é um método
         System.out.println("Digite o modelo do carro: ");
-        carro.modelo = scanner.nextLine();
+        carro.setModelo(scanner.nextLine());
         System.out.println("Digite o ano do carro: ");
-        carro.ano = scanner.nextInt();
+        carro.setAno(scanner.nextInt());
         scanner.nextLine();
         System.out.println("Digite o consumo do carro: ");
-        carro.consumoPorKm = scanner.nextDouble();
+        carro.setConsumoPorKm(scanner.nextDouble());
         scanner.nextLine();
         return carro;
     }
