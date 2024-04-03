@@ -10,30 +10,46 @@
     <h1>Tabelas e Formularios</h1>
 
     <table>
-        <tr> <!-- tr - linha -->
-            <th>Nome</th> <!-- th - titulo da tabela-->
-            <th>Telefone</th>
-            <th>E-mail</th>
-        </tr>
-        <tr>
-            <td>Cauan</td>
-            <td>98744-4454</td>
-            <td>fiap@gmail.com</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Jão</td> <!-- rowspan - mescla linhas-->
-            <td>12345-6789</td>
-            <td>jao@gmail.com</td>
-        </tr>
-        <tr>
-            <td>44444444</td>
-            <td>jao@fiam.com</td>
-        </tr>
-        <tr>
-            <td>maria</td>
-            <td>77777-7777</td>
-            <td>maria@gmail.com</td>
-        </tr>
+        <!-- ordem: caption colgroup (col) -->
+        <caption>Lista de telefones e e-mails</caption>
+        <colgroup>
+            <col class="destaque" span="2">
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr> <!-- tr - linha -->
+                <th>Nome</th> <!-- th - titulo da tabela-->
+                <th>Telefone</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cauan</td>
+                <td>98744-4454</td>
+                <td>fiap@gmail.com</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Jão</td> <!-- rowspan - mescla linhas-->
+                <td>12345-6789</td>
+                <td>jao@gmail.com</td>
+            </tr>
+            <tr>
+                <td>44444444</td>
+                <td>jao@fiam.com</td>
+            </tr>
+            <tr>
+                <td >maria</td>
+                <td>77777-7777</td>
+                <td>maria@gmail.com</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Obs. Somente Funcionários ativos </td> <!-- colspan mescla colunas-->
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
