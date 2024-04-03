@@ -36,30 +36,30 @@ public class Main {
             System.out.println("Digite a opção desejada: ");
             System.out.println("1 - Cadastrar models.Carro");
             System.out.println("2 - Cadastrar caminhão");
-            System.out.println("2 - Abastecer models.Carro");
-            System.out.println("3 - Dirigir models.Carro");
-            System.out.println("4 - Previsão de autonomia");
-            System.out.println("5 - Sair");
+            System.out.println("3 - Abastecer models.Carro");
+            System.out.println("4 - Dirigir models.Carro");
+            System.out.println("5 - Previsão de autonomia");
+            System.out.println("6 - Sair");
             int opcao = scanner.nextInt();
             scanner.nextLine();
 
             switch (opcao) {
                 case 1 -> carro = cadastrarCarro();
-                case 2 -> {
+                case 3 -> {
                     System.out.println("Digite a quantidade de litros para abastecer: ");
                     double litros = scanner.nextDouble();
                     scanner.nextLine();
                     carro.abastecer(litros);
                 }
-                case 3 -> {
+                case 4 -> {
                     System.out.println("Digite a distância a ser percorrida: ");
                     double distancia = scanner.nextDouble();
                     scanner.nextLine();
                     carro.dirigir(distancia);
                 }
-                case 4 ->
+                case 5 ->
                         System.out.println("A previsão de autonomia do carro é de: " + carro.previsaoDeAutonomia() + "Km");
-                case 5 -> {
+                case 6 -> {
                     System.out.println("Saindo do sistema...");
                     System.exit(0);
                 }
