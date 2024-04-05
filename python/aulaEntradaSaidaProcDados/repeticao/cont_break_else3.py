@@ -5,6 +5,8 @@ digite 10 numeros:
  
 o maior  100
 """
+import os
+os.system("cls")
 maior = 0
 volta = 1
 print("digite 10 nº: ")
