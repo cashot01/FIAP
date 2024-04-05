@@ -11,7 +11,20 @@ os.system("cls")
 inicial = int(input("inicial: "))
 fim = int(input("final: "))
 
-while inicial <= fim:
+inicial += 1
+
+while inicial < fim:
     print(inicial)
     
     inicial += 1
+
+"""
+outro jeito:
+
+inicial += 1
+fim -= 1
+
+while inicial <= fim:
+    print(inicial)
+    inicial += 1
+"""
