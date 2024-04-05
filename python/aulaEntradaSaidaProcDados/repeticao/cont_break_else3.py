@@ -10,8 +10,10 @@ os.system("cls")
 maior = 0
 volta = 1
 print("digite 10 nº: ")
+num = int(input())
+maior = num
 
-while volta <= 10:
+while volta < 10:
     num = int(input())
     if num > maior:
         maior = num
