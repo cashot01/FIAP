@@ -65,4 +65,6 @@ public class Caminhao extends Veiculo {
         consumoPorKm = consumoPorKm + (pesoTotal * 0.0001); // 0.01% de consumo a mais por kg
     }
 
+    public void setEixos(String s) {
+    }
 }
