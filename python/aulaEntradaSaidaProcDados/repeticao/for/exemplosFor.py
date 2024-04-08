@@ -9,3 +9,6 @@ os.system("cls")
 num = int(input("nº: "))
 for volta in range(num, num * 10 + 1, num ):
     print(f"{volta}", end= " ")
+
+print()
+
