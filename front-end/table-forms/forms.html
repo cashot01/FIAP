@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - HTML5</title>
+</head>
+<body>
+    <h1>Forms HTML5</h1>
+
+    <form action="cadastro" method="get">
+        
+        <fieldset> <!-- agrupa os campos do forms-->
+            <legend>Dados Pessoais</legend> <!-- "titulo do fieldset"-->
+
+            <label for="idNome">Nome: </label>
+            <input type="text" name="nome" id="idNome"> <br>
+
+            <label for="idEmail">E-mail: </label>
+            <input type="email" name="e-mail" id="idEmail"> <br>
+
+            <label for="idBusca">Busca: </label>
+            <input type="search" name="busca" id="idBusca"> <br>
+
+            <label for="idSite">Site: </label>
+            <input type="url" name="Site" id="idSite"> <br>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
