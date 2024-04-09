@@ -24,6 +24,70 @@
 
             <label for="idSite">Site: </label>
             <input type="url" name="Site" id="idSite"> <br>
+            <!-- nesse input o link do site precisa do https://www.exemplo.com.br-->
+
+            <label for="idCel">Celular: </label>
+            <input type="tel" name="cel" id="idCel"> <br> 
+
+            <label for="idData">Data:</label>
+            <input type="date" name="data" id="idData"> <br>
+            <!-- dd/mm/aaaa (padrão do Brasil)  ->  09/04/2024-->
+
+            <label for="idHora">Hora</label>
+            <input type="time" name="hora" id="idHora"> <br>
+            <!-- (--:--) -> 08:49 -->
+
+            <label for="idReuniao">Reunião</label>
+            <input type="datetime-local" name="reuniao" id="idReuniao"> <br>
+            <!-- data + horas -> 09/04/2024 08:49-->
+
+            <label for="idMes">Mês</label>
+            <input type="month" name="mês" id="idMes"> <br>
+            <!-- Mês + ano -> abril de 2024-->
+
+            <label for="idSemana">Semana</label>
+            <input type="week" name="semana" id="idSemana"> <br>
+            <!-- Semana --,  ----(ano) -->
+            <!-- semana começa no 1º dia util-->
+
+            <label for="idValor">Valor</label>
+            <input type="number" name="valor" id="idValor" min="0" max="50" step="0.01"> <br>
+            <!-- somente nº, unica exceção letra e pra nº cientifico-->
+            <!-- valor minimo 0 , valor maximo 50 , nesse exemplo-->
+            <!-- step é de quantos em quantos-->
+        </fieldset>
+
+        <fieldset>
+            <legend>Tamanhos de roupa</legend>
+
+
+            <input type="radio" name="tamanho" id="idPeq" value="P">
+            <label for="idPeq">Pequeno</label>
+
+            <input type="radio" name="tamanho" id="idMed" value="M">
+            <label for="idMed">Medio</label>
+
+            <input type="radio" name="tamanho" id="idGrand" value="G">
+            <label for="idGrand">Grande</label>
+            <!-- nesses casos inverte o label pelo input-->
+            <!--type radio (circulo) - somente um vai ser selecionado -->
+            <!-- o que relaciona eles entre si é o mesmo name, se for diferente vou conseguir marcar todos-->
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Cores</legend>
+
+            <input type="checkbox" name="cor" id="idAzul" value="Azul">
+            <label for="idAzul">Azul</label>
+
+            <input type="checkbox" name="cor" id="idVermelho" value="Vermelho">
+            <label for="idVermelho">Vermelho</label>
+
+            <input type="checkbox" name="cor" id="idVerde" value="Verde">
+            <label for="idVerde">Verde</label>
+            <!-- checkbox (quadrado), escolho quantos quiser -->
+    
         </fieldset>
 
         <input type="submit" value="Enviar">
