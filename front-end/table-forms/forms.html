@@ -90,6 +90,25 @@
     
         </fieldset>
 
+        <fieldset>
+            <legend>Observações</legend>
+
+            <textarea name="obs" id="idObs" cols="30" rows="10"></textarea>
+            <!-- area de texto para o usuario digitar texto longo-->
+        </fieldset>
+
+        <fieldset>
+            <label for="idEstado">Estado</label>
+            <select name="estado" id="idEstado">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </select>
+            <!-- cria uma "lista" com opções de cidade nesse caso -->
+            <!-- value - será o jeito que recebo as informações-->
+            <!-- enquanto os nomes dos Estados vai ser como o usuario vai enviar os dados-->
+        </fieldset>
+
         <input type="submit" value="Enviar">
     </form>
 </body>
