@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3cd62763-7091-4580-a7e0-ec569f2ecab3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/bgg/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bgg/BoardGame.java" afterDir="false" />
