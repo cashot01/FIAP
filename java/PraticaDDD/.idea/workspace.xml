@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cd62763-7091-4580-a7e0-ec569f2ecab3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/bgg/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bgg/Game.java" afterDir="false" />
-    </list>
+    <list default="true" id="3cd62763-7091-4580-a7e0-ec569f2ecab3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
