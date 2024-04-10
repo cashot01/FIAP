@@ -101,13 +101,19 @@
         <fieldset>
             <label for="idEstado">Estado</label>
             <select name="estado" id="idEstado">
-                <option value="SP">São Paulo</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="ES">Espirito Santo</option>
+                <option value="" disabled selected>Selecione</option>
+                <!-- disabled - desabilitado (n consegue escolher)-->
+                <!-- selected - selecionado (fica marcado pra escolher algum option) -->
+                <optgroup label="Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espirito Santo</option>
+                </optgroup>
             </select>
             <!-- cria uma "lista" com opções de cidade nesse caso -->
             <!-- option - itens da lista-->
+            <!-- optgroup - junta os options-->
             <!-- value - será o jeito que recebo as informações-->
             <!-- enquanto os nomes dos Estados vai ser como o usuario vai enviar os dados-->
         </fieldset>
