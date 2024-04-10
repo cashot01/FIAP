@@ -2,7 +2,7 @@ package bgg;
 
 import java.util.List;
 
-public class Game{
+public abstract class Game{
     private String name;
     private int yearlaunched;
     private int minPlayers;
