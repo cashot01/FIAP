@@ -14,10 +14,14 @@
             <legend>Dados Pessoais</legend> <!-- "titulo do fieldset"-->
 
             <label for="idNome">Nome: </label>
-            <input type="text" name="nome" id="idNome"> <br>
+            <input type="text" name="nome" id="idNome" required> <br>
+            <!-- required - obrigatorio preencher-->
 
             <label for="idEmail">E-mail: </label>
             <input type="email" name="e-mail" id="idEmail"> <br>
+
+            <label for="idSenha">Senha</label>
+            <input type="password" name="senha" id="idSenha" minlength="4" maxlength="10"> <br>
 
             <label for="idBusca">Busca: </label>
             <input type="search" name="busca" id="idBusca"> <br>
@@ -121,6 +125,10 @@
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpar">
         <!-- reset - reseta o forms-->
+        <input type="button" value="Mudar">
+        <input type="file" name="doc" id="idDoc" value="Docment">
+        <!-- file - escolhe um arquivo-->
+        <input type="color" name="cor2" id="idCor2">
     </form>
 </body>
 </html>
