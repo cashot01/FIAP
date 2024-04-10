@@ -2,7 +2,7 @@ package bgg;
 
 import java.util.List;
 
-public class Game {
+public class Game{
     private String name;
     private int yearlaunched;
     private int minPlayers;
@@ -24,5 +24,16 @@ public class Game {
         this.minAge = minAge;
         this.ratings = ratings;
         this.meanRating = calculateMeanRating();
+    }
+
+    public Game() {
+
+    }
+
+    private double calculateMeanRating() {
+        return ratings.stream()
+                .mapToDouble(Rating::getRating)
+                .average()
+                .orElse(0);
     }
 }
