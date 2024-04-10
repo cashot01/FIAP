@@ -14,8 +14,3 @@ public class Carro extends Veiculo {
         return "Carro{} " + super.toString();
     }
 }
-
-
-
-
-

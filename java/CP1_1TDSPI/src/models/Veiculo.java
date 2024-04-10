@@ -4,20 +4,14 @@ import java.time.LocalDateTime;
 
 public class Veiculo {
     protected String marca;
-
     protected int ano;
-
     protected double consumoPorKm;
-
     protected String modelo;
-
+    protected double combustivelNoTanque;
     protected double quilometragem;
 
-    protected double combustivelNoTanque;
-    // protected  - serve para usar em outras classes, nos "filhos"
-
     public Veiculo(){
-
+        
     }
 
     public Veiculo(String marca, int ano, double consumoPorKm, String modelo) {
@@ -40,9 +34,10 @@ public class Veiculo {
     }
 
     public void setAno(int ano) {
-        // || - ou
-        if(ano < 1886 || ano > LocalDateTime.now().getYear()){
-            System.out.println("o carrro não pode ser mais antigo que 1886 ou mais novo que o ano atual");
+        if(ano < 1886 || ano > LocalDateTime.now().getYear()) {
+            System.out.println
+                    ("O carro não pode ser mais antigo que 1886 ou mais novo que o ano atual");
+            return;
         }
         this.ano = ano;
     }
@@ -63,6 +58,10 @@ public class Veiculo {
         this.modelo = modelo;
     }
 
+    public double getCombustivelNoTanque() {
+        return combustivelNoTanque;
+    }
+
     public double getQuilometragem() {
         return quilometragem;
     }
@@ -79,27 +78,24 @@ public class Veiculo {
                 '}';
     }
 
-    public void setQuilometragem(double quilometragem) {
-        this.quilometragem = quilometragem;
-    }
-
     public void abastecer(double litros){
         combustivelNoTanque += litros;
         System.out.println("Abastecendo " + litros + "litros no tanque.");
     }
 
-    // Reduzir a quantidade de combustivel no tanque com base na distancia percorrida e no consumo por quilometro no carro.
-    // Aumentar a quilometragem do veiculo.
-    // Caso nao haja combustivel suficiente para a distancia desejada, o carro nao deve "dirigir" e deve imprimir uma mensagem indicando falta de combustivel
+    //Reduzir a quantidade de combustível no tanque com base na distância percorrida e no consumo por quilômetro do carro.
+    //Aumentar a quilometragem do veiculo.
+    //Caso não haja combustível suficiente para a distância desejada, o carro não deve "dirigir" e deve imprimir uma mensagem indicando falta de combustível.
+    // se eu quero diririgir 100km e o veiculo faz 10km/l, eu precisaria de 10 litros de combustivel
     public void dirigir(double distancia){
         double combustivelNecessario = distancia / consumoPorKm; // ex: 100km / 10km/l = 10 litros
-        if (combustivelNoTanque >= combustivelNecessario){
+        if(combustivelNoTanque >= combustivelNecessario){
             combustivelNoTanque -= combustivelNecessario;
             quilometragem += distancia;
-            System.out.println("Dirigindo "+ distancia +"km");
+            System.out.println("Dirigindo "+ distancia +" km");
         }
         else
-            System.out.println("Combustivel insuficiente para dirigir "+ distancia +"km");
+            System.out.println("\u001B[31m"+ " Combustivel insuficiente para dirigir "+ distancia + " km, você é um liso de combustivel" + "\u001B[0m");
     }
 
     public double previsaoDeAutonomia(){

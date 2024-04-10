@@ -1,12 +1,15 @@
 package models;
 
-public class Moto extends Veiculo {
-    public int cilindradas;
+public class Moto extends Veiculo{
+    private int cilindradas;
+
     public Moto(){
-        cilindradas = 50;
+      cilindradas = 50;
     }
 
-    public Moto(String marca, int ano, double consumoPorKm, String modelo, int cilindradas) {
+    public Moto(String marca, int ano,
+                double consumoPorKm, String modelo,
+                int cilindradas) {
         super(marca, ano, consumoPorKm, modelo);
         this.cilindradas = cilindradas;
     }
