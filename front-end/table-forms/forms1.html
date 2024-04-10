@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/form1.css">
+</head>
+<body>
+    <h1>Preferencias</h1>
+    <form action="Cadastrar" method="get">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="idNome">Nome: </label>
+            <input type="text" name="nome" id="idNome" autofocus> <br>
+
+            <label for="idEmail">Email: </label>
+            <input type="text" name="email" id="idEmail"> <br>
+
+        </fieldset>
+
+        <fieldset>
+            <label for="idCor">Cor Favorita:</label>
+            <select name="corFavorita" id="idCor">
+                <option value="Select" disabled selected>Selecione</option>
+                <option value="AZ">Azul</option>
+                <option value="PT">Preto</option>
+                <option value="Verm">Vermelho</option>
+                <option value="Branc">Branco</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Manequim</legend>
+            <input type="radio" name="manequim" id="idPeq">
+            <label for="idPeq">Pequeno</label>
+            <input type="radio" name="manequim" id="idMed">
+            <label for="idMed">Medio</label>
+            <input type="radio" name="manequim" id="idGrand">
+            <label for="idGrand">Grande</label>
+            <input type="radio" name="manequim" id="idExtra">
+            <label for="idExtra">Extra Grande</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Estilo Preferido</legend>
+            <input type="checkbox" name="estilo" id="idDespo">
+            <label for="idDespo">Despojado</label>
+            <input type="checkbox" name="estilo" id="idCasu">
+            <label for="idDespo">Casual</label>
+            <input type="checkbox" name="estilo" id="idEspo">
+            <label for="idDespo">Esportivo</label>
+            <input type="checkbox" name="estilo" id="idSoci">
+            <label for="idDespo">Social</label>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
