@@ -1,9 +1,13 @@
 # peça 2 nº e exiba em ordem crescente
-n1 = int(input("n1: "))
-n2 = int(input("n2: "))
+import os
+os.system("cls")
+num1 = int(input('Inicio: '))
+num2 = int(input('Fim: '))
 
-for crescente in range(n1, n2 + 1, 1):
-    print(crescente)
+if num2 < num1:
+    aux = num1
+    num1 = num2
+    num2 = aux
 
-for decrescente in range(n2, n1 + 1 , 1):
-    print(decrescente)
+for i in range(num1, num2 + 1, 1):
+    print(i, end = ' ')
