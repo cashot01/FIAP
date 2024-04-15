@@ -30,10 +30,33 @@ public abstract class Game{
 
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private double calculateMeanRating() {
         return ratings.stream()
                 .mapToDouble(Rating::getRating)
                 .average()
                 .orElse(0);
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "name='" + name + '\'' +
+                ", yearlaunched=" + yearlaunched +
+                ", minPlayers=" + minPlayers +
+                ", maxPlayers=" + maxPlayers +
+                ", bestNumPlayers=" + bestNumPlayers +
+                ", meanPlayTime=" + meanPlayTime +
+                ", minAge=" + minAge +
+                ", meanRating=" + meanRating +
+                ", ratings=" + ratings +
+                '}';
     }
 }
