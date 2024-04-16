@@ -1,0 +1,29 @@
+
+/* body{
+    background-color: chocolate;
+    border: 8px solid black;
+} */
+
+
+
+
+/* h1, p, div{
+    /* elementos do tipo display block aceita todos os tipos de formatações*/
+    /* background-color: aqua; */
+    /* width: 300px; */
+    /* height: 200px; */
+    /* padding: 30px; */
+    /* margin: 20px; 
+*/
+
+/*display inline - não aceita todas as formatações */
+
+/* a{
+    display: inline-block;
+    background-color: rgba(255, 127, 80, 0.63);
+
+} */
+
+/* img{
+    display: block;
+} */
