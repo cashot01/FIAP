@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background-color: royalblue;
+    border: 4px solid lightblue;
+    width: 80%;
+    min-height: 300px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    /* column - organiza em colunas*/
+    /*row - organiza em linhas*/
+    /*row reverse - organiza em linhas so que ao contrario(direita para esquerda, no exemplo fica item4, item3, item2, item1)*/
+    /*column-reverse - organiza em colunas da direita pra esquerda*/
+    flex-wrap: nowrap;
+    /* nowrap - n quebra a linha*/
+    /* wrap - quebra a linha para baixo*/
+    /* wrap-reverse - quebra a linha para cima */
+    justify-content: flex-start;
+    /* flex-start - joga o conteudo do container no começo(esquerda)*/
+    /*flex-end - joga o conteudo do container no final(direita) sem inverter a ordem (item1, item2, item3, item4)*/
+    /* center - no meio*/
+    /* space-between - espaço entre os elementos*/
+    /* space-around - espaço em volta dos elementos */
+    /* space-evenly - distribui o mesmo espaço dos elementos */
+    align-items: stretch;
+    /* stretch - ocupa toda a altura  */
+    /* flex-start - ocupa somente o lugar dele no inicio*/
+    /* flex-end - ocupa somente o lugar dele no final*/
+    /* center - ocupa somente o lugar dele no centro(esquerda meio) */
+    /* baseline */
+    align-content: stretch;
+    /* alinhamento do conteudo*/
+    /* stretch - flex-start - flex-end - center - space-between - space-around - space-evenly */
+}
+
+.item{
+    background-color: coral;
+    border:2px solid white ;
+    color: white;
+    padding: 5px;
+}
+
+.container :nth-child(1){
+    flex-grow: 0;
+    /* grow - ocupa o espaço que está sobrando - expande */
+    flex-basis: 100px;
+    /* basis - quando chega na largura todos ficam com a mesma largura*/
+}
+.container :nth-child(2){
+    order: 0;
+    /* valor padrão*/
+    /* order 1  , fica item1, item3, item4, item2*/
+    /* order -1 fica item2, item1, item3, item4*/
+    flex-grow: 0;
+    flex-basis: 100px;
+    align-self: center;
+    /* alinhamento só para aquele elemento */
+}
+.container :nth-child(3){
+    flex-grow: 0;
+    flex-shrink: 2;
+    /* 0 - n diminui o elemento*/
+    /* 1 - diminui o elemento se prescisar */
+    flex-basis: 100px;
+    /* shorthand flex: 0 2 100px (grow, shrink, basis)*/
+}
+
+.container :nth-child(4){
+    flex-grow: 0;
+    flex-basis: 100px;
+}
