@@ -1,2 +1,4 @@
-package mtgtop8;public class Card {
+package mtgtop8;
+public class Card {
+    
 }
