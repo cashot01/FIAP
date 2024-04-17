@@ -1,2 +1,5 @@
-package mtgtop8;public class Player {
+package mtgtop8;
+public class Player {
+    private String name;
+    private 
 }
