@@ -25,6 +25,7 @@ body{
 .content_princ{
     min-height: 200px;
     flex-grow: 1;
+    display: flex;
 }
 
 .footer_princ{
