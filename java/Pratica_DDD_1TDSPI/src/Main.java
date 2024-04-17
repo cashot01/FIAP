@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         }
-        public static bggTeste(){
+        public static void bggTeste(){
             var boardgame = new Boardgame("Catan", 1995, 3,4,
                     4,60,4, new ArrayList<>(Arrays.asList(
                     new Rating("user1", 8, "good game"),
