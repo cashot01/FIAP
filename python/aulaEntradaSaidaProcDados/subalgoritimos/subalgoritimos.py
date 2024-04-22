@@ -1,33 +1,19 @@
 # Subalgoritimos - Funções e Procedimentos ===> Métodos
 import os
+import sub
 os.system("cls")
-import math
-
-# ========================== SUBALGORITIMOS
-# Procedimento ==> Subalgoritimo que n retorna valor ao programa chamador
-def saudacao1():
-    print("Bom dia usuário")
-
-def saudacao2(nome):
-    print(f"Bom dia {nome} ")
-
-def saudacao3(nome, hora):
-    if hora < 12:
-        msg =  "bom dia"
-    elif hora < 18:
-        msg =  "boa tarde"
-    else:
-        msg =  "boa noite"
-    print(f"{msg}, {nome}")
-
-
-
-# Funções ==> Subalgoritimo que retorna valor ao programa chamador
-
 
 
 
 # =========================  PROGRAMA PRINCIPAL
-saudacao1()
-saudacao2("Cauan") # "Cauan" é um parametro
-saudacao3("gustavo", 17)
+sub.saudacao1()
+sub.saudacao2("Cauan") # "Cauan" é um parametro
+sub.saudacao3("gustavo", 17)
+
+print(math.sqrt(16))
+print(raiz2(16))
+print(raizn(27, 3))
+print(pi())
+r = 2
+c = 2 * pi() * r
+print(f"raio = {r}, circunferencia = {c}")
