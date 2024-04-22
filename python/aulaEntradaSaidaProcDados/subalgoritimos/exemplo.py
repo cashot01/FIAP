@@ -1,3 +1,6 @@
+import sub
+import os
+os.system("cls")
 """
 Exercicios
 1 -  criar uma função chamada "maior2n" que passe por 2 nº por parametro e retorne o maior 
@@ -21,3 +24,6 @@ Exercicios
 >> Crescente 5 e 34
 
 """
+
+x = sub.raiz2(49)
+print(x)
