@@ -2,6 +2,8 @@ import bgg.Boardgame;
 import bgg.Rating;
 import mtgtop8.Event;
 import mtgtop8.MTG_FORMAT;
+import mtgtop8.Player;
+import mtgtop8.TournamentPlayer;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -14,11 +16,24 @@ public class Main {
         newEvent.setFormat(MTG_FORMAT.PIONEER);
         newEvent.setRating(4);
         newEvent.setLocation("Minneapolis, MN");
-        newEvent.setData(
+        newEvent.setDateEvent(
+                //LocalDateTime.of(2018,8,3,12,0,0));
                 LocalDateTime.parse("2018-12-03T12:00:00"));
+        newEvent.setPlayers(new ArrayList<>());
+        newEvent.getPlayers()
+                .add(new TournamentPlayer(
+                        new Player("Paulo Vitor", "Brazil", "PVDDR"),
+                null, 1));
+        newEvent.getPlayers()
+                .add(new TournamentPlayer(
+                        new Player("Reid Duke", "USA", "ReidDuke"),
+                        null, 2));
 
-        }
-        public static void bggTeste(){
+        
+
+    }
+
+    public static void bggTeste(){
             var boardgame = new Boardgame("Catan", 1995, 3,4,
                     4,60,4, new ArrayList<>(Arrays.asList(
                     new Rating("user1", 8, "good game"),
@@ -45,5 +60,5 @@ public class Main {
             //contar as avaliações que tiveram nota 5
             System.out.println(boardgame.getRatings().stream().filter(nota -> nota.getRating() == 5).count());
 
-        }
+    }
 }

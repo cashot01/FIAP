@@ -3,10 +3,10 @@ package mtgtop8;
 public enum CARD_TYPE {
     CREATURE,
     ARTIFACT,
-    ENCHANTIMENT,
+    ENCHANTMENT,
     INSTANT,
     SORCERY,
     PLANESWALKER,
     LAND,
-    OTHER,
+    OTHER
 }
