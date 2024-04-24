@@ -11,25 +11,9 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        var newEvent = new Event();
-        newEvent.setName("Pro Tour 25th Anniversary");
-        newEvent.setFormat(MTG_FORMAT.PIONEER);
-        newEvent.setRating(4);
-        newEvent.setLocation("Minneapolis, MN");
-        newEvent.setDateEvent(
-                //LocalDateTime.of(2018,8,3,12,0,0));
-                LocalDateTime.parse("2018-12-03T12:00:00"));
-        newEvent.setPlayers(new ArrayList<>());
-        newEvent.getPlayers()
-                .add(new TournamentPlayer(
-                        new Player("Paulo Vitor", "Brazil", "PVDDR"),
-                null, 1));
-        newEvent.getPlayers()
-                .add(new TournamentPlayer(
-                        new Player("Reid Duke", "USA", "ReidDuke"),
-                        null, 2));
 
-        
+
+
 
     }
 
@@ -60,5 +44,25 @@ public class Main {
             //contar as avaliações que tiveram nota 5
             System.out.println(boardgame.getRatings().stream().filter(nota -> nota.getRating() == 5).count());
 
+    }
+
+    public static void mtgTop8Teste(){
+        var newEvent = new Event();
+        newEvent.setName("Pro Tour 25th Anniversary");
+        newEvent.setFormat(MTG_FORMAT.PIONEER);
+        newEvent.setRating(4);
+        newEvent.setLocation("Minneapolis, MN");
+        newEvent.setDateEvent(
+                //LocalDateTime.of(2018,8,3,12,0,0));
+                LocalDateTime.parse("2018-12-03T12:00:00"));
+        newEvent.setPlayers(new ArrayList<>());
+        newEvent.getPlayers()
+                .add(new TournamentPlayer(
+                        new Player("Paulo Vitor", "Brazil", "PVDDR"),
+                        null, 1));
+        newEvent.getPlayers()
+                .add(new TournamentPlayer(
+                        new Player("Reid Duke", "USA", "ReidDuke"),
+                        null, 2));
     }
 }
