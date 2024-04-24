@@ -127,7 +127,7 @@ if(valor1 === valor2){
     console.log("Falso");
 }
 
-for()
+
 
 
 
