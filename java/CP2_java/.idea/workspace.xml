@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c6f90f2-fc28-4a23-92e9-c4ed40ecb7a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CP2_java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lego/Avaliacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lego/ImagemProduto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lego/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lego/ProdutoDigital.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lego/ProdutoFisico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lego/Tema.java" afterDir="false" />
-    </list>
+    <list default="true" id="1c6f90f2-fc28-4a23-92e9-c4ed40ecb7a1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
