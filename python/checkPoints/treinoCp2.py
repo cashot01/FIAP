@@ -24,7 +24,9 @@ for i in range(1, 5, 1):
     if a == 0:
         print(f"Valor de a({a}) = 0,  essa equação virou do 1º grau")
         aZero += 1
-        
+        continue
+    else:
+      print("continua")  
 
     b = int(input("digite o valor de b: "))
     c = int(input("digite o valor de c: "))
@@ -34,7 +36,7 @@ for i in range(1, 5, 1):
     if delta < 0:
         print(f"Não é possível, valor de delta({delta}) < 0")
         deltaNegativa += 1
-        # break
+        continue
 
     elif delta == 0:
         print(f"Delta({delta} == 0,  tem 2 raizes iguais)")
