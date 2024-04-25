@@ -17,16 +17,16 @@ deltaNegativa = 0
 deltaZero = 0
 deltaPositiva = 0
 
-for i in range(1, 5, 1):
+for i in range(1, 6, 1):
 
-    print(f"Exemplo {i}")
+    print(f"\n Volta:  {i}")
     a = int(input("digite o valor de a: "))
     if a == 0:
         print(f"Valor de a({a}) = 0,  essa equação virou do 1º grau")
         aZero += 1
         continue
-    else:
-      print("continua")  
+    # else:
+    #   print("continua")  
 
     b = int(input("digite o valor de b: "))
     c = int(input("digite o valor de c: "))
@@ -58,7 +58,7 @@ for i in range(1, 5, 1):
 
     
     
-    input("digite algo para continuar... ")
+    # input("digite algo para continuar... ")
 
 
     
@@ -71,7 +71,7 @@ porcentagem_deltaPositiva = (deltaPositiva / i) * 100
 
 
     
-print(f"""
+print(f"""\n-------------------- Porcentagens --------------------------
     A Zero........: {porcentagem_aZero} %
     delta negativo: {porcentagem_deltaNegativa} %
     delta zero....: {porcentagem_deltaZero} %
