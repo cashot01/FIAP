@@ -72,10 +72,10 @@ porcentagem_deltaPositiva = (deltaPositiva / i) * 100
 
     
 print(f"""\n-------------------- Porcentagens --------------------------
-    A Zero........: {porcentagem_aZero} %
-    delta negativo: {porcentagem_deltaNegativa} %
-    delta zero....: {porcentagem_deltaZero} %
-    delta positivo: {porcentagem_deltaPositiva} %""")
+    A Zero........: {porcentagem_aZero:.2f} %
+    delta negativo: {porcentagem_deltaNegativa:.2f} %
+    delta zero....: {porcentagem_deltaZero:.2f} %
+    delta positivo: {porcentagem_deltaPositiva:.2f} %""")
     
 
 
