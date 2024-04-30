@@ -15,4 +15,5 @@ public class Debito extends Cartao {
     public void setConsignado(double consignado) {
         this.consignado = consignado;
     }
+    
 }

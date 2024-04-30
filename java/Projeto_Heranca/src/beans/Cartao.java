@@ -98,18 +98,9 @@ public class Cartao {
         this.compra = compra;
     }
 
-    @Override
-    public String toString() {
-        return "Cartao{" +
-                "banco='" + banco + '\'' +
-                ", bandeira='" + bandeira + '\'' +
-                ", nome='" + nome + '\'' +
-                ", cor='" + cor + '\'' +
-                ", validade='" + validade + '\'' +
-                ", numero=" + numero +
-                ", cvv=" + cvv +
-                ", saldo=" + saldo +
-                ", compra=" + compra +
-                '}';
+    public double limite() {
+        return 0;
     }
+
+
 }
