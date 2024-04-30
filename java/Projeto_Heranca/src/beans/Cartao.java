@@ -5,6 +5,7 @@ public class Cartao {
     private String bandeira;
     private String nome;
     private  String cor;
+    private String validade;
     private int numero;
     private int cvv;
     private double saldo;
@@ -13,11 +14,12 @@ public class Cartao {
     public Cartao() {
     }
 
-    public Cartao(String banco, String bandeira, String nome, String cor, int numero, int cvv, double saldo, double compra) {
+    public Cartao(String banco, String bandeira, String nome, String cor, String validade, int numero, int cvv, double saldo, double compra) {
         this.banco = banco;
         this.bandeira = bandeira;
         this.nome = nome;
         this.cor = cor;
+        this.validade = validade;
         this.numero = numero;
         this.cvv = cvv;
         this.saldo = saldo;
@@ -54,6 +56,14 @@ public class Cartao {
 
     public void setCor(String cor) {
         this.cor = cor;
+    }
+
+    public String getValidade() {
+        return validade;
+    }
+
+    public void setValidade(String validade) {
+        this.validade = validade;
     }
 
     public int getNumero() {
@@ -95,6 +105,7 @@ public class Cartao {
                 ", bandeira='" + bandeira + '\'' +
                 ", nome='" + nome + '\'' +
                 ", cor='" + cor + '\'' +
+                ", validade='" + validade + '\'' +
                 ", numero=" + numero +
                 ", cvv=" + cvv +
                 ", saldo=" + saldo +
