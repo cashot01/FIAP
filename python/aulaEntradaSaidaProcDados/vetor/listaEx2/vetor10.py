@@ -1,7 +1,7 @@
 # exercicio 10 - fazer procedimento copia_vetor, onde copia o vetor 1 no vetor2
 import os
 os.system("cls")
-def copia_vetor(v1:list, v2:list) -> int:
+def copia_vetor(v1:list, v2:list) -> None:
     v2 = [v1[0], v1[1], v1[2], v1[3], v1[4]]
     print(f"""
     vetor 1: {v1}
