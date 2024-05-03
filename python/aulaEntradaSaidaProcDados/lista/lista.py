@@ -93,3 +93,15 @@ print(lista)
 lista.reverse()
 # reverse inverte a ordem dos elementos dentro da lista
 print(f"Ordem Invertida = {lista}")
+
+print("\n =============== CLEAR()")
+lista = [19, 4, 25, 33, -5]
+print(lista)
+lista.clear()
+# clear apaga todods os elementos da lista
+print(lista)
+
+print("\n =============== DEL (LISTA)")
+lista = [19, 4, 25, 33, -5]
+del(lista)
+# del (lista) exclui (desloca) a lista da memoria
