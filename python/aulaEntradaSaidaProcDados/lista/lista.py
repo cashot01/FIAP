@@ -1,32 +1,79 @@
+print("\n =============== LISTA VAZIA")
 lista = list()
+print(f"Lista Vazia = {lista}")
+
+print("\n =============== APPEND")
 lista.append(22)
 # .append adiciona no final da lista
 lista.append(57.7)
 lista.append("Logica")
 print(lista)
 
+print("\n =============== INSERT")
 lista.insert(10, "Cauan")
 # insert insere um dado numa posição da lista especifica
 # 1º coloca o indice depois o dado
 # se o valor do indice for maior que a lista, o item será colocado no final da lista
 print(lista)
 
+
+# print("============= POP")
 # lista.pop()
 # pop remove o elemento com a posição informada da lista, caso não informe a posição remove o ultimo elemento
 # se colocar indice q 
-print(lista)
+# print(lista)
 
+print("\n =============== REMOVE")
 lista.remove(57.7)
 # remove o elemento 
 # se colocar elemento q n existe da erro
 print(lista)
 
+
+print("\n =============== INDEX")
 indice = lista.index("Cauan")
 # index - mostra o indice do elemento escolhido
 print(f"Indice = {indice}")
 
-qut = lista.count()
-print(qut)
+print("\n =============== COUNT")
+qtd = lista.count(22)
+# count - conta quatos elementos especificos tem na lista
+print(f"Quantidade: {qtd}")
+
+print("\n =============== LEN")
+qtd_elementos = len(lista)
+# len conta quantos elementos existem na lista
+print(f"Quantidade de elementos = {qtd_elementos}")
 
 
+print("\n =============== SUM")
+lista = [19, 4, 25, 33, -5]
+print(lista)
+print(sum(lista))
+# sum - soma os elementos da lista caso todos sejam numericos
+
+
+print("\n =============== CONCATENAÇÃO (+)")
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+lista3 = lista1 + lista2
+# + concatena (junta) listas
+print(f"Lista1 = {lista1}")
+print(f"Lista2 = {lista2}")
+print(f"Lista3 = {lista3}")
+
+print("\n =============== EXETEND")
+lista1 = [1, 2, 3]
+print(f"Lista1 = {lista1}")
+lista2 = [4, 5, 6]
+print(f"Lista2 = {lista2}")
+lista2.extend(lista1)
+# extend adiciona ao final da lista outra lista
+print(f"Lista2 = {lista2}")
+
+print("\n =============== COPY")
+lista1 = [1, 2, 3]
+lista2 = lista1.copy()
+print(f"Lista1 = {lista1}")
+print(f"Lista2 = {lista2}")
 
