@@ -77,3 +77,19 @@ lista2 = lista1.copy()
 print(f"Lista1 = {lista1}")
 print(f"Lista2 = {lista2}")
 
+print("\n =============== SORT (REVERSE)")
+lista = [19, 4, 25, 33, -5]
+print(lista)
+lista.sort()
+# ordena os elementos da lista
+# parametro reverse=True permite que seja ordenada em ordem decescente
+print(f"Ordem crescente = {lista}")
+lista.sort(reverse=True)
+print(f"Decrescente = {lista}")
+
+print("\n =============== REVERSE()")
+lista = [19, 4, 25, 33, -5]
+print(lista)
+lista.reverse()
+# reverse inverte a ordem dos elementos dentro da lista
+print(f"Ordem Invertida = {lista}")
