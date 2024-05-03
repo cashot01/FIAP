@@ -1,3 +1,6 @@
+import os
+os.system("cls")
+
 print("\n =============== LISTA VAZIA")
 lista = list()
 print(f"Lista Vazia = {lista}")
