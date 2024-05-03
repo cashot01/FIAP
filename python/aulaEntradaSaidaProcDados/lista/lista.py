@@ -11,7 +11,7 @@ lista.insert(10, "Cauan")
 # se o valor do indice for maior que a lista, o item será colocado no final da lista
 print(lista)
 
-lista.pop(1)
+# lista.pop()
 # pop remove o elemento com a posição informada da lista, caso não informe a posição remove o ultimo elemento
 # se colocar indice q 
 print(lista)
@@ -22,5 +22,11 @@ lista.remove(57.7)
 print(lista)
 
 indice = lista.index("Cauan")
+# index - mostra o indice do elemento escolhido
 print(f"Indice = {indice}")
+
+qut = lista.count()
+print(qut)
+
+
 
