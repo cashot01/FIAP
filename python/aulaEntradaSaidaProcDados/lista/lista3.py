@@ -4,12 +4,20 @@
 Valor: 33 Não encontrado
 """
 
+#============================= SUBALGORITIMO
+def encontrar_elemento(e: input) -> None:
+
+    if e in lista:
+        print(f"{e} Encontrado")
+    else:
+        print(f"{e} Não encontrado")
+
+
 lista = [45, 4.6, "edson", "a", "False"]
 print(lista)
 
-elemento = input("valor: ")
+elemento = input("digite algo: ")
 
-if elemento in lista:
-    print(f"{elemento} Encontrado")
-else:
-    print(f"{elemento} Não encontrado")
+encontrar_elemento(elemento)
+
+
