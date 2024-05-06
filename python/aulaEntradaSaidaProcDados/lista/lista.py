@@ -48,6 +48,20 @@ qtd_elementos = len(lista)
 # len conta quantos elementos existem na lista
 print(f"Quantidade de elementos = {qtd_elementos}")
 
+nome = "Cauan Aranega Passos"
+print(f"{nome} tem {len(nome)} caracteres")
+# len tbm pode ser usado para contar os caracteres de um string
+print()
+
+for i in range(0, len(lista), 1):
+    print(f"{lista[i]}")
+# tbm usa para percorrer uma lista em for 
+# desse jeito capturo o elemento e o indice
+
+for dado in lista:
+    print(f"{dado}", end=" ")
+# desse jeito só capturo o elemento 
+
 
 print("\n =============== SUM")
 lista = [19, 4, 25, 33, -5]
