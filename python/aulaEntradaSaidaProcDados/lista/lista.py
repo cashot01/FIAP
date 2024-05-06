@@ -68,6 +68,7 @@ lista = [19, 4, 25, 33, -5]
 print(lista)
 print(sum(lista))
 # sum - soma os elementos da lista caso todos sejam numericos
+# da para colocar True vale 1, e false vale 0 
 
 
 print("\n =============== CONCATENAÇÃO (+)")
