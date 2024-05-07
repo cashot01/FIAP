@@ -8,8 +8,8 @@ os.system("cls")
 #============================= SUBALGORITIMO
 
 def exibe_lista(l: list) -> None:
-    for i in range(0, len(lista), 1):
-        print(f"{i}-{lista[i]} | ", end=" ")
+    for i in range(0, len(l), 1):
+        print(f"{i}-{l[i]} | ", end=" ")
 
 
 
