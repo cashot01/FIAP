@@ -5,27 +5,38 @@
     font-family: sans-serif;
 }
 
-html{
+/* html{
     font-size: 20px;
-}
+} */
 
 .box1{
     border: 3px solid blue;
+    background-color: lightblue;
     /* margin: 10px; */
-    width: 70%;
+    width: 100vw; /* relativo ao elemento pai*/
+    min-height: 100vh;
     padding: 15px;
     font-size: 20px;
+    text-align: center;
 }
 
 .box2{
     border: 3px solid red;
+    background-color: lightcoral;
     /* margin: 10px; */
-    width: 70vw;
+    width: 100vw; /* relativo ao view do navegador*/
+    min-height: 100vh;
     padding: 15px;
     font-size: 20px;
 }
 
+img{
+    width: 700px;
+    max-width: 100%;
+}
+
 p{
     /* font-size: 1.5em; 1.5em * 16px = 24px */
-    font-size: 1.5rem; /* 1.5rem * 16px = 24px */
+    /*font-size: 1.5rem;*/ /* 1.5rem * 16px = 24px */
+    font-size: 1.5vw;
 }
