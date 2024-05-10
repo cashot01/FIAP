@@ -6,14 +6,8 @@ def verifica_lista_inteiro(l: list) -> bool:
     for i in range(0, len(l), 1):
         l[i] = str(l[i])
         l[i].isnumeric()
-
-
-        
         
     
-
-
-
 
 
 # --------------- Programa para testar a função 
