@@ -10,4 +10,5 @@ print(lista)
 
 tupla = (65, 34, 78, 29, "aniversario", "edson")
 # tupla é entre parenteses
+print(tupla[0]) # para mostrar algum elemento colchetes []
 print(tupla)
