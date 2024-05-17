@@ -3,11 +3,18 @@ os.system("cls")
 
 def vogal_maiuscula(s: str) -> str:
     vogal = "aeiou"
-    for i in range(len(s)):
-        if s[i] in vogal:
-            s = s.replace(s[i], s[i].upper())
+    for i, carac in enumerate(s):
+        if carac in vogal:
+            s = s.replace(carac, carac.upper())
     
-    return s
+
+# def vogal_maiuscula(s: str) -> str:
+#     vogal = "aeiou"
+#     for i in range(len(s)):
+#         if s[i] in vogal:
+#             s = s.replace(s[i], s[i].upper())
+    
+#     return s
 
 
 
