@@ -1,53 +1,49 @@
-public class Avaliacao {
+public class Avaliacao extends Curso {
         private String usuario;
         private int nota;
         private String comentario;
 
-        public Avaliacao(){
-
-        }
-
-        public Avaliacao(String usuario, int nota, String comentario) {
-            this.usuario = usuario;
-            this.nota = nota;
-            this.comentario = comentario;
-        }
-
-        public String getUsuario() {
-            return usuario;
-        }
-
-        public void setUsuario(String usuario) {
-            this.usuario = usuario;
-        }
-
-        public int getNota() {
-            return nota;
-        }
-
-        public void setNota(int nota) {
-            this.nota = nota;
-        }
-
-        public String getComentario() {
-            return comentario;
-        }
-
-        public void setComentario(String comentario) {
-            this.comentario = comentario;
-        }
-
-        @Override
-        public String toString() {
-            return "Avaliacao{" +
-                    "usuario='" + usuario + '\'' +
-                    ", nota=" + nota +
-                    ", comentario='" + comentario + '\'' +
-                    '}';
-        }
-        public void exibirInfo(){
-            System.out.println(this);
-        }
+    public Avaliacao() {
     }
+
+    public Avaliacao(String usuario, int nota, String comentario) {
+        this.usuario = usuario;
+        this.nota = nota;
+        this.comentario = comentario;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public int getNota() {
+        return nota;
+    }
+
+    public void setNota(int nota) {
+        this.nota = nota;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+    @Override
+    public String toString() {
+        return "Avaliacao{" +
+                "usuario='" + usuario + '\'' +
+                ", nota=" + nota +
+                ", comentario='" + comentario + '\'' +
+                "} " + super.toString();
+    }
+}
 
 

@@ -1,34 +1,39 @@
-public class Modulo {
-    public String titulo;
-    public double duracao;
-    public void exibirDetalhes(){
-
-    }
+public class Modulo extends Curso {
+    public String tituloModulo;
+    public double duracaoModulo;
 
     public Modulo() {
     }
 
-    public String getTitulo() {
-        return titulo;
+    public Modulo(String tituloModulo, double duracaoModulo) {
+        this.tituloModulo = tituloModulo;
+        this.duracaoModulo = duracaoModulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public String getTituloModulo() {
+        return tituloModulo;
     }
 
-    public double getDuracao() {
-        return duracao;
+    public void setTituloModulo(String tituloModulo) {
+        this.tituloModulo = tituloModulo;
     }
 
-    public void setDuracao(double duracao) {
-        this.duracao = duracao;
+    public double getDuracaoModulo() {
+        return duracaoModulo;
+    }
+
+    public void setDuracaoModulo(double duracaoModulo) {
+        this.duracaoModulo = duracaoModulo;
     }
 
     @Override
     public String toString() {
         return "Modulo{" +
-                "titulo='" + titulo + '\'' +
-                ", duracao=" + duracao +
-                '}';
+                "tituloModulo='" + tituloModulo + '\'' +
+                ", duracaoModulo=" + duracaoModulo +
+                "} " + super.toString();
+    }
+    public void exibirDetalhes(){
+        System.out.println(this);
     }
 }

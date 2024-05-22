@@ -33,4 +33,7 @@ public class Usuario {
                 ", email='" + email + '\'' +
                 '}';
     }
+    public void exibirInfo(){
+        System.out.println(this);
+    }
 }
