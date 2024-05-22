@@ -6,6 +6,12 @@ public class Avaliacao {
     public Avaliacao() {
     }
 
+    public Avaliacao(int pontuacao, String comentario, String nomeUsuario) {
+        this.pontuacao = pontuacao;
+        this.comentario = comentario;
+        this.nomeUsuario = nomeUsuario;
+    }
+
     public int getPontuacao() {
         return pontuacao;
     }

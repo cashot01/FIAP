@@ -1,5 +1,3 @@
-package lego;
-
 public class ImagemProduto {
     private String url;
 
