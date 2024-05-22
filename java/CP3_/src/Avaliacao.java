@@ -44,6 +44,10 @@ public class Avaliacao extends Curso {
                 ", comentario='" + comentario + '\'' +
                 "} " + super.toString();
     }
+
+    public void exibirAvaliacao(){
+        System.out.println(this);
+    }
 }
 
 

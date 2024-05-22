@@ -1,4 +1,4 @@
-public class Usuario {
+public class Usuario extends Avaliacao {
     private String nome;
     private String email;
 
@@ -33,6 +33,7 @@ public class Usuario {
                 ", email='" + email + '\'' +
                 '}';
     }
+    
     public void exibirInfo(){
         System.out.println(this);
     }

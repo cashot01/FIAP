@@ -1,6 +1,7 @@
+import java.util.List;
 public class Modulo extends Curso {
-    public String tituloModulo;
-    public double duracaoModulo;
+    private String tituloModulo;
+    private double duracaoModulo;
 
     public Modulo() {
     }
@@ -18,14 +19,6 @@ public class Modulo extends Curso {
         this.tituloModulo = tituloModulo;
     }
 
-    public double getDuracaoModulo() {
-        return duracaoModulo;
-    }
-
-    public void setDuracaoModulo(double duracaoModulo) {
-        this.duracaoModulo = duracaoModulo;
-    }
-
     @Override
     public String toString() {
         return "Modulo{" +
@@ -33,6 +26,7 @@ public class Modulo extends Curso {
                 ", duracaoModulo=" + duracaoModulo +
                 "} " + super.toString();
     }
+    @Override
     public void exibirDetalhes(){
         System.out.println(this);
     }
