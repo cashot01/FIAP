@@ -45,6 +45,9 @@ public class Avaliacao {
                     ", comentario='" + comentario + '\'' +
                     '}';
         }
+        public void exibirInfo(){
+            System.out.println(this);
+        }
     }
 
 

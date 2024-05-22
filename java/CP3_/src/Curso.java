@@ -3,7 +3,7 @@ public class Curso {
     public String descricao;
     public double duracao;
     public void exibirDetalhes(){
-
+        System.out.println(this);
     }
 
     public Curso() {
