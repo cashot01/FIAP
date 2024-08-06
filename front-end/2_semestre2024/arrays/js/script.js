@@ -61,6 +61,47 @@ alunos.splice(2,1,'Juliana')
 alunos.splice(1,1)
 // remove 1 ou + elementos do array
 
-console.log(alunos);
+// console.log(alunos);
+
+const cursos = [
+    {nome:'HTML5', duracao:'3 meses'},
+    {nome:'CSS3', duracao:'4 meses'},
+    {nome:'Javascript', duracao:'5 meses'}
+]
+
+// const nomeCursos = cursos.map((curso)=>{ return curso.nome})
+const nomeCursos = cursos.map(curso => curso.nome)
+// map -> mapear , percorrer array
+// nesse caso só pega o nome do curso
+
+const propCursos = cursos.map( curso => `O curso ${curso.nome} só dura ${curso.duracao}`)
+
+const sugestaoCursos = cursos.map((curso, i)=> `O curso ${curso.nome} deve ser o ${i+1}º a ser feito` )
+
+// console.log(sugestaoCursos);
+
+
+const notas = [
+    {nome: 'João', nota: 7.5},
+    {nome: 'Maria', nota: 8.5},
+    {nome: 'José', nota: 6},
+    {nome: 'Carlos', nota: 4},
+    {nome: 'Filipi', nota: 3},
+]
+
+const notasAprov = notas.filter( aluno => aluno.nota >= 6)
+
+// console.log(notasAprov);
+
+const frutas = ['maça', 'banana', 'pera', 'banana', 'uva', 'goiaba', 'maça', 'laranja', 'morango', 'pera', 'morango']
+
+const frutasSelecionadas = frutas.filter((fruta, i, todas)=> todas.indexOf(fruta) === i)
+// ['maça', 'banana', 'pera', 'uva', 'goiaba', 'laranja', 'morango']
+
+console.log(frutasSelecionadas);
+
+
+
+
 
 
