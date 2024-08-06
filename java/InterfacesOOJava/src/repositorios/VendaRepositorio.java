@@ -25,6 +25,6 @@ public class VendaRepositorio implements Cadastro{
 
     @Override
     public void alterar(Object objeto) {
-        
+
     }
 }
