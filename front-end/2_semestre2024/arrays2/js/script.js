@@ -75,10 +75,47 @@ const temResponsavel = fliaBrinquedo.some(pessoa => pessoa.idade >= 18)
 console.log(temResponsavel ? "Sim, vcs podem": "Precisa alguem maior de 18");
 
 const responsavel = fliaBrinquedo.find(pessoa => pessoa.idade >= 18)
+// 
 
 console.log(`A pessoa será ${responsavel.nome} pois ela tem ${responsavel.idade}`);
 
 const convidados = ['prof Luiz', 'Gustavo', 'Anne', ' prof Rafael Ronqui', 'Carolina']
+
+const profConvidados = convidados.filter(conv => conv.includes('prof'))
+// verifica se a string contem o valor especificado
+
+console.log(profConvidados);
+
+
+
+const frutas = ['maça', 'banana', 'uva']
+const verduras = ['couve', 'alface', 'agriao']
+
+const feira = [...frutas, ...verduras, 'batata']
+// Spread  espalha os valores no local, tirando eles do array ou objeto-> ...
+
+
+console.log(feira);
+
+let pessoa = {
+    nome: 'João',
+    idade: 18,
+    altura: 1.7
+}
+
+pessoa = {...pessoa, rg: 23.325435}
+
+console.log(pessoa);
+
+// rest parameter
+function somarTodos(...args){
+    return args.reduce((acc, atual)=> acc += atual)
+}
+
+console.log(somarTodos(1,2,3,4,5,6,7,8,4,));
+
+
+
 
 
 
