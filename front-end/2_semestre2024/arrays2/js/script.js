@@ -57,4 +57,29 @@ const dadosVendas = vendedores.reduce(
 
 console.log(dadosVendas);
 
+const fliaBrinquedo = [
+    {nome:'Sara', idade:17, altura: 1.5},
+    {nome:'Luciana',idade:18, altura: 1.7},
+    {nome:'Cleber',idade:15, altura: 1.65},
+    {nome:'Andreson',idade:22, altura: 1.80},
+]
+
+const todaFilaPode = fliaBrinquedo.every(pessoas => PermissionStatus.altura >= 1.60)
+// todas as alternativas tem que ser verdadeira
+
+console.log(todaFilaPode ? "Vamos lá": "Nem todos podem");
+
+const temResponsavel = fliaBrinquedo.some(pessoa => pessoa.idade >= 18)
+// pelo menos 1 tem que ser verdadeira
+
+console.log(temResponsavel ? "Sim, vcs podem": "Precisa alguem maior de 18");
+
+const responsavel = fliaBrinquedo.find(pessoa => pessoa.idade >= 18)
+
+console.log(`A pessoa será ${responsavel.nome} pois ela tem ${responsavel.idade}`);
+
+const convidados = ['prof Luiz', 'Gustavo', 'Anne', ' prof Rafael Ronqui', 'Carolina']
+
+
+
 
