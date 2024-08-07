@@ -1,23 +1,18 @@
-package entidades;
+package Entidades;
 
-public class Produto {
-    // atributos da classe
+public class Produto extends _EntidadeBase {
     private String nome;
     private double preco;
-    private  Categoria categoria;
-
-    // Construtor
 
     public Produto() {
     }
 
-    public Produto(String nome, double preco, Categoria categoria) {
+    public Produto(int id, String nome, double preco) {
+        super(id);
         this.nome = nome;
         this.preco = preco;
-        this.categoria = categoria;
     }
 
-    // Getters e Setters
     public String getNome() {
         return nome;
     }
@@ -34,22 +29,11 @@ public class Produto {
         this.preco = preco;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
-
-    // To String
-
     @Override
     public String toString() {
         return "Produto{" +
                 "nome='" + nome + '\'' +
                 ", preco=" + preco +
-                ", categoria=" + categoria +
-                '}';
+                "} " + super.toString();
     }
 }
