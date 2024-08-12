@@ -3,11 +3,6 @@ os.system("cls")
 
 
 
-notas ={
-    "Joao" : 9.5,
-    "Maria": 10.0,
-    "José": 5
-}
 
 def menu():
     print("""
@@ -52,9 +47,16 @@ def sair():
 
 # def notaValida(n: float) -> bool:
 
+notas ={
+    "Joao" : 9.5,
+    "Maria": 10.0,
+    "José": 5
+}
 
 
 def adicionarAluno():
+
+    
 
     input("Voltar menu...")
     os.system("cls")
