@@ -5,7 +5,7 @@ import Entidades._EntidadeBase;
 import java.util.ArrayList;
 
 public class _RepositorioBaseImpl<T extends _EntidadeBase> implements _RepositorioBase<T>{
-    ArrayList<T> lista = new ArrayList<>()
+    ArrayList<T> lista = new ArrayList<>();
     @Override
     public void cadastrar(T objeto) {
 
@@ -29,5 +29,10 @@ public class _RepositorioBaseImpl<T extends _EntidadeBase> implements _Repositor
     public void deletar(T objeto) {
         var objetoRemovido = lista.stream().filter(x -> x.getId() == objeto.getId()).findFirst().get();
         lista.remove(objetoRemovido);
+    }
+
+    @Override
+    public void deletarPorId(T objeto) {
+
     }
 }
