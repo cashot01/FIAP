@@ -1,28 +1,8 @@
 package Repositorios;
-
 import Entidades.Venda;
 
 import java.util.ArrayList;
 
-public class VendaRepositorio implements Cadastro<Venda> {
+public class VendaRepositorio extends _RepositorioBaseImpl<Venda> {
 
-    @Override
-    public void cadastrar(Venda objeto) {
-
-    }
-
-    @Override
-    public ArrayList<Venda> listar() {
-        return null;
-    }
-
-    @Override
-    public void atualizar(Venda objeto) {
-
-    }
-
-    @Override
-    public void deletar(Venda objeto) {
-
-    }
 }

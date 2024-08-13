@@ -1,15 +1,18 @@
 package Entidades;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-public class Cupom extends _EntidadeBase {
+public class Cupom extends _EntidadeBase{
     private String codigo;
     private double desconto;
     private char tipoDesconto;
-    private LocalDate validade;
+    private LocalDateTime validade;
     private int limiteUsos;
 
-    public Cupom(int id, String codigo, double desconto, char tipoDesconto, LocalDate validade, int limiteUsos) {
+    public Cupom() {
+    }
+
+    public Cupom(int id, String codigo, double desconto, char tipoDesconto, LocalDateTime validade, int limiteUsos) {
         super(id);
         this.codigo = codigo;
         this.desconto = desconto;
@@ -42,11 +45,11 @@ public class Cupom extends _EntidadeBase {
         this.tipoDesconto = tipoDesconto;
     }
 
-    public LocalDate getValidade() {
+    public LocalDateTime getValidade() {
         return validade;
     }
 
-    public void setValidade(LocalDate validade) {
+    public void setValidade(LocalDateTime validade) {
         this.validade = validade;
     }
 

@@ -1,6 +1,6 @@
 package Entidades;
 
-public class Usuario extends _EntidadeBase{
+public class Usuario extends _EntidadeBase {
     private String nome;
     private String email;
 
