@@ -1,5 +1,5 @@
 -- criar banco de dados
-						
+create FIAP;					
 
 
 -- utilizar banco de dados
