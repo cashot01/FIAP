@@ -5,8 +5,7 @@ def lista_tabela(t: list) -> None:
     for i in range(0, len(tabela), 1):
         print(f"Registro: {i+1}")
         print(f"Nome........: {t[i]['nome']}")
-        print(f"Idade........: {t[i]['idade']}")
-        print()
+        print(f"Idade........: {t[i]['idade']}\n")
 
 
 tabela = list()
