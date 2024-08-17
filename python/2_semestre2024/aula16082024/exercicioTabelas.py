@@ -43,11 +43,11 @@ def listar_registros(t: list) -> None:
     os.system("cls")
     for i in range(0, len(tabela), 1):
         print(f"Registro: {i+1}")
-        print(f"CPF.............: {t[i]['cpf']}")
-        print(f"Nome.............: {t[i]['nome']}")
-        print(f"Idade.............: {t[i]['idade']}")
-        print(f"Cidade.............: {t[i]['cidade']}")
-        print(f"Faculdade.............: {t[i]['faculdade']} \n")
+        print(f"CPF..................: {t[i]['cpf']}")
+        print(f"Nome.................: {t[i]['nome']}")
+        print(f"Idade................: {t[i]['idade']}")
+        print(f"Cidade...............: {t[i]['cidade']}")
+        print(f"Faculdade............: {t[i]['faculdade']} \n")
     voltar_menu(msg_continuar)
 
 def cadastrar() -> None:
