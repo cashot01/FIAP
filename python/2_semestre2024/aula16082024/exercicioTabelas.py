@@ -31,9 +31,9 @@ def consultar():
     print("consulta\n")
     cpf = input("cpf: ")
 
-    if resgistro.get('cpf'):
-        nome = resgistro['nome']
-        print(f"CPF: {cpf} nome: {nome} ")
+    if resgistro.get(cpf):
+        nome = resgistro[nome]
+        print(f"CPF existe ")
     else:
         print(f"O CPF {cpf} não existe")
 
