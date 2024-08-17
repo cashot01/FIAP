@@ -21,6 +21,11 @@ def exibe_menu() -> None:
     4 - editar
     5 - excluir
  """)
+    
+def voltar_menu(msg: str) -> None:
+    msg = input(msg)
+    os.system("cls")
+
 
 def consultar() -> None:
     print("consulta\n")
@@ -28,6 +33,7 @@ def consultar() -> None:
     if resgistro.get(cpf):
         nome = resgistro[cpf]
         print(f"CPF: {cpf} nome: {nome} ")
+    voltar_menu(msg_continuar)
 
 def listar_registros(t: list) -> None:
     os.system("cls")
@@ -38,7 +44,7 @@ def listar_registros(t: list) -> None:
         print(f"Idade.............: {t[i]['idade']}")
         print(f"Cidade.............: {t[i]['cidade']}")
         print(f"Faculdade.............: {t[i]['faculdade']} \n")
-        # input(msg_continuar)
+    voltar_menu(msg_continuar)
 
 def cadastrar() -> None:
     os.system("cls")
@@ -48,7 +54,7 @@ def cadastrar() -> None:
     resgistro['cidade'] = input("cidade: ")
     resgistro['faculdade'] = input("faculdade: ")
     tabela.append(resgistro.copy())
-    input(msg_continuar)
+    voltar_menu(msg_continuar)
 
 
 
