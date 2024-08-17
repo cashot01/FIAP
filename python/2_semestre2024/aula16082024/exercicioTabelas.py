@@ -27,12 +27,16 @@ def voltar_menu(msg: str) -> None:
     os.system("cls")
 
 
-def consultar() -> None:
+def consultar():
     print("consulta\n")
     cpf = input("cpf: ")
-    if resgistro.get(cpf):
-        nome = resgistro[cpf]
+
+    if resgistro.get('cpf'):
+        nome = resgistro['nome']
         print(f"CPF: {cpf} nome: {nome} ")
+    else:
+        print(f"O CPF {cpf} não existe")
+
     voltar_menu(msg_continuar)
 
 def listar_registros(t: list) -> None:
