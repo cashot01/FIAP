@@ -51,7 +51,12 @@ def consultar():
 
     voltar_menu(msg_continuar)
 
-
+def exibe_registro(t, indice):
+    print(f"\nCPF....: {t[indice]['cpf']}")
+    print(f"Nome.....: {t[indice]['nome']}")
+    print(f"Idade....: {t[indice]['idade']}")
+    print(f"Cidade...: {t[indice]['cidade']}")
+    print(f"Faculdade: {t[indice]['faculdade']}")
 
 def listar_registros(t: list) -> None:
     os.system("cls")
