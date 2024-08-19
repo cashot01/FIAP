@@ -7,23 +7,23 @@ notas = {'Joao' :  9.5,
 
 # Rotina de cadastro de Aluno | Nota
 def cadastrar_aluno():
-    mensagem_titulo("Cadastrando Aluno")
+    mensagem_titulo(margem + "Cadastrando Aluno")
     if len(notas) <= 10:
-        nome = input("Nome: ")
+        nome = input(margem + "Nome: ")
         if nome == "":
-            mensagem("!", "Proibido nome em branco!")
+            mensagem("!", margem + "Proibido nome em branco!")
         else:
             if notas.get(nome) != None:
-                mensagem('!', f"Ja existe o aluno {nome}")
+                mensagem('!', margem + f"Ja existe o aluno {nome}")
             else:
-                nota = input("Nota: ") # "22"
-                if nota_valida(nota): # "34.6.4"
+                nota = input("Nota: ") # 22
+                if nota_valida(nota):
                     notas[nome] = float(nota)
-                    mensagem("*", "Aluno cadastrado com sucesso!")
+                    mensagem("*", margem + "Aluno cadastrado com sucesso!")
                 else:
-                    mensagem("!", f"A nota {nota} é inválida!")
+                    mensagem("!", margem + f"A nota {nota} é inválida!")
     else:
-        mensagem("!","A turma está lotada com 10 alunos!")
+        mensagem("!",margem + "A turma está lotada com 10 alunos!")
     input(msg_continuar)
 
 # Rotina de Edição de Aluno | Nota
@@ -48,16 +48,15 @@ def listar_alunos():
     print("\nNOME           NOTA")
     print("-------------------")
     for nome, nota in notas.items():
-        espaco = 15 - len(nome) # 15 - 5 = 10
-        print(f"{nome}{espaco * ' '}{nota:4.1f}") # '10.0'
-
-    input(msg_continuar) # input manco
+        espaco = 15 - len(nome) # Marcelo 7
+        print(f"{nome}{espaco*' '}{nota:4.1f}") # 10.0
+    input(msg_continuar)
 
 # Rotina de Exclusão de Aluno | Nota
 def excluir_aluno():
     mensagem_titulo("Excluindo um aluno")
     nome = input("\nNome: ")
-    if not notas.get(nome) :
+    if not notas.get(nome):
         mensagem("!",f"O aluno {nome} não existe!")
     else:
         del notas[nome]
@@ -80,7 +79,6 @@ def calcular_media():
 def consultar_aluno():
     mensagem_titulo("\nConsultando um aluno")
     nome = input("\nNome: ")
-
     if notas.get(nome):
         nota = notas[nome]
         print("\nNOME           NOTA")
@@ -93,21 +91,21 @@ def consultar_aluno():
 # Verifica se uma string 'v' é float.
 # Parâmetro: v -> str
 # Retorno: bool
-def isfloat(v: str) -> bool: # "346.4"
-    valor_aux = v.replace('.','',1) # substitua o primeiro ponto por vazio # "346.4" 
-    return valor_aux.isdigit() # "346.4" False
+def isfloat(v: str) -> bool: # 
+    valor_aux = v.replace('.','',1)
+    return valor_aux.isdigit() # True
 
 # Verifica se um valor 'n' corresponde a uma nota.
 # Parâmetro: n -> float
 # Retorno: bool
-def isValida(n: float) -> bool: # 22
+def isValida(n: float) -> bool:
     return n >= 0 and n <= 10 # False
 
 # Verifica se um valor 'n' corresponde a uma nota, valor float válido.
 # Parâmetro: n -> str
 # Retorno: bool
-def nota_valida(n: str) -> bool: # "34.6.4"
-    if isfloat(n): # "34.6.4"
+def nota_valida(n: str) -> bool: # 22
+    if isfloat(n):
         n = float(n) # "22" -> 22
         if isValida(n): # 22
             return True
@@ -129,7 +127,7 @@ def mensagem(carac:str, msg: str) -> None:
 # Retorno: None
 def mensagem_titulo(msg: str) -> None:
     tamanho = len(msg)
-    print(f"\n{msg}\n{tamanho * '='}")
+    print(f"\n{msg}\n{tamanho*'='}")
 
 # Exibição do menu
 def exibe_menu() -> None:
@@ -148,7 +146,7 @@ def exibe_menu() -> None:
 import os
 
 msg_continuar = "\nPressione alguma tecla para continuar . . ."
-
+margem = 4 * " "
 while True:
     os.system("cls")
  
@@ -182,8 +180,9 @@ while True:
                 mensagem("-","Exclusão cancelada!")
             input(msg_continuar)
         case '8':
-            mensagem_titulo("Olha que legal este baguio")
+            mensagem('?','Confirma a gravação?')
             input(msg_continuar)
         case _:
             mensagem("*","OPÇÃO INVÁLIDA!")
             input(msg_continuar)
+                
