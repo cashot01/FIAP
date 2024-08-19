@@ -150,7 +150,7 @@ import os
 msg_continuar = "\nPressione alguma tecla para continuar . . ."
 
 while True:
-    os.system("clear")
+    os.system("cls")
  
     exibe_menu()
     escolha = input("Escolha: ")
