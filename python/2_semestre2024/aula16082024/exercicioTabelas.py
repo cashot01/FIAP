@@ -26,8 +26,20 @@ def voltar_menu(msg: str) -> None:
     msg = input(msg)
     os.system("cls")
 
+"""
+retorna o numero do indice se encontrado, caso contrario retorna -1
+t: Tabela -> list
+
+"""
+def busca_cpf(t: list, cpf: int) -> int:
+    for i in range(0, len(t), 1):
+        if t[i]['cpf'] == cpf:
+            return i
+    return -1
+
 
 def consultar():
+    os.system("cls")
     print("consulta\n")
     cpf = input("cpf: ")
 
@@ -39,6 +51,8 @@ def consultar():
 
     voltar_menu(msg_continuar)
 
+
+
 def listar_registros(t: list) -> None:
     os.system("cls")
     for i in range(0, len(tabela), 1):
@@ -49,6 +63,10 @@ def listar_registros(t: list) -> None:
         print(f"Cidade...............: {t[i]['cidade']}")
         print(f"Faculdade............: {t[i]['faculdade']} \n")
     voltar_menu(msg_continuar)
+
+def editar(t: list, i: int, id: int) -> None:
+    exibe_funcionario(t, i)
+    t[retorno]['cpf'] = id
 
 def cadastrar() -> None:
     os.system("cls")
