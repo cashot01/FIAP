@@ -70,7 +70,7 @@ def listar_registros(t: list) -> None:
     voltar_menu(msg_continuar)
 
 def editar(t: list, i: int, id: int) -> None:
-    exibe_funcionario(t, i)
+    exibe_registro(t, i)
     t[retorno]['cpf'] = id
 
 def cadastrar() -> None:
