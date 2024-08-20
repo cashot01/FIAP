@@ -1,14 +1,22 @@
 
 
 
+type Comp1Props = {
+    curso:string;
+    aviso: ()=> void
+    children: React.ReactNode;
+}
 
-export default function Componente1(props:{curso:string, aviso: () => void}){
+
+
+export default function Componente1({curso, aviso, children}:Comp1Props){
 
     return(
         <div>
             <p>usando um pouco de typescript</p>
-            <p>Curso: {props.curso}</p>
-            <button onClick={()=> props.aviso()}>Aviso</button>
+            <p>Curso: {curso}</p>
+            {children}
+            <button onClick={()=> aviso()}>Aviso</button>
         </div>
     )
 }
