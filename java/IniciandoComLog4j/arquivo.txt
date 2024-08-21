@@ -1,0 +1,1 @@
+Esse é o conteúdo que será exportado para o arquivo txt
