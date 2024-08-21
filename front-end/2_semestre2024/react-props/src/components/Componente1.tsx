@@ -1,11 +1,5 @@
+import { Comp1Props, Comp2Props } from "../types"
 
-type Comp1Props = {
-    children: React.ReactNode;
-}
-
-type Comp2Props = {
-    autor:string;
-}
 
 export default function Componente1({children, autor}:Comp1Props & Comp2Props){
 

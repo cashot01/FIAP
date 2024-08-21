@@ -1,9 +1,5 @@
+import { CabecProps } from "../types"
 
-type CabecProps ={
-    titulo:string;
-    codigo:number;
-    info: ()=> void;
-}
 
 export default function Cabecalho(props:CabecProps){
     // props - objeto

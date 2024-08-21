@@ -1,9 +1,5 @@
+import { AlunoProps } from "../types"
 
-type AlunoProps= {
-    nome:string;
-    idade:number;
-    index:number;
-}
 
 export default function Cards({nome, idade, index}:AlunoProps){
 
