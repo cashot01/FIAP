@@ -18,6 +18,7 @@ create table Aluno(
     dt_nascimento date,
     cpf varchar(15),
     rg varchar(15), 
+    sexo char(1) check(sexo='f' or sexo='m' or sexo='i'),
     CONSTRAINT uk_rg_cpf UNIQUE(cpf, rg) -- chave unica composta 
 );
 
