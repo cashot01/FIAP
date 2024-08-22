@@ -29,3 +29,11 @@ create table Contato(
     celular varchar(12) not null,
     id_aluno int references Aluno(id_aluno) -- chave estrangeira
 );
+
+
+-- UTILIZAMOS APENAS O DROP QUANDO A TABELA ESTÁ VAZIA DE LINHAS
+-- QUANDO A TABELA TEM LINHAS, UTILIZAR O ALTER
+-- O COMANDO DROP APAGA A TABELA E AS SUAS LINHAS
+
+drop table Contato;
+drop table Aluno;
