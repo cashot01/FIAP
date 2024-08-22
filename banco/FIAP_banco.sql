@@ -20,3 +20,12 @@ create table Aluno(
     rg varchar(15), 
     CONSTRAINT uk_rg_cpf UNIQUE(cpf, rg) -- chave unica composta 
 );
+
+create table Contato(
+    id_contato int primary key,
+    grau_parentesco varchar(20) not null,
+    res_telefone varchar(12),
+    email varchar(255),
+    celular varchar(12) not null,
+    id_aluno int references Aluno(id_aluno) -- chave estrangeira
+);
