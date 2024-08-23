@@ -46,23 +46,25 @@ perguntas = {
     },
     }
     
-def quiz():
-    acertos = 0
+def provaMatematica():
+    pontos = 0
     total_perguntas = len(perguntas)
     for pergunta in perguntas.values():
         os.system("cls")
         print(f"\n{pergunta['pergunta']}\n")
         for resposta, valor in pergunta['respostas'].items():
-            print(f"{resposta}: {valor}")
+            print(f"{resposta}: {valor} \n")
         resposta_usuario = input("Alternativa:  ")
         if resposta_usuario == pergunta['resposta_certa']:
             print("Parabens, Resposta correta!")
-            acertos += 1
+            pontos += 1
         else:
             print(f" !!! Resposta incorreta !!!")
-    porcentagem_acertos = (acertos / total_perguntas) * 100
-    print(f"\nVocê acertou {acertos} de {total_perguntas} perguntas.")
-    print(f"Sua porcentagem de acertos é de {porcentagem_acertos:.2f}%.")
+    porcentagem_pontos = (pontos / total_perguntas) * 100
+    os.system("cls")
+    print("==========================================================")
+    print(f"\nVocê acertou {pontos} perguntas.")
+    print(f"Sua porcentagem de acerto foi {porcentagem_pontos:.2f}%\n")
+    print("==========================================================")
 
-
-quiz()
+provaMatematica()
