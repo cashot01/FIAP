@@ -56,10 +56,10 @@ def quiz():
             print(f"{resposta}: {valor}")
         resposta_usuario = input("Alternativa:  ")
         if resposta_usuario == pergunta['resposta_certa']:
-            print("Resposta correta!")
+            print("Parabens, Resposta correta!")
             acertos += 1
         else:
-            print(f"Resposta incorreta.")
+            print(f" !!! Resposta incorreta !!!")
     porcentagem_acertos = (acertos / total_perguntas) * 100
     print(f"\nVocê acertou {acertos} de {total_perguntas} perguntas.")
     print(f"Sua porcentagem de acertos é de {porcentagem_acertos:.2f}%.")
