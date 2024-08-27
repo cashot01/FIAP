@@ -1,0 +1,7 @@
+/* css module só faz com classes*/
+
+.div1{
+    border: 2px solid orange;
+    padding: 20px;
+    background-color: rgba(255, 166, 0, 0.677);
+}

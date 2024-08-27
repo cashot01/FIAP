@@ -1,34 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Cabecalho from './components/Cabecalho'
+import Componente1 from './components/Componente1'
+import Componente2 from './components/Componente2'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const paragr = {
+    color:'blue',
+    backgroundColor:'#ddf',
+    padding:'15px'
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='div1'>
+      <Cabecalho/>
+      {/* estilo inline*/}
+      <p style={{color:'green', backgroundColor:'#dfd'}}>Este é um exemplo de comok usar CSS em React</p>
+      <p style={paragr}>Um segundo paragrafo</p>
+      <Componente1/>
+      <Componente2/>
+    </div>
   )
 }
 
