@@ -1,8 +1,10 @@
+import { MainGeral } from "../../styled"
+
 export default function Home(){
 
     return (
-        <main>
+        <MainGeral>
             <h1>Home</h1>
-        </main>
+        </MainGeral>
     )
 }

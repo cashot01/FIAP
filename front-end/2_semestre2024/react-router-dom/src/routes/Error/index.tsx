@@ -1,9 +1,10 @@
+import { MainError } from "../../styled"
 
 export default function Error(){
 
     return (
-        <main>
+        <MainError>
             <h1>Erro 404 - Pagina não encontrada</h1>
-        </main>
+        </MainError>
     )
 }

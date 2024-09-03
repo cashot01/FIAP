@@ -11,6 +11,7 @@ import Home from './routes/Home/index.tsx'
 import Produtos from './routes/Produtos/index.tsx'
 import Error from './routes/Error/index.tsx'
 import EditarProdutos from './routes/EditarProdutos/index.tsx'
+import GlobalStyle from './global-style.ts'
 
 
 const router = createBrowserRouter([
@@ -40,5 +41,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <GlobalStyle/>
   </StrictMode>,
 )

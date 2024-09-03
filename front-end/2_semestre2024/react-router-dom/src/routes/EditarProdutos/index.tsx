@@ -1,9 +1,10 @@
+import { MainGeral } from "../../styled"
 
 export default function EditarProdutos(){
 
     return(
-        <main>
+        <MainGeral>
             <h1>Editar Produtos</h1>
-        </main>
+        </MainGeral>
     )
 }

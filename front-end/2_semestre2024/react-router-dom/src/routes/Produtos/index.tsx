@@ -1,9 +1,10 @@
+import { MainGeral } from "../../styled"
 
 export default function Produtos(){
 
     return(
-        <main>
+        <MainGeral>
             <h1>Produtos</h1>
-        </main>
+        </MainGeral>
     )
 }

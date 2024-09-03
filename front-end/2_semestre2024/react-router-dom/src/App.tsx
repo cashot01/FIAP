@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      <Menu/>
-      <Outlet/>
-      <Rodape/>
+      <Menu/> {/** Elemento Menu fica fixo na pagina */}
+      <Outlet/> {/** Outlet é onde sera chamado o corpo da pagina */}
+      <Rodape/> {/** Elemento Rodape fica fix na pagina */}
     </>
   )
 }

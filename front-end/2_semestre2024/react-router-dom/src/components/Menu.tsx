@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
+import { NavMenu } from "../styled";
 
 export default function Menu(){
 
     return (
-        <nav>
+        <NavMenu>
             <Link to='/'>Home</Link>
             <span> | </span>
             <Link to='/produtos'>Produtos</Link>
             
-        </nav>
+        </NavMenu>
     )
 }
