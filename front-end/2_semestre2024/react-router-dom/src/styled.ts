@@ -66,6 +66,27 @@ export const MainError = styled.main`
     h1{
         color: #f00;
         font-size: 4em;
+        text-align: center;
+    }
+
+`
+
+export const SectionPropagandas = styled.section`
+
+    background-color: #fdd;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        text-align: center;
+        margin: 10px;
+    }
+
+    p{
+        text-align: justify;
+        margin: 5px;
     }
 
 `
