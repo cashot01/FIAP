@@ -94,7 +94,7 @@ def grava_prova_aluno(t: list, nome: str, nota: float) -> None:
 import os
 proxima_pergunta = 4
 while True:
-    os.system("clear")
+    os.system("cls")
     exibe_menu()
     escolha = input("\nEscolha: ")
     match escolha:

@@ -1,5 +1,5 @@
 import os
-os.system("clear")
+os.system("cls")
 
 '''
 MODOS DE ABERTURA
