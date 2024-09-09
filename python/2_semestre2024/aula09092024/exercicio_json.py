@@ -42,7 +42,7 @@ def exibe_menu():
     print("3 - Editar registros")
 
 def cadastrar_novo_registro():
-    
+
 
 
 # programa principal
