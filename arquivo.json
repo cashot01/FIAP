@@ -1,0 +1,17 @@
+{
+    "pessoa1": {
+        "nome": "Edson",
+        "idade": 48,
+        "email": "eds@gmail.com"
+    },
+    "pessoa2": {
+        "nome": "Jose",
+        "idade": 23,
+        "email": "jose@gmail.com"
+    },
+    "pessoa3": {
+        "nome": "Maria",
+        "idade": 44,
+        "email": "maria@gmail.com"
+    }
+}
