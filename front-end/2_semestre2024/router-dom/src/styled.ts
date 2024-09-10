@@ -74,4 +74,8 @@ export const Section1 = styled.section`
     border: 2px solid blue;
     padding: 10px;
 
+    @media (max-width: 700px){
+        background-color: yellow;
+    }
+
 `
