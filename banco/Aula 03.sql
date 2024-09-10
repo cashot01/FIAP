@@ -1,3 +1,5 @@
+
+
 CREATE TABLE T_ENDERECO(
   cep int,
   logradouro varchar(100) CONSTRAINT nn_log NOT NULL ,
