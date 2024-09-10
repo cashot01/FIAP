@@ -1,9 +1,12 @@
+import { MainGeral } from "../../styled"
+import Materia1 from "./Materia1"
 
 export default function Home(){
 
     return(
-        <main>
+        <MainGeral>
             <h1>Home</h1>
-        </main>
+            <Materia1/>
+        </MainGeral>
     )
 }
