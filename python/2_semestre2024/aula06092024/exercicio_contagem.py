@@ -3,10 +3,9 @@ os.system("cls")
 from collections import Counter
 
 
+
 def menu():
-    """Exibe o menu principal e lida com as opções escolhidas pelo usuário."""
     while True:
-        print("Menu de Opções:")
         print("1. Adicionar um novo texto")
         print("2. Mostrar a palavra mais utilizada")
         print("3. Sair")
