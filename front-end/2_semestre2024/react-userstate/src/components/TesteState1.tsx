@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function TesteState1(){
-    const [nome, setNome] = useState('João')
+    const [nome, setNome] = useState<string>('João')
 
     return(
         <div>

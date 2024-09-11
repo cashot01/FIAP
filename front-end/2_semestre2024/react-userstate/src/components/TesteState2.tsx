@@ -3,7 +3,7 @@ import { useState } from "react"
 
 export default function TesteState2(){
 
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState<number>(0);
     let valorVariavel = 0
 
     const aumentar = ()=>{
