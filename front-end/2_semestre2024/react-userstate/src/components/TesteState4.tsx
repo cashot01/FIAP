@@ -4,7 +4,7 @@ import Filho from "./Filho";
 
 export default function TesteState4(){
 
-    const [filho, setFilho] = useState(false)
+    const [filho, setFilho] = useState<boolean>(false)
 
     return(
         <div>

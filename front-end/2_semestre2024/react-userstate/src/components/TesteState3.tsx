@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function TesteState3(){
 
-    const [nome, setNome] = useState('')
+    const [nome, setNome] = useState<string>('')
 
     return(
         <div>
