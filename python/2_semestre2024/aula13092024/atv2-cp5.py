@@ -25,12 +25,10 @@ while True:
                 novo_contato['nome'] = input("Nome: ")
                 novo_contato['idade'] = input("Idade: ")
                 print("Cadastrado com sucesso!")
+            
                 
                 
 
     else:
-        print(f"""\n
-        CPF: {novo_contato['cpf']}
-        NOME: {novo_contato['nome']}
-        IDADE: {novo_contato['idade']}
-        """)
+        print("Programa finalizado")
+        break
