@@ -1,4 +1,6 @@
 # CAUAN ARANEGA S PASSOS RM555466
+# Lucas Fialho - RM557884
+
 import os
 os.system("cls")
 
