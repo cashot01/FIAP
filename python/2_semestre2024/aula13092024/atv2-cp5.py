@@ -8,7 +8,7 @@ contatos = []
 contato = {
     'cpf': '',
     'nome': '',
-    'idade': int
+    'idade': ''
 }
 
 contatos.append(contato.copy())
@@ -22,13 +22,11 @@ while True:
                     print(f"{k} : {v}")
 
             else:
-                novo_contato = {}
-                novo_contato['cpf'] = cpf
-                novo_contato['nome'] = input("Nome: ")
-                novo_contato['idade'] = input("Idade: ")
-                print("Cadastrado com sucesso!")
-            
-                
+                contato = {}
+                contato['cpf'] = cpf
+                contato['nome'] = input("Nome: ")
+                contato['idade'] = input("Idade: ")
+                print("Cadastrado com sucesso!")        
                 
 
     else:
