@@ -12,8 +12,9 @@ public class Main {
 
         var produtoRespositorio = new ProdutoRespositorio();
 
-        var produto = new Produto(0, "Sprite", 5.5);
-
-        produtoRespositorio.Insert(produto);
+        //var produto = new Produto(0, "Sprite", 5.5);
+        //produtoRespositorio.Insert(produto);
+        var produtos = produtoRepositorio.GetAll();
+        produtos.forEach(System.out::println);
     }
 }

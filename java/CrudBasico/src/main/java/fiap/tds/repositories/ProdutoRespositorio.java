@@ -5,6 +5,7 @@ import fiap.tds.infrastructure.DatabaseConfig;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoRespositorio implements _CrudRepositorio<Produto> {
@@ -52,7 +53,34 @@ public class ProdutoRespositorio implements _CrudRepositorio<Produto> {
 
     @Override
     public List<Produto> GetAll() {
-        return List.of();
+        var produtos = new ArrayList<Produto>();
+        try{
+            // 1 - registrar o driver, fazer a conexão
+            var conn = DatabaseConfig.getConnection();
+            // 2 - criar o statement e definir a querry
+            var query = "SELECT * FROM PRODUTOS ORDER BY ID";
+            var stmt = conn.prepareStatement(query);
+            // 3 - executar a query
+            var rs = stmt.executeQuery();
+            // 4 - iterar sobre o resultado
+            while (rs.next()){
+                var id = rs.getInt("ID");
+                var nome = rs.getString("NOME");
+                var preco = rs.getDouble("PRECO");
+                produtos.add(new Produto(id, nome, preco));
+            }
+            // 5 - fechar o resultset
+            rs.close();
+            // 6 - fechar o sattement
+            stmt.close();
+            // 7 - fechar conexão
+            conn.close();
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return produtos;
     }
 
 }
