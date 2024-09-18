@@ -1,7 +1,9 @@
 package repositorio;
 
 import entidade.Musica;
+import infraestrutura.ConexaoBD;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,6 +14,9 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
     public void Insert(Musica entity) {
         try{
             var conn = ConexaoBD.getConnection();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 
