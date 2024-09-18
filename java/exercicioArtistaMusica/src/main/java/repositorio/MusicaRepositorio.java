@@ -44,7 +44,7 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
             stmt.executeUpdate();
             stmt.close();
             conn.close();
-            
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -71,7 +71,30 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
 
     @Override
     public Optional<Musica> GetById(int id) {
-        return Optional.empty();
+        Optional<Musica> musica = Optional.empty();
+        try{
+            var conn = ConexaoBD.getConnection();
+            var query = "SELECT * FROM MUSICAS WHERE ID = ?";
+            var stmt = conn.prepareStatement(query);
+            stmt.setInt(1, id);
+            var rs = stmt.executeQuery();
+            if(rs.next()){
+                var _id = rs.getInt("ID");
+                var nomeMusica = rs.getString("NOMEMUSICA");
+                var duracao = rs.getDouble("DURACAO");
+                var dataLancamento = rs.getDate("DATALANCAMENTO");
+                musica = Optional.of(new Musica(_id, nomeMusica, duracao, dataLancamento));
+            }
+            rs.close();
+            stmt.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return musica;
+
     }
 
     @Override
