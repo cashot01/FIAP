@@ -2,7 +2,8 @@ package entidade;
 
 import java.util.Date;
 
-public class Musica extends _EntidadeBase {
+public class Musica {
+    private int id;
     private String nomeMusica;
     private  double duracao;
     private Date dataLancamento;

@@ -1,6 +1,7 @@
 package entidade;
 
-public class Artista extends _EntidadeBase{
+public class Artista {
+    private int id;
     private String nome;
     private String generoMusial;
 
@@ -8,9 +9,17 @@ public class Artista extends _EntidadeBase{
     }
 
     public Artista(int id, String nome, String generoMusial) {
-        super(id);
+        this.id = id;
         this.nome = nome;
         this.generoMusial = generoMusial;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -32,8 +41,9 @@ public class Artista extends _EntidadeBase{
     @Override
     public String toString() {
         return "Artista{" +
-                "nome='" + nome + '\'' +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
                 ", generoMusial='" + generoMusial + '\'' +
-                "} " + super.toString();
+                '}';
     }
 }
