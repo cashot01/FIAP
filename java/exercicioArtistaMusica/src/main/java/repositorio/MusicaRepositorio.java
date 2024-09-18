@@ -19,7 +19,10 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
             var stmt = conn.prepareStatement(query);
             stmt.setString(1, musica.getNomeMusica());
             stmt.setDouble(2, musica.getDuracao());
-
+            stmt.setDate(3, musica.getDataLancamento());
+            stmt.executeUpdate();
+            stmt.close();
+            conn.close();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -28,6 +31,15 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
 
     @Override
     public void Update(Musica entity, int id) {
+        try {
+            var conn = ConexaoBD.getConnection();
+            var query =
+                    "UPDATE MUSICAS SET NOMEMUSICA = ?, DURACAO = ?, DATALANCAMENTO = ? WHERE ID = ?";
+            
+            var stmt = conn.prepareStatement(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
