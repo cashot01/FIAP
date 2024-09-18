@@ -117,9 +117,11 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
             rs.close();
             stmt.close();
             conn.close();
-            
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        return musicas;
     }
 }
