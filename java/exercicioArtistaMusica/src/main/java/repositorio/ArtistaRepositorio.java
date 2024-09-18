@@ -41,7 +41,7 @@ public class ArtistaRepositorio implements _RepositorioBase<Artista>{
             stmt.executeUpdate();
             stmt.close();
             conn.close();
-            
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -50,6 +50,19 @@ public class ArtistaRepositorio implements _RepositorioBase<Artista>{
 
     @Override
     public void Delete(int id) {
+        try{
+            var conn = ConexaoBD.getConnection();
+            var query =
+                    "DELETE FROM ARTISTAS WHERE ID = ?";
+            var stmt = conn.prepareStatement(query);
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            stmt.close();
+            conn.close();
+            
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
