@@ -1,13 +1,30 @@
 package repositorio;
 
 import entidade.Artista;
+import infraestrutura.ConexaoBD;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
 public class ArtistaRepositorio implements _RepositorioBase<Artista>{
+
     @Override
-    public void Insert(Artista entity) {
+    public void Insert(Artista artista) {
+        try{
+            var conn = ConexaoBD.getConnection();
+            var query =
+                    "INSERT INTO MUSICAS (ID, NOME, GENEROMUSICAL) VALUES (DEFAULT,?,?)";
+            var stmt = conn.prepareStatement(query);
+            stmt.setString(1, artista.getNome());
+            stmt.setString(2, artista.getGeneroMusial());
+            stmt.executeUpdate();
+            stmt.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -28,6 +45,6 @@ public class ArtistaRepositorio implements _RepositorioBase<Artista>{
 
     @Override
     public List<Artista> GetAll() {
-        return List.of();
+        return null;
     }
 }
