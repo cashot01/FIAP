@@ -11,9 +11,15 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
 
 
     @Override
-    public void Insert(Musica entity) {
+    public void Insert(Musica musica) {
         try{
             var conn = ConexaoBD.getConnection();
+            var query =
+                    "INSERT INTO MUSICAS (NOMEMUSICA, DURACAO, DATALANCAMENTO) VALUES (DEFAULT,?,?)";
+            var stmt = conn.prepareStatement(query);
+            stmt.setString(1, musica.getNomeMusica());
+            stmt.setDouble(2, musica.getDuracao());
+            
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
