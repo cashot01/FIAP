@@ -35,7 +35,7 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
             var conn = ConexaoBD.getConnection();
             var query =
                     "UPDATE MUSICAS SET NOMEMUSICA = ?, DURACAO = ?, DATALANCAMENTO = ? WHERE ID = ?";
-            
+
             var stmt = conn.prepareStatement(query);
         } catch (SQLException e) {
             throw new RuntimeException(e);
