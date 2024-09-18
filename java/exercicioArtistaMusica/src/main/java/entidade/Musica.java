@@ -12,10 +12,18 @@ public class Musica {
     }
 
     public Musica(int id, String nomeMusica, double duracao, Date dataLancamento) {
-        super(id);
+        this.id = id;
         this.nomeMusica = nomeMusica;
         this.duracao = duracao;
         this.dataLancamento = dataLancamento;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNomeMusica() {
@@ -45,9 +53,10 @@ public class Musica {
     @Override
     public String toString() {
         return "Musica{" +
-                "nomeMusica='" + nomeMusica + '\'' +
+                "id=" + id +
+                ", nomeMusica='" + nomeMusica + '\'' +
                 ", duracao=" + duracao +
                 ", dataLancamento=" + dataLancamento +
-                "} " + super.toString();
+                '}';
     }
 }
