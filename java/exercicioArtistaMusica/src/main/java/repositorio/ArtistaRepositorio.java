@@ -30,6 +30,21 @@ public class ArtistaRepositorio implements _RepositorioBase<Artista>{
 
     @Override
     public void Update(Artista entity, int id) {
+        try{
+            var conn = ConexaoBD.getConnection();
+            var query =
+                    "UPDATE ARTISTAS SET NOME = ?, GENEROMUSICAL = ? WHERE ID = ?";
+            var stmt = conn.prepareStatement(query);
+            stmt.setString(1, entity.getNome());
+            stmt.setString(2, entity.getGeneroMusial());
+            stmt.setInt(3, id);
+            stmt.executeUpdate();
+            stmt.close();
+            conn.close();
+            
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
