@@ -105,7 +105,6 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
             var conn = ConexaoBD.getConnection();
             var query = "SELECT * FROM MUSICAS WHERE NOME LIKE ? ORDER BY ID";
             var stmt = conn.prepareStatement(query);
-            stmt.setString(1, "%" + name + "%");
             var rs = stmt.executeQuery();
             while (rs.next()){
                 var id = rs.getInt("ID");
