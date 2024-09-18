@@ -11,7 +11,7 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
     @Override
     public void Insert(Musica entity) {
         try{
-            var conn =
+            var conn = ConexaoBD.getConnection();
         }
     }
 

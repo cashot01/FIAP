@@ -8,7 +8,7 @@ import java.util.Optional;
 public class ArtistaRepositorio implements _RepositorioBase<Artista>{
     @Override
     public void Insert(Artista entity) {
-        
+
     }
 
     @Override
