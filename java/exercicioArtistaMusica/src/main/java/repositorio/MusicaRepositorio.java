@@ -5,6 +5,7 @@ import infraestrutura.ConexaoBD;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -99,6 +100,26 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
 
     @Override
     public List<Musica> GetAll() {
-        return List.of();
+        var musicas = new ArrayList<Musica>();
+        try{
+            var conn = ConexaoBD.getConnection();
+            var query = "SELECT * FROM MUSICAS WHERE NOME LIKE ? ORDER BY ID";
+            var stmt = conn.prepareStatement(query);
+            stmt.setString(1, "%" + name + "%");
+            var rs = stmt.executeQuery();
+            while (rs.next()){
+                var id = rs.getInt("ID");
+                var nomeMusica = rs.getString("NOMEMUSICA");
+                var duracao = rs.getDouble("DURACAO");
+                var dataLancamento = rs.getDate("DATALANCAMENTO");
+                musicas.add(new Musica(id, nomeMusica, duracao, dataLancamento));
+            }
+            rs.close();
+            stmt.close();
+            conn.close();
+            
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
