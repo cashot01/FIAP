@@ -15,11 +15,11 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
         try{
             var conn = ConexaoBD.getConnection();
             var query =
-                    "INSERT INTO MUSICAS (NOMEMUSICA, DURACAO, DATALANCAMENTO) VALUES (DEFAULT,?,?)";
+                    "INSERT INTO MUSICAS (ID, NOMEMUSICA, DURACAO, DATALANCAMENTO) VALUES (DEFAULT,?,?)";
             var stmt = conn.prepareStatement(query);
             stmt.setString(1, musica.getNomeMusica());
             stmt.setDouble(2, musica.getDuracao());
-            
+
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -33,6 +33,19 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
 
     @Override
     public void Delete(int id) {
+        try{
+            var conn = ConexaoBD.getConnection();
+            var query =
+                    "DELETE FROM MUSICAS WHERE ID = ?";
+            var stmt = conn.prepareStatement(query);
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            stmt.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
