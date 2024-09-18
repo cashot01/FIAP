@@ -97,18 +97,18 @@ public class ArtistaRepositorio implements _RepositorioBase<Artista>{
 
     @Override
     public List<Artista> GetAll() {
-        var artistas = new ArrayList<Musica>();
+        var artistas = new ArrayList<Artista>();
         try{
             var conn = ConexaoBD.getConnection();
-            var query = "SELECT * FROM ARTISTAS WHERE NOME LIKE ? ORDER BY ID";
+            var query =
+                    "SELECT * FROM ARTISTAS WHERE NOME LIKE ? ORDER BY ID";
             var stmt = conn.prepareStatement(query);
-            stmt.setString(1, "%" + nome + "%");
             var rs = stmt.executeQuery();
             while (rs.next()){
                 var id = rs.getInt("ID");
                 var nome = rs.getString("NOME");
                 var generomusical = rs.getString("GENEROMUSICAL");
-                artistas.add(new Musica(id, nome, generomusical));
+                artistas.add(new Artista(id, nome, generomusical));
             }
             rs.close();
             stmt.close();
@@ -118,7 +118,7 @@ public class ArtistaRepositorio implements _RepositorioBase<Artista>{
             throw new RuntimeException(e);
         }
 
-        return musicas;
+        return artistas;
     }
 
 }
