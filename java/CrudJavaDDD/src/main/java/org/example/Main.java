@@ -14,19 +14,19 @@ public class Main {
 
 
 
-        var artista = new Artista(1,"MC IG");
+        var artista = new Artista(1,"MC Daniel");
         artistaRepositorio.Cadastrar(artista);
-        var artista2 = new Artista(2,"Cristiano Araújo");
+        var artista2 = new Artista(2,"Gustavo Lima");
         artistaRepositorio.Cadastrar(artista2);
 
-        var musica3 = new Musica(3, "Sorriso no Rosto", 148, artista);
-        var musica4 = new Musica(4, "Goodnight Menina 3", 209, artista);
+        var musica3 = new Musica(3, "Dentro da Hilux", 148, artista);
+        var musica4 = new Musica(4, "Vamo de Pagodin", 209, artista);
         artista.getMusicas().add(musica3);
         artista.getMusicas().add(musica4);
 
 
-        var musica = new Musica(1, "É Com Ela Que Estou", 226, artista2);
-        var musica2 = new Musica(2, "Caso Indefinido", 215, artista2);
+        var musica = new Musica(1, "60 segundos", 226, artista2);
+        var musica2 = new Musica(2, "Desejo Imortal", 215, artista2);
         artista.getMusicas().add(musica);
         artista.getMusicas().add(musica2);
 
