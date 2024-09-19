@@ -102,6 +102,21 @@ WHERE table_name='T_ALUNO';
 -- EXIBIR A ESTRUTURA DA TABELA
 
 DESC T_ALUNO;
+
 -- OU
 DESCRIBE T_ALUNO;
+
+SELECT * FROM t_endereco;
+
+SELECT * FROM T_ALUNO;
+
+-- insert generico
+INSERT INTO t_endereco VALUES (0122345, 'Av. Paulista', 'Centro', 'São Paulo', 'SP');
+
+
+
+INSERT INTO t_endereco (cep, logradouro, bairro, cidade)
+VALUES (0123454, 'Av. Ipiranga', 'Centro', 'Sao Paulo')
+
+
 
