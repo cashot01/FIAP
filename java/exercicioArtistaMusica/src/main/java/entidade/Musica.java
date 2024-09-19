@@ -5,13 +5,13 @@ import java.util.Date;
 public class Musica {
     private int id;
     private String nomeMusica;
-    private  double duracao;
+    private  float duracao;
     private Date dataLancamento;
 
     public Musica() {
     }
 
-    public Musica(int id, String nomeMusica, double duracao, Date dataLancamento) {
+    public Musica(int id, String nomeMusica, float duracao, Date dataLancamento) {
         this.id = id;
         this.nomeMusica = nomeMusica;
         this.duracao = duracao;
@@ -34,11 +34,11 @@ public class Musica {
         this.nomeMusica = nomeMusica;
     }
 
-    public double getDuracao() {
+    public float getDuracao() {
         return duracao;
     }
 
-    public void setDuracao(double duracao) {
+    public void setDuracao(float duracao) {
         this.duracao = duracao;
     }
 

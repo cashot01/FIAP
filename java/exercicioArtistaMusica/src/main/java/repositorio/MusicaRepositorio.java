@@ -20,7 +20,7 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
                     "INSERT INTO MUSICAS (ID, NOMEMUSICA, DURACAO, DATALANCAMENTO) VALUES (DEFAULT,?,?)";
             var stmt = conn.prepareStatement(query);
             stmt.setString(1, musica.getNomeMusica());
-            stmt.setDouble(2, musica.getDuracao());
+            stmt.setFloat(2, musica.getDuracao());
             stmt.setDate(3, (Date) musica.getDataLancamento());
             stmt.executeUpdate();
             stmt.close();
@@ -82,7 +82,7 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
             if(rs.next()){
                 var _id = rs.getInt("ID");
                 var nomeMusica = rs.getString("NOMEMUSICA");
-                var duracao = rs.getDouble("DURACAO");
+                var duracao = rs.getFloat("DURACAO");
                 var dataLancamento = rs.getDate("DATALANCAMENTO");
                 musica = Optional.of(new Musica(_id, nomeMusica, duracao, dataLancamento));
             }
@@ -109,7 +109,7 @@ public class MusicaRepositorio implements _RepositorioBase<Musica>{
             while (rs.next()){
                 var id = rs.getInt("ID");
                 var nomeMusica = rs.getString("NOMEMUSICA");
-                var duracao = rs.getDouble("DURACAO");
+                var duracao = rs.getFloat("DURACAO");
                 var dataLancamento = rs.getDate("DATALANCAMENTO");
                 musicas.add(new Musica(id, nomeMusica, duracao, dataLancamento));
             }
