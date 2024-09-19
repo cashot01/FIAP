@@ -3,15 +3,15 @@ package entidade;
 public class Artista {
     private int id;
     private String nome;
-    private String generoMusial;
+    private String generoMusical;
 
     public Artista() {
     }
 
-    public Artista(int id, String nome, String generoMusial) {
+    public Artista(int id, String nome, String generoMusical) {
         this.id = id;
         this.nome = nome;
-        this.generoMusial = generoMusial;
+        this.generoMusical = generoMusical;
     }
 
     public int getId() {
@@ -30,12 +30,12 @@ public class Artista {
         this.nome = nome;
     }
 
-    public String getGeneroMusial() {
-        return generoMusial;
+    public String getGeneroMusical() {
+        return generoMusical;
     }
 
-    public void setGeneroMusial(String generoMusial) {
-        this.generoMusial = generoMusial;
+    public void setGeneroMusical(String generoMusical) {
+        this.generoMusical = generoMusical;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class Artista {
         return "Artista{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", generoMusial='" + generoMusial + '\'' +
+                ", generoMusical='" + generoMusical + '\'' +
                 '}';
     }
 }

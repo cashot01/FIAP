@@ -1,17 +1,18 @@
 package entidade;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Musica {
     private int id;
     private String nomeMusica;
     private  float duracao;
-    private Date dataLancamento;
+    private LocalDate dataLancamento;
 
     public Musica() {
     }
 
-    public Musica(int id, String nomeMusica, float duracao, Date dataLancamento) {
+    public Musica(int id, String nomeMusica, float duracao, LocalDate dataLancamento) {
         this.id = id;
         this.nomeMusica = nomeMusica;
         this.duracao = duracao;
@@ -42,11 +43,11 @@ public class Musica {
         this.duracao = duracao;
     }
 
-    public Date getDataLancamento() {
+    public LocalDate getDataLancamento() {
         return dataLancamento;
     }
 
-    public void setDataLancamento(Date dataLancamento) {
+    public void setDataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 

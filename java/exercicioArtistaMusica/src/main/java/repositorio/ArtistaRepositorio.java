@@ -19,7 +19,7 @@ public class ArtistaRepositorio implements _RepositorioBase<Artista>{
                     "INSERT INTO MUSICAS (ID, NOME, GENEROMUSICAL) VALUES (DEFAULT,?,?)";
             var stmt = conn.prepareStatement(query);
             stmt.setString(1, artista.getNome());
-            stmt.setString(2, artista.getGeneroMusial());
+            stmt.setString(2, artista.getGeneroMusical());
             stmt.executeUpdate();
             stmt.close();
             conn.close();
@@ -38,7 +38,7 @@ public class ArtistaRepositorio implements _RepositorioBase<Artista>{
                     "UPDATE ARTISTAS SET NOME = ?, GENEROMUSICAL = ? WHERE ID = ?";
             var stmt = conn.prepareStatement(query);
             stmt.setString(1, entity.getNome());
-            stmt.setString(2, entity.getGeneroMusial());
+            stmt.setString(2, entity.getGeneroMusical());
             stmt.setInt(3, id);
             stmt.executeUpdate();
             stmt.close();
