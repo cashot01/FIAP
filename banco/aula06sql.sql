@@ -34,3 +34,7 @@ commit;
 rollback;
 
 DELETE FROM T_ENDERECO;
+
+UPDATE T_ENDERECO SET cidade='Campinas';
+rollback;
+
