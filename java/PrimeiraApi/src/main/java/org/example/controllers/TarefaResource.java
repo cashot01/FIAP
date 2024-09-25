@@ -44,7 +44,10 @@ public class TarefaResource {
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void updateTarefa(@PathParam("id") int id, Tarefa tarefaAtualizada){
-
+        tarefas.stream().filter(tarefa -> tarefa.getId() == id)
+                .forEach(tarefa -> {
+                    tarefa.setDescricao(tarefaAtualizada.getDescricao());
+                });
     }
 
     @DELETE
