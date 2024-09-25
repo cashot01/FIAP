@@ -2,14 +2,12 @@
 import { useState } from "react";
 import Tarefa from "./Tarefa";
 import FormTarefas from "./FormTarefas";
+import { TarefaProps } from "@/types";
 
 
 export default function ListaTarefas(){
 
-    const [tarefas, setTarefas] = useState([
-        {titulo:'Lista de Pagamentos', setor:'Dep. Vendas', descricao:'Levantar os valores das Vendas'},
-        {titulo:'Planilha de Salarios', setor:'Dep. Pessoal', descricao:'Gerar Planilhas'}
-    ])
+    const [tarefas, setTarefas] = useState<TarefaProps[]>([])
 
     const [tarefa, setTarefa] = useState({titulo:'', setor:'', descricao:''})
 
