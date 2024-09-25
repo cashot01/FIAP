@@ -37,3 +37,26 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.form-tarefa{
+  width: 100%;
+  padding: 20px;
+  background-color: #993;
+
+  form{
+    width: 50%;
+    margin: auto;
+  }
+
+  input{
+    padding: 5px;
+    width: 80%;
+    margin-bottom: 5px;
+  }
+
+  button{
+    padding: 10px;
+    background-color: #3c3;
+    color: #fff;
+  }
+}
