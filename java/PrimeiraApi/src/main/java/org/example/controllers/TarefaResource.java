@@ -2,6 +2,7 @@ package org.example.controllers;
 
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 import org.example.models.Tarefa;
 
 import java.util.ArrayList;
@@ -26,18 +27,44 @@ public class TarefaResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @Path("page/{page}")
+    public List<Tarefa> getTarefasPaginadas(
+            @PathParam("page") int page)
+    {
+        int pageSize = 2;
+        int fromIndex = (page - 1)* pageSize;
+        if(fromIndex + pageSize >= tarefas.size()){
+            return tarefas.subList(fromIndex, tarefas.size());
+        }
+
+        return tarefas.subList(fromIndex, fromIndex + pageSize);
+
+
+    }
+    
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
     @Path("{id}")
-    public Tarefa getTarefa(@PathParam("id") int id){
-        return tarefas.stream()
+    public Response getTarefa(@PathParam("id") int id){
+         Tarefa t = tarefas.stream()
                 .filter(tarefa -> tarefa.getId() == id)
                 .findFirst()
                 .orElse(null);
+
+         if(t != null)
+             return Response.status(Response.Status.OK).entity(t).build();
+
+         return Response.status(Response.Status.NOT_FOUND).build();
     }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void addTarefa(Tarefa novaTarefa){
+    public Response addTarefa(Tarefa novaTarefa){
         tarefas.add(novaTarefa);
+        return Response.status(Response.Status.CREATED)
+                .entity(novaTarefa)
+                .build();
     }
 
     @PUT
