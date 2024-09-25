@@ -40,7 +40,12 @@ public class TarefaResource {
         tarefas.add(novaTarefa);
     }
 
+    @PUT
+    @Path("{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void updateTarefa(@PathParam("id") int id, Tarefa tarefaAtualizada){
 
+    }
 
     @DELETE
     @Path("{id}")
