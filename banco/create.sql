@@ -113,5 +113,7 @@ SELECT taxa_aprovacao, ROUND(taxa_aprovacao, 2) tx_arr FROM ESCOLAS_DADOS WHERE 
 -- REMOVE OS VALORES NULL PARA 0
 UPDATE escolas_dados SET taxa_aprovacao= 0 WHERE taxa_aprovacao IS NULL;
 
+UPDATE escolas_dados SET taxa_aprovacao= REPLACE(',','.') WHERE taxa_aprovacao <> '0';
+
 
 
