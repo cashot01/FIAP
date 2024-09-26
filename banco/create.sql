@@ -47,4 +47,48 @@ COMPARAÇÃO COM FUNÇÃO:
 */
 
 -- procedural
+-- operadores de comparação 
+-- com igual
 SELECT * FROM ESCOLAS_DADOS WHERE rede='municipal';
+
+-- com diferente
+SELECT * FROM ESCOLAS_DADOS WHERE rede<>'municipal';
+
+-- com maior
+SELECT * FROM ESCOLAS_DADOS WHERE ano > 2021;
+
+-- com menor
+SELECT * FROM ESCOLAS_DADOS WHERE ano < 2021;
+
+-- com maior igual
+SELECT * FROM ESCOLAS_DADOS WHERE ano >= 2021;
+
+-- com menor igual
+SELECT * FROM ESCOLAS_DADOS WHERE ano <= 2021;
+
+-- operadores logicos
+-- AND
+-- intervalos de valores
+SELECT * FROM ESCOLAS_DADOS WHERE ano > 2017 and ano < 2020;
+SELECT * FROM ESCOLAS_DADOS WHERE ano >= 2017 and ano <= 2020;
+
+-- regras obrigatorias
+SELECT * FROM ESCOLAS_DADOS WHERE ano > 2017 and rede='municipal';
+
+-- intervalo com between
+SELECT * FROM ESCOLAS_DADOS WHERE ano BETWEEN 2019 and 2021;
+
+
+-- OR
+SELECT * FROM ESCOLAS_DADOS WHERE ano = 2019 or ano=2021;
+
+-- cenarios de erros
+-- nome coluna ou tabela inexistente
+SELECT * FROM ESCOLAS_DADOS WHERE anooooooo > 2017 and ano < 2020;
+-- condição logica invalidada
+SELECT * FROM ESCOLAS_DADOS WHERE ano > 2017 and ano < 2015;
+-- junção incompleta
+
+
+
+
