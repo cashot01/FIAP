@@ -8,21 +8,6 @@ def cadastrar_registro(id: str, registros: dict) -> None:
         'idade': idade
     }
 
-    """
-    '123' = {
-        'cpf': '123',
-        'nome': 'edson',
-        'idade': '40',
-    }
-
-    '234' = {
-        'cpf': '234',
-        'nome': 'maria',
-        'idade': '34',
-    }
-
-    """
-
     print("Cadastrado com sucesso")
 
 def exibe_registro(registro: str) -> None:
