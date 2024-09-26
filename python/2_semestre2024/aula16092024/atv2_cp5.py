@@ -29,9 +29,6 @@ def editar_registro(id: str, registros: dict) -> None:
         registros[id]['idade'] = idade
     print("Editado com sucesso")
 
-
-
-
 # programa principal
 import os
 os.system("cls")
