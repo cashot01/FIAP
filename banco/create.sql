@@ -82,6 +82,15 @@ SELECT * FROM ESCOLAS_DADOS WHERE ano BETWEEN 2019 and 2021;
 -- OR
 SELECT * FROM ESCOLAS_DADOS WHERE ano = 2019 or ano=2021;
 
+SELECT * FROM ESCOLAS_DADOS WHERE rede = 'municipal' or ensino = 'fundamental';
+
+
+-- IN
+SELECT * FROM ESCOLAS_DADOS WHERE rede in('municipal', 'privada');
+
+
+
+
 -- cenarios de erros
 -- nome coluna ou tabela inexistente
 SELECT * FROM ESCOLAS_DADOS WHERE anooooooo > 2017 and ano < 2020;
