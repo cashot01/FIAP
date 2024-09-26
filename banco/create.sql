@@ -91,6 +91,7 @@ SELECT * FROM ESCOLAS_DADOS WHERE rede in('municipal', 'privada');
 
 
 
+
 -- cenarios de erros
 -- nome coluna ou tabela inexistente
 SELECT * FROM ESCOLAS_DADOS WHERE anooooooo > 2017 and ano < 2020;
@@ -98,6 +99,19 @@ SELECT * FROM ESCOLAS_DADOS WHERE anooooooo > 2017 and ano < 2020;
 SELECT * FROM ESCOLAS_DADOS WHERE ano > 2017 and ano < 2015;
 -- junção incompleta
 
+
+-- UTILIZANDO FUNÇÕES
+
+-- NUMERICAS
+SELECT taxa_aprovacao FROM ESCOLAS_DADOS;
+
+-- REMOVENDO VAZIOS ATRAVES DO IS NOT NULL
+SELECT taxa_aprovacao FROM ESCOLAS_DADOS WHERE taxa_aprovacao IS NOT NULL;
+
+SELECT taxa_aprovacao, ROUND(taxa_aprovacao, 2) tx_arr FROM ESCOLAS_DADOS WHERE taxa_aprovacao IS NOT NULL;
+
+-- REMOVE OS VALORES NULL PARA 0
+UPDATE escolas_dados SET taxa_aprovacao= 0 WHERE taxa_aprovacao IS NULL;
 
 
 
