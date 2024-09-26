@@ -14,3 +14,5 @@ CREATE TABLE escolas_dados (
     ideb VARCHAR2(10),
     projecao VARCHAR2(10)
 );
+
+SELECT * FROM ESCOLAS_DADOS;
