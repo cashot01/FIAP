@@ -15,4 +15,36 @@ CREATE TABLE escolas_dados (
     projecao VARCHAR2(10)
 );
 
+-- n procedural (consulta simples)
+-- retorna todas as linhas da tablas
 SELECT * FROM ESCOLAS_DADOS;
+
+-- n procedural (consulta simples)
+-- retorna todas as linhas da tablas
+SELECT SIGLA_UF, ENSINO, ANOS_ESCOLARES FROM ESCOLAS_DADOS;
+
+-- OPERADORES PARA WHERE
+-- LOGICOS: OR, AND e NOT
+/* COMPARAÇÃO: 
+    > (MAIOR),
+    < (MENOR),
+    >= (MAIOR IGUAL),
+    <= (MENOR IGUAL),
+    <> (DIFERENTE) e
+    = (IGUAL)
+    
+    
+MATEMATICOS:
+    +
+    -
+    *
+    /
+    
+    
+COMPARAÇÃO COM FUNÇÃO:
+    BETWEEN: VERIFICAR INTERVALOS DE VALORES (TEM A MESMA LOGICA DO AND)
+    IN: LISTA DE VALORES (TEM A MESMA LOGICA DO OR)
+*/
+
+-- procedural
+SELECT * FROM ESCOLAS_DADOS WHERE rede='municipal';
