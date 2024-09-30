@@ -39,9 +39,45 @@ def senha_valida(s: str) -> bool:
         
 
 # -------- Processa o arquivo dependendo do modo de abertura
-def processa_arquivo(nome_arquivo: str, modo_abertura: str) -> None:
+def processa_arquivo(nome_arquivo: str, modo_abertura: str, l: str, s: str) -> None:
     match modo_abertura:
         case "a":
             # Gravação do login e senha validados no arquivo
             with open(nome_arquivo, modo_abertura, encoding="UTF-8") as arq:
-                arq.write(f"{login}, {senha}")
+                arq.write(f"{l}, {s}")
+            input("\nLOGIN E SENHA GRAVADOS COM SUCESSO")
+
+        case "r":
+            print()
+            with open(nome_arquivo, modo_abertura, encoding="UTF-8") as arq:
+                print("---------------------------------------")
+                print(arq.read())
+                print("---------------------------------------")
+
+# ============================== Programa Principal
+margem = 4 * " "
+continua = True
+while continua:
+    print(f"""
+    MENU
+    0 - SAIR
+    1 - DIGITE AS CREDENCIAIS (LOGIN E SENHA)
+    2 - EXIBIR O ARQUIVO
+          
+    Escolha: """, end="")
+    escolha = input()
+    match escolha:
+        case "0":
+            continua = False
+        case "1":
+            # digitação do login valido
+            login = input("\n"+margem+"Login")
+            while not login_valido(login):
+                print(margem + "ERRO! Digite um login valido")
+                login = input(margem + "Login: ")
+            
+            # digitação senha valida
+            senha = input("\n"+margem+"Senha")
+            while not login_valido(senha):
+                print(margem + "ERRO! Digite um senha valida")
+                senha = input(margem + "Senha: ")
