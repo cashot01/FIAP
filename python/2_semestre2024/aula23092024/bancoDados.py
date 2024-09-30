@@ -1,4 +1,5 @@
 import os
+os.system("cls")
 import oracledb
 import pandas as pd
 
@@ -45,7 +46,7 @@ while conexao:
                 tipo = input(margem + "Tipo.....: ")
                 nome = input(margem + "Nome.....: ")
                 idade = int(input(margem + "Idade....: "))
-                cadastro = f"""INSERT INTO petshop(tipo_pet, nome_pet,idade) values ({tipo},{nome},{idade})"""
+                cadastro = f"""INSERT INTO petshop(tipo_pet, nome_pet,idade) VALUES ('{tipo}','{nome}','{idade}')"""
                 # Executa a gravação do registro na tabela
                 inst_cadastro.execute(cadastro)
                 conn.commit()
