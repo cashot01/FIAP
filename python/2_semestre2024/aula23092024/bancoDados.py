@@ -1,5 +1,4 @@
 import os
-os.system("cls")
 import oracledb
 import pandas as pd
 
@@ -56,6 +55,32 @@ while conexao:
                 print(margem + "Erro em alguma coisa")
             else:
                 print(margem + "DADOS GRAVADOS COM SUCESSO!")
+
+        case 2:
+            print("------ LISTAR PET ------")
+
+            lista_dados = []
+
+            inst_consulta.execute("SELECT * FROM petshop")
+
+            data = inst_consulta.fetchall()
+
+            for dt in data:
+                lista_dados.append(dt)
+
+            # ordena a lista
+            lista_dados = sorted(lista_dados)
+
+            dados_df = pd.DataFrame.from_records(
+                lista_dados, columns=['Id', 'Tipo', 'Nome', 'Idade'], index='Id'
+            )
+
+            if dados_df.empty:
+                print("Não existe pet cadastrado")
+            else:
+                print(dados_df)
+
+
         case _:
             print(margem + "Opcao invalida!")
 else:
