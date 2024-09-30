@@ -44,7 +44,7 @@ def processa_arquivo(nome_arquivo: str, modo_abertura: str, l: str, s: str) -> N
         case "a":
             # Gravação do login e senha validados no arquivo
             with open(nome_arquivo, modo_abertura, encoding="UTF-8") as arq:
-                arq.write(f"{l}, {s}")
+                arq.write(f"{l}, {s} \n")
             input("\nLOGIN E SENHA GRAVADOS COM SUCESSO")
 
         case "r":
@@ -71,13 +71,18 @@ while continua:
             continua = False
         case "1":
             # digitação do login valido
-            login = input("\n"+margem+"Login")
+            login = input("\n"+margem+"Login: ")
             while not login_valido(login):
                 print(margem + "ERRO! Digite um login valido")
                 login = input(margem + "Login: ")
             
             # digitação senha valida
-            senha = input("\n"+margem+"Senha")
-            while not login_valido(senha):
+            senha = input("\n"+margem+"Senha: ")
+            while not senha_valida(senha):
                 print(margem + "ERRO! Digite um senha valida")
                 senha = input(margem + "Senha: ")
+
+            processa_arquivo("dados1.txt", "a", login, senha)
+        
+        case "2":
+            processa_arquivo("dados1.txt", "r", login, senha)
