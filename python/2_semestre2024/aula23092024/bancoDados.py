@@ -32,7 +32,7 @@ margem = ' ' * 4  # Define uma margem para a exibição da aplicação
 # Enquanto o flag conexao estiver apontado com True
 while conexao:
     # Limpa a tela via SO
-    os.system('clear')
+    os.system('cls')
  
  
     # Apresenta o menu
@@ -56,7 +56,7 @@ while conexao:
         escolha = 6
         print("Digite um número.Reinicie a Aplicação!")
  
-    os.system('clear')  # Limpa a tela via SO
+    os.system('cls')  # Limpa a tela via SO
  
     # VERIFICA QUAL A ESCOLHA DO USUÁRIO
     match escolha:
