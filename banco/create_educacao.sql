@@ -61,3 +61,79 @@ FROM Dados_Escolas;
 
 -- APELIDOS
 -- PODE SER DEFENIDOS COM A CLAUSULA AS (ALIAS) OU A FRENTE DO OBJETO
+
+
+-- GROUP BY
+SELECT
+    rede
+FROM Dados_Escolas
+GROUP BY rede;
+
+
+SELECT
+    ensino
+FROM Dados_Escolas
+GROUP BY ensino;
+
+
+SELECT
+    sigla_uf
+FROM Dados_Escolas
+GROUP BY sigla_uf;
+
+--
+SELECT 
+    min(taxa_aprovacao)
+FROM Dados_Escolas;   
+
+
+SELECT 
+    max(taxa_aprovacao)
+FROM Dados_Escolas; 
+
+
+SELECT 
+    avg(taxa_aprovacao)
+FROM Dados_Escolas; 
+
+
+SELECT 
+    sum(taxa_aprovacao)
+FROM Dados_Escolas; 
+
+
+SELECT 
+    stddev(taxa_aprovacao)
+FROM Dados_Escolas; 
+
+
+-- MEDIA DA TAXA APROVAÇÃO POR ENSINO
+SELECT 
+    ensino,
+    avg(taxa_aprovacao) media
+FROM Dados_Escolas
+GROUP BY ensino;
+
+
+-- MEDIA DA TAXA APROVAÇÃO POR UF
+SELECT 
+    sigla_uf,
+    avg(taxa_aprovacao) media
+FROM Dados_Escolas
+GROUP BY sigla_uf;
+
+
+-- MENOR NOTA POR ESTADO
+SELECT 
+    sigla_uf,
+    min(taxa_aprovacao) media
+FROM Dados_Escolas
+GROUP BY sigla_uf;
+
+
+-- MENOR NOTA POR ESTADO
+SELECT 
+    sigla_uf,
+    max(taxa_aprovacao) media
+FROM Dados_Escolas
+GROUP BY sigla_uf;
