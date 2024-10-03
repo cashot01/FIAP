@@ -14,3 +14,5 @@ CREATE TABLE Dados_Escolas (
     ideb NUMBER,
     projecao NUMBER
 );
+
+
