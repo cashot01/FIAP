@@ -188,4 +188,7 @@ SELECT
     ano,
     count(ano) QTD_ESCOLAS
 FROM Dados_Escolas
-GROUP BY ano;
+GROUP BY ano
+ORDER BY ano desc;
+
+
