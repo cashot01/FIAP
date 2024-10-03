@@ -181,3 +181,11 @@ GROUP BY sigla_uf;
 SELECT 
     COUNT(sigla_uf)
 FROM Dados_Escolas;    
+
+
+-- QUANTIDADE DE ESCOLAS POR ANO
+SELECT 
+    ano,
+    count(ano) QTD_ESCOLAS
+FROM Dados_Escolas
+GROUP BY ano;
