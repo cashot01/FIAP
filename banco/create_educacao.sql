@@ -131,9 +131,53 @@ FROM Dados_Escolas
 GROUP BY sigla_uf;
 
 
--- MENOR NOTA POR ESTADO
+-- MAIOR NOTA POR ESTADO
 SELECT 
     sigla_uf,
     max(taxa_aprovacao) media
 FROM Dados_Escolas
 GROUP BY sigla_uf;
+
+
+-- OS ESTADOS QUE TIVERAM A MAIOR NOTA , MAS ESTA SENDO EXIBIDO OS ULTIMOS
+SELECT 
+    sigla_uf,
+    max(taxa_aprovacao) MAIOR
+FROM Dados_Escolas
+GROUP BY sigla_uf
+ORDER BY MAIOR asc;
+
+
+-- OS ESTADOS QUE TIVERAM A MAIOR NOTA , MAS ESTA SENDO EXIBIDO OS PRIMEIROS
+SELECT 
+    sigla_uf,
+    max(taxa_aprovacao) MAIOR
+FROM Dados_Escolas
+GROUP BY sigla_uf
+ORDER BY MAIOR desc;
+
+
+-- ORDENADO OS ANOS DO MENOR PARA O MAIOR
+SELECT * 
+FROM Dados_Escolas
+ORDER BY ANO asc;
+
+
+-- ORDENADO OS ANOS DO MAIOR PARA O MENOR
+SELECT * 
+FROM Dados_Escolas
+ORDER BY ANO desc;
+
+
+-- QUANTIDADE DE ESCOLAS POR ESTADO
+SELECT 
+    sigla_uf,
+    count(sigla_uf) QTD_ESCOLAS
+FROM Dados_Escolas
+GROUP BY sigla_uf;
+
+
+-- QUANTIDADE DE ESCOLAS DE TODO O CONJUNTO
+SELECT 
+    COUNT(sigla_uf)
+FROM Dados_Escolas;    
