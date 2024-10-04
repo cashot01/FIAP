@@ -50,7 +50,7 @@ def executar_programa():
         c = float(input("C: "))
         
         # Verificar se é uma equação de segundo grau
-        if  verificar_equacao(a, b, c):
+        if not verificar_equacao(a, b, c):
             continuar = deseja_continuar()
             continue
         
