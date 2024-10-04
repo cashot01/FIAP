@@ -1,8 +1,10 @@
+import os
+os.system("cls")
 import math
 
 # Função para calcular o Delta
 def calcular_delta(a, b, c):
-    return b**2 - 4*a*c
+    return b**2 - 4* a* c
 
 # Função para calcular as raízes x1 e x2
 def calcular_raizes(a, b, delta):
@@ -41,10 +43,11 @@ def processar_delta(delta, a, b, c):
 def executar_programa():
     continuar = True
     while continuar:
-        # Entrada dos valores de a, b, c
-        a = float(input("Digite o valor de a: "))
-        b = float(input("Digite o valor de b: "))
-        c = float(input("Digite o valor de c: "))
+        os.system("cls")
+        
+        a = float(input("A: "))
+        b = float(input("B: "))
+        c = float(input("C: "))
         
         # Verificar se é uma equação de segundo grau
         if not verificar_equacao(a, b, c):
@@ -63,13 +66,13 @@ def executar_programa():
 # Função para perguntar ao usuário se deseja continuar
 def deseja_continuar():
     while True:
-        resposta = input("Continuar executando o programa? [S]im ou [N]ão: ").strip().lower()
+        resposta = input("\nContinuar executando o programa? [S]im ou [N]ão: ").strip().lower()
         if resposta == 's':
             return True
         elif resposta == 'n':
             return False
         else:
-            print("Letra inválida! Digite [S]im ou [N]ão:")
+            print(f"Opção inválida: {resposta}! Digite [S]im ou [N]ão: ")
 
 # Executa o programa
 executar_programa()
