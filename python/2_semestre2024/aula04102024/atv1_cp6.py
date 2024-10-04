@@ -40,7 +40,7 @@ def processar_delta(delta, a, b, c):
         print("As raízes x1 e x2 têm valores distintos.")
 
 # Função principal que executa o programa
-def executar_programa():
+def programa_principal():
     continuar = True
     while continuar:
         os.system("cls")
@@ -74,5 +74,6 @@ def deseja_continuar():
         else:
             print(f"Opção inválida: {resposta}! Digite [S]im ou [N]ão: ")
 
-# Executa o programa
-executar_programa()
+#====================== PROGRAMA PRINCIPAL
+
+programa_principal()
