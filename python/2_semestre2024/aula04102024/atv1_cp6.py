@@ -13,7 +13,7 @@ def calcular_raizes(a, b, delta):
     return x1, x2
 
 # Função para verificar o tipo de equação e exibir a mensagem adequada
-def verificar_equacao(a, b, c):
+def verificar_equacao(a, b, c) -> bool:
     if a == 0:
         print("Esta equação não é do segundo grau sim do primeiro.")
         return False
@@ -50,7 +50,7 @@ def executar_programa():
         c = float(input("C: "))
         
         # Verificar se é uma equação de segundo grau
-        if not verificar_equacao(a, b, c):
+        if  verificar_equacao(a, b, c):
             continuar = deseja_continuar()
             continue
         
