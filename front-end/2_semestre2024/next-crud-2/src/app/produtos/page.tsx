@@ -1,5 +1,5 @@
 "use client"
-import { TipoProduto } from "@/types"
+import { TipoProduto } from "../../types"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
