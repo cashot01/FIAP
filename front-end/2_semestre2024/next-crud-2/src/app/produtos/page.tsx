@@ -18,10 +18,10 @@ export default function Produtos(){
     },[])
 
     return(
-        <main className="produtos">
-            <h1>Produtos</h1>
-            <table>
-                <thead>
+        <main className="grow p-5">
+            <h1 className="text-center text-4xl font-bold text-indigo-600 mb-4">Produtos</h1>
+            <table className="w-2/3 m-auto">
+                <thead className="bg-slate-900 text-white">
                     <tr>
                         <th>Id</th><th>Nome</th><th>Preço</th><th>estoque</th><th>Editar</th>
                     </tr>
@@ -34,12 +34,14 @@ export default function Produtos(){
                                 <td>{p.nome}</td>
                                 <td>{p.preco}</td>
                                 <td>{p.estoque}</td>
-                                <td><Link href={`/produtos/produto/${p.id}`}>Editar</Link></td>
+                                <td>
+                                    <Link className="text-red-600 border-l" href={`/produtos/produto/${p.id}`}>Editar</Link>
+                                </td>
                             </tr>
                         ))
                     }
                 </tbody>
-                <tfoot>
+                <tfoot className="bg-black text-white">
                     <tr>
                         <td colSpan={5}>Total de Produtos: {lista.length}</td>
                     </tr>

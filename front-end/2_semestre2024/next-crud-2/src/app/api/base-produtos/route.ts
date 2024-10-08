@@ -1,4 +1,4 @@
-import { TipoProduto } from "@/types";
+import { TipoProduto } from "../../../types";
 import { promises as fs} from "fs";
 import { NextResponse } from "next/server";
 
