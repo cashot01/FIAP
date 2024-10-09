@@ -22,12 +22,12 @@ export default function Produto({params}:{params:{id:number}}){
 
     return(
         <main className="grow p-5">
-            <h1 className="text-3xl text-center text-indigo-600">Produto</h1>
-            <div>
-                <p>Id: {produto?.id}</p>
-                <p>Nome: {produto?.nome}</p>
-                <p>Preço: {produto?.preco}</p>
-                <p>Estoque: {produto?.estoque}</p>
+            <h1 className="text-3xl text-center text-indigo-600 mb-4 font-bold">Produto</h1>
+            <div className="bg-indigo-300 w-48 p-2 m-auto border border-indigo-950 rounded-md">
+                <p className="text-lg font-medium mb-1">Id: {produto?.id}</p>
+                <p className="text-lg font-medium mb-1">Nome: {produto?.nome}</p>
+                <p className="text-lg font-medium mb-1">Preço: {produto?.preco}</p>
+                <p className="text-lg font-medium mb-1">Estoque: {produto?.estoque}</p>
             </div>
         </main>
     )
