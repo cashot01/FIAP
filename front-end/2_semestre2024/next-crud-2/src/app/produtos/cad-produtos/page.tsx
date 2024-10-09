@@ -57,7 +57,7 @@ export default function CadastroProdutos(){
         <main>
             <h1>Cadastro de Produtos</h1>
             <p>Aqui inserimos um novo produto assim que chega na loja.</p>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="idNome">Nome</label>
                     <input type="text" name="nome" id="idNome" onChange={handleChange} value={produto.nome}/>
