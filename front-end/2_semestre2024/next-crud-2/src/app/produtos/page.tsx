@@ -35,7 +35,7 @@ export default function Produtos(){
                                 <td>{p.preco}</td>
                                 <td>{p.estoque}</td>
                                 <td>
-                                    <Link className="text-red-600 border-l" href={`/produtos/produto/${p.id}`}>Editar</Link>
+                                    <Link className="text-red-600 " href={`/produtos/produto/${p.id}`}>Editar</Link>
                                 </td>
                             </tr>
                         ))

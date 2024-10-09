@@ -12,9 +12,9 @@ body{
 
 
 table, th, td{
-  @apply border-spacing-0 border-indigo-950 text-center
+  @apply border-spacing-0 border border-indigo-950 text-center
 }
 
 th, td{
-  @apply p-4
+  @apply p-1
 }
