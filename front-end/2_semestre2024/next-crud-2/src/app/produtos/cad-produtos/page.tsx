@@ -44,7 +44,12 @@ export default function CadastroProdutos(){
                     estoque:0
                 })
                 navigate.push("/produtos")
+            }else{
+                alert("Erro ao cadastrar")
             }
+        }catch(error){
+            console.error("Erro ao cadastarar o produto:",error);
+            
         }
     }
 
