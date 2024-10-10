@@ -1,4 +1,6 @@
 from flask import Flask
+import numpy as np
+import pickle
 
 app = Flask(__name__)
 
@@ -8,3 +10,6 @@ def hello():
 
 if __name__ == "__main__":
     app.run()
+
+with open('C:\Users\labsfiap\Documents\GitHub\FIAP\chatbotIA\pipelineModel 1.pkl', 'rb') as f:
+    modelo = pickle.load(f)
