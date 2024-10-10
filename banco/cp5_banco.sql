@@ -43,5 +43,5 @@ INSERT INTO T_QF_ESTOQUE (id_estoque, id_produto, id_armazem, qtd_disponivel) VA
 INSERT INTO T_QF_ESTOQUE (id_estoque, id_produto, id_armazem, qtd_disponivel) VALUES (2, 2, 2, 45);
  
 //Insert ITEM PEDIDO
-INSERT INTO T_QF_ITEM_PEDIDO (id_item, id_pedido, id_produto, qt_produto, vl_subtotal, vl_desconto) VALUES (1, 1, 1, 2, 500.00, 500.00);
-INSERT INTO T_QF_ITEM_PEDIDO (id_item, id_pedido, id_produto, qt_produto, vl_subtotal, vl_desconto) VALUES (2, 2, 2, 1, 120.00, 120.00);
+INSERT INTO T_QF_ITEM_PEDIDO (id_item, id_pedido, id_produto, qt_produto, vl_subtotal, vl_desconto) VALUES (1, 1, 1, 2, 345.00, 100.00);
+INSERT INTO T_QF_ITEM_PEDIDO (id_item, id_pedido, id_produto, qt_produto, vl_subtotal, vl_desconto) VALUES (2, 2, 2, 1, 300.00, 120.00);
