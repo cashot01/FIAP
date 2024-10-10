@@ -11,5 +11,5 @@ def hello():
 if __name__ == "__main__":
     app.run()
 
-with open('C:\Users\labsfiap\Documents\GitHub\FIAP\chatbotIA\pipelineModel 1.pkl', 'rb') as f:
+with open('C:\Users\labsfiap\Documents\GitHub\FIAP\chatbotIA\pipelineModel1.pkl', 'rb') as f:
     modelo = pickle.load(f)
