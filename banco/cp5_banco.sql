@@ -1,154 +1,47 @@
-CREATE TABLE T_QF_CLIENTE (
-    id_cliente INT PRIMARY KEY,
-    nm_cliente VARCHAR(100) NOT NULL,
-    cpf VARCHAR(15) NOT NULL UNIQUE,
-    dt_nascimento DATE,
-    sx_cliente VARCHAR(1),
-    st_cliente VARCHAR(1)
-);
-
-SELECT * FROM T_QF_CLIENTE;
-
-CREATE TABLE T_QF_AUTENTICA (
-    id_autentica INTEGER PRIMARY KEY,
-    login VARCHAR(256) UNIQUE,
-    senha VARCHAR(30),
-    T_QF_CLIENTE_id_cliente INTEGER,
-    FOREIGN KEY (T_QF_CLIENTE_id_cliente) REFERENCES T_QF_CLIENTE(id_cliente)
-);
-
-SELECT * FROM T_QF_AUTENTICA;
-
-CREATE TABLE T_QF_ENDERECO (
-    id_endereco INTEGER PRIMARY KEY,
-    cep VARCHAR2(15),
-    logradouro VARCHAR2(150),
-    numero NUMBER,
-    complemento VARCHAR2(150),
-    bairro VARCHAR2(150),
-    cidade VARCHAR2(150),
-    uf VARCHAR2(2),
-    ponto_referencia VARCHAR2(150),
-    T_QF_CLIENTE_id_cliente INTEGER,
-    FOREIGN KEY (T_QF_CLIENTE_id_cliente) REFERENCES T_QF_CLIENTE(id_cliente)
-);
-
-SELECT * FROM T_QF_ENDERECO;
-
-CREATE TABLE T_QF_CUPOM (
-    id_cupom INTEGER PRIMARY KEY,
-    cd_cupom VARCHAR2(100) NOT NULL,
-    vl_desconto NUMBER(5, 2),
-    val_cupom DATE
-);
-
-SELECT * FROM T_QF_CUPOM;
-
-CREATE TABLE T_QF_PEDIDO (
-    id_pedido INTEGER PRIMARY KEY,
-    dt_hr_pedido DATE NOT NULL,
-    st_pedido VARCHAR2(20) NOT NULL,
-    vl_total NUMBER(5, 2),
-    vl_desconto NUMBER(5, 2),
-    obs_gerais VARCHAR2(255),
-    T_QF_CLIENTE_id_cliente INTEGER,
-    T_QF_CUPOM_id_cupom INTEGER,
-    FOREIGN KEY (T_QF_CLIENTE_id_cliente) REFERENCES T_QF_CLIENTE(id_cliente),
-    FOREIGN KEY (T_QF_CUPOM_id_cupom) REFERENCES T_QF_CUPOM(id_cupom)
-);
-
-SELECT * FROM T_QF_PEDIDO;
-
-CREATE TABLE T_QF_PAGAMENTO (
-   id_pagamento INTEGER PRIMARY KEY,
-   T_QF_PEDIDO_id_pedido INTEGER,
-   forma_pagamento VARCHAR2(50),
-   vl_pagamento NUMBER(5,2),
-   dt_hr_pagamento DATE,
-   st_pagamento VARCHAR2(20),
-   CONSTRAINT T_QF_PAGAMENTO_T_QF_PEDIDO_FK FOREIGN KEY (T_QF_PEDIDO_id_pedido)
-   REFERENCES T_QF_PEDIDO (id_pedido)
-);
-
-SELECT * FROM T_QF_PAGAMENTO;
-
-CREATE TABLE T_QF_CATEGORIA (
-    id_categoria INTEGER PRIMARY KEY,
-    ds_categoria VARCHAR2(1500) UNIQUE NOT NULL
-);
-
-SELECT * FROM T_QF_CATEGORIA;
-
-CREATE TABLE T_QF_MARCA (
-    id_marca INTEGER PRIMARY KEY,
-    ds_marca VARCHAR2(100) UNIQUE NOT NULL
-);
-
-SELECT * FROM T_QF_MARCA;
-
-CREATE TABLE T_QF_PRODUTO (
-   id_produto INTEGER PRIMARY KEY,
-   ds_produto VARCHAR2(150),
-   vl_produto NUMBER(5, 2),
-   peso NUMBER(5, 2),
-   fl_inativo VARCHAR2(1),
-   id_categoria INTEGER,
-   id_marca INTEGER,
-   CONSTRAINT FK_T_QF_PRODUTO_CATEGORIA FOREIGN KEY (id_categoria) REFERENCES T_QF_CATEGORIA(id_categoria),
-   CONSTRAINT FK_T_QF_PRODUTO_MARCA FOREIGN KEY (id_marca) REFERENCES T_QF_MARCA(id_marca)
-);
-
-SELECT * FROM T_QF_PRODUTO;
-
-CREATE TABLE T_QF_ARMAZEM (
-    id_armazem INTEGER PRIMARY KEY,
-    ds_armazem VARCHAR2(100) UNIQUE NOT NULL,
-    local_armazem VARCHAR2(100) NOT NULL
-);
-
-SELECT * FROM T_QF_ARMAZEM;
-
-CREATE TABLE T_QF_ESTOQUE (
-    id_estoque INTEGER PRIMARY KEY,
-    id_produto INTEGER,
-    id_armazem INTEGER,
-    qtd_disponivel INTEGER,
-    FOREIGN KEY (id_produto) REFERENCES T_QF_PRODUTO(id_produto),
-    FOREIGN KEY (id_armazem) REFERENCES T_QF_ARMAZEM(id_armazem)
-);
-
-SELECT * FROM T_QF_ESTOQUE;
-
-CREATE TABLE T_QF_ITEM_PEDIDO (
-    id_item INTEGER PRIMARY KEY,
-    id_pedido INTEGER,
-    id_produto INTEGER,
-    qt_produto INTEGER NOT NULL,
-    vl_subtotal NUMBER(5, 2) NOT NULL,
-    vl_desconto NUMBER(5, 2),
-    FOREIGN KEY (id_pedido) REFERENCES T_QF_PEDIDO(id_pedido),
-    FOREIGN KEY (id_produto) REFERENCES T_QF_PRODUTO(id_produto)
-);
-
-SELECT * FROM T_QF_ITEM_PEDIDO;
-
-//ALTERS
-ALTER TABLE T_QF_ESTOQUE
-ADD dt_hr_estoque TIMESTAMP;
-
-ALTER TABLE T_QF_PRODUTO
-ADD Cor_produto VARCHAR2(20);
-
-//DROPS 
-DROP TABLE T_QF_ITEM_PEDIDO;
-DROP TABLE T_QF_ESTOQUE;
-DROP TABLE T_QF_ARMAZEM;
-DROP TABLE T_QF_PRODUTO;
-DROP TABLE T_QF_CATEGORIA;
-DROP TABLE T_QF_MARCA;
-DROP TABLE T_QF_PAGAMENTO;
-DROP TABLE T_QF_PEDIDO;
-DROP TABLE T_QF_CUPOM;
-DROP TABLE T_QF_ENDERECO;
-DROP TABLE T_QF_AUTENTICA;
-DROP TABLE T_QF_CLIENTE;
+//Insert CLIENTE
+INSERT INTO T_QF_CLIENTE (id_cliente, nm_cliente, cpf, dt_nascimento, sx_cliente, st_cliente) VALUES (1, ' Silva', '123.456.789-00', TO_DATE('1988-05-27', 'YYYY-MM-DD'), 'M', 'A');
+INSERT INTO T_QF_CLIENTE (id_cliente, nm_cliente, cpf, dt_nascimento, sx_cliente, st_cliente) VALUES (2, 'Sandra', '987.456.320-90', TO_DATE('1999-1-15', 'YYYY-MM-DD'), 'F', 'A');
+ 
+//Insert AUTENTICA 
+INSERT INTO T_QF_AUTENTICA (id_autentica, login, senha, T_QF_CLIENTE_id_cliente) VALUES (1, 'silva', 'senha123', 1);
+INSERT INTO T_QF_AUTENTICA (id_autentica, login, senha, T_QF_CLIENTE_id_cliente) VALUES (2, 'sandra', 'senha987', 2);
+ 
+//Insert ENDERECO
+INSERT INTO T_QF_ENDERECO (id_endereco, cep, logradouro, numero, complemento, bairro, cidade, uf, ponto_referencia, T_QF_CLIENTE_id_cliente) VALUES (1, '01005-070', 'Rua Cep', 10, 'Apt 206', 'Centro', 'São Paulo', 'SP', 'Próximo ao mercado', 1);
+INSERT INTO T_QF_ENDERECO (id_endereco, cep, logradouro, numero, complemento, bairro, cidade, uf, ponto_referencia, T_QF_CLIENTE_id_cliente) VALUES (2, '06877-000', 'Rua Pascal', 240, 'Casa', 'Jardim', 'São Paulo', 'MG', 'Ao lado da escola', 2);
+ 
+//Insert CUPOM
+INSERT INTO T_QF_CUPOM (id_cupom, cd_cupom, vl_desconto, val_cupom) VALUES (1, 'DESCONTO36', 10.00, TO_DATE('2024-12-3', 'YYYY-MM-DD'));
+INSERT INTO T_QF_CUPOM (id_cupom, cd_cupom, vl_desconto, val_cupom) VALUES (2, 'PROMO29', 20.00, TO_DATE('2024-1-30', 'YYYY-MM-DD'));
+ 
+//Insert PEDIDO
+INSERT INTO T_QF_PEDIDO (id_pedido, dt_hr_pedido, st_pedido, vl_total, vl_desconto, obs_gerais, T_QF_CLIENTE_id_cliente, T_QF_CUPOM_id_cupom) VALUES (1, TO_DATE('2023-1-01', 'YYYY-MM-DD'), 'Pendente', 200.00, 10.00, 'Aguardando pagamento', 1, 1);
+INSERT INTO T_QF_PEDIDO (id_pedido, dt_hr_pedido, st_pedido, vl_total, vl_desconto, obs_gerais, T_QF_CLIENTE_id_cliente, T_QF_CUPOM_id_cupom) VALUES (2, TO_DATE('2024-10-02', 'YYYY-MM-DD'), 'Pago', 150.00, 20.00, 'Pagamento confirmado', 2, 2);
+ 
+//Insert PAGAMENTO
+INSERT INTO T_QF_PAGAMENTO (id_pagamento, T_QF_PEDIDO_id_pedido, forma_pagamento, vl_pagamento, dt_hr_pagamento, st_pagamento) VALUES (1, 1, 'Crédito', 200.00, TO_DATE('2023-1-01', 'YYYY-MM-DD'), 'Aguardando');
+INSERT INTO T_QF_PAGAMENTO (id_pagamento, T_QF_PEDIDO_id_pedido, forma_pagamento, vl_pagamento, dt_hr_pagamento, st_pagamento) VALUES (2, 2, 'Boleto', 150.00, TO_DATE('2024-10-02', 'YYYY-MM-DD'), 'Pago');
+ 
+//Insert CATEGORIA
+INSERT INTO T_QF_CATEGORIA (id_categoria, ds_categoria) VALUES (1, 'Eletrônicos');
+INSERT INTO T_QF_CATEGORIA (id_categoria, ds_categoria) VALUES (2, 'Móveis');
+ 
+//Insert MARCA
+INSERT INTO T_QF_MARCA (id_marca, ds_marca) VALUES (1, 'Samsung');
+INSERT INTO T_QF_MARCA (id_marca, ds_marca) VALUES (2, 'Motorola');
+ 
+//Insert PRODUTO
+INSERT INTO T_QF_PRODUTO (id_produto, ds_produto, vl_produto, peso, fl_inativo, id_categoria, id_marca) VALUES (1, 'TV 50 Polegadas', 250.00, 15.00, 'N', 1, 1);
+INSERT INTO T_QF_PRODUTO (id_produto, ds_produto, vl_produto, peso, fl_inativo, id_categoria, id_marca) VALUES (2, 'Sofá 3 Lugares', 120.00, 50.00, 'N', 2, 2);
+ 
+//Insert ARMAZEM
+INSERT INTO T_QF_ARMAZEM (id_armazem, ds_armazem, local_armazem) VALUES (1, 'Armazém Principal 1', 'São Paulo');
+INSERT INTO T_QF_ARMAZEM (id_armazem, ds_armazem, local_armazem) VALUES (2, 'Armazém Secundário', 'Minas Gerais');
+ 
+//Insert ESTOQUE
+INSERT INTO T_QF_ESTOQUE (id_estoque, id_produto, id_armazem, qtd_disponivel) VALUES (1, 1, 1, 10);
+INSERT INTO T_QF_ESTOQUE (id_estoque, id_produto, id_armazem, qtd_disponivel) VALUES (2, 2, 2, 45);
+ 
+//Insert ITEM PEDIDO
+INSERT INTO T_QF_ITEM_PEDIDO (id_item, id_pedido, id_produto, qt_produto, vl_subtotal, vl_desconto) VALUES (1, 1, 1, 2, 500.00, 500.00);
+INSERT INTO T_QF_ITEM_PEDIDO (id_item, id_pedido, id_produto, qt_produto, vl_subtotal, vl_desconto) VALUES (2, 2, 2, 1, 120.00, 120.00);
