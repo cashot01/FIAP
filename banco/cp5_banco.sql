@@ -1,0 +1,154 @@
+CREATE TABLE T_QF_CLIENTE (
+    id_cliente INT PRIMARY KEY,
+    nm_cliente VARCHAR(100) NOT NULL,
+    cpf VARCHAR(15) NOT NULL UNIQUE,
+    dt_nascimento DATE,
+    sx_cliente VARCHAR(1),
+    st_cliente VARCHAR(1)
+);
+
+SELECT * FROM T_QF_CLIENTE;
+
+CREATE TABLE T_QF_AUTENTICA (
+    id_autentica INTEGER PRIMARY KEY,
+    login VARCHAR(256) UNIQUE,
+    senha VARCHAR(30),
+    T_QF_CLIENTE_id_cliente INTEGER,
+    FOREIGN KEY (T_QF_CLIENTE_id_cliente) REFERENCES T_QF_CLIENTE(id_cliente)
+);
+
+SELECT * FROM T_QF_AUTENTICA;
+
+CREATE TABLE T_QF_ENDERECO (
+    id_endereco INTEGER PRIMARY KEY,
+    cep VARCHAR2(15),
+    logradouro VARCHAR2(150),
+    numero NUMBER,
+    complemento VARCHAR2(150),
+    bairro VARCHAR2(150),
+    cidade VARCHAR2(150),
+    uf VARCHAR2(2),
+    ponto_referencia VARCHAR2(150),
+    T_QF_CLIENTE_id_cliente INTEGER,
+    FOREIGN KEY (T_QF_CLIENTE_id_cliente) REFERENCES T_QF_CLIENTE(id_cliente)
+);
+
+SELECT * FROM T_QF_ENDERECO;
+
+CREATE TABLE T_QF_CUPOM (
+    id_cupom INTEGER PRIMARY KEY,
+    cd_cupom VARCHAR2(100) NOT NULL,
+    vl_desconto NUMBER(5, 2),
+    val_cupom DATE
+);
+
+SELECT * FROM T_QF_CUPOM;
+
+CREATE TABLE T_QF_PEDIDO (
+    id_pedido INTEGER PRIMARY KEY,
+    dt_hr_pedido DATE NOT NULL,
+    st_pedido VARCHAR2(20) NOT NULL,
+    vl_total NUMBER(5, 2),
+    vl_desconto NUMBER(5, 2),
+    obs_gerais VARCHAR2(255),
+    T_QF_CLIENTE_id_cliente INTEGER,
+    T_QF_CUPOM_id_cupom INTEGER,
+    FOREIGN KEY (T_QF_CLIENTE_id_cliente) REFERENCES T_QF_CLIENTE(id_cliente),
+    FOREIGN KEY (T_QF_CUPOM_id_cupom) REFERENCES T_QF_CUPOM(id_cupom)
+);
+
+SELECT * FROM T_QF_PEDIDO;
+
+CREATE TABLE T_QF_PAGAMENTO (
+   id_pagamento INTEGER PRIMARY KEY,
+   T_QF_PEDIDO_id_pedido INTEGER,
+   forma_pagamento VARCHAR2(50),
+   vl_pagamento NUMBER(5,2),
+   dt_hr_pagamento DATE,
+   st_pagamento VARCHAR2(20),
+   CONSTRAINT T_QF_PAGAMENTO_T_QF_PEDIDO_FK FOREIGN KEY (T_QF_PEDIDO_id_pedido)
+   REFERENCES T_QF_PEDIDO (id_pedido)
+);
+
+SELECT * FROM T_QF_PAGAMENTO;
+
+CREATE TABLE T_QF_CATEGORIA (
+    id_categoria INTEGER PRIMARY KEY,
+    ds_categoria VARCHAR2(1500) UNIQUE NOT NULL
+);
+
+SELECT * FROM T_QF_CATEGORIA;
+
+CREATE TABLE T_QF_MARCA (
+    id_marca INTEGER PRIMARY KEY,
+    ds_marca VARCHAR2(100) UNIQUE NOT NULL
+);
+
+SELECT * FROM T_QF_MARCA;
+
+CREATE TABLE T_QF_PRODUTO (
+   id_produto INTEGER PRIMARY KEY,
+   ds_produto VARCHAR2(150),
+   vl_produto NUMBER(5, 2),
+   peso NUMBER(5, 2),
+   fl_inativo VARCHAR2(1),
+   id_categoria INTEGER,
+   id_marca INTEGER,
+   CONSTRAINT FK_T_QF_PRODUTO_CATEGORIA FOREIGN KEY (id_categoria) REFERENCES T_QF_CATEGORIA(id_categoria),
+   CONSTRAINT FK_T_QF_PRODUTO_MARCA FOREIGN KEY (id_marca) REFERENCES T_QF_MARCA(id_marca)
+);
+
+SELECT * FROM T_QF_PRODUTO;
+
+CREATE TABLE T_QF_ARMAZEM (
+    id_armazem INTEGER PRIMARY KEY,
+    ds_armazem VARCHAR2(100) UNIQUE NOT NULL,
+    local_armazem VARCHAR2(100) NOT NULL
+);
+
+SELECT * FROM T_QF_ARMAZEM;
+
+CREATE TABLE T_QF_ESTOQUE (
+    id_estoque INTEGER PRIMARY KEY,
+    id_produto INTEGER,
+    id_armazem INTEGER,
+    qtd_disponivel INTEGER,
+    FOREIGN KEY (id_produto) REFERENCES T_QF_PRODUTO(id_produto),
+    FOREIGN KEY (id_armazem) REFERENCES T_QF_ARMAZEM(id_armazem)
+);
+
+SELECT * FROM T_QF_ESTOQUE;
+
+CREATE TABLE T_QF_ITEM_PEDIDO (
+    id_item INTEGER PRIMARY KEY,
+    id_pedido INTEGER,
+    id_produto INTEGER,
+    qt_produto INTEGER NOT NULL,
+    vl_subtotal NUMBER(5, 2) NOT NULL,
+    vl_desconto NUMBER(5, 2),
+    FOREIGN KEY (id_pedido) REFERENCES T_QF_PEDIDO(id_pedido),
+    FOREIGN KEY (id_produto) REFERENCES T_QF_PRODUTO(id_produto)
+);
+
+SELECT * FROM T_QF_ITEM_PEDIDO;
+
+//ALTERS
+ALTER TABLE T_QF_ESTOQUE
+ADD dt_hr_estoque TIMESTAMP;
+
+ALTER TABLE T_QF_PRODUTO
+ADD Cor_produto VARCHAR2(20);
+
+//DROPS 
+DROP TABLE T_QF_ITEM_PEDIDO;
+DROP TABLE T_QF_ESTOQUE;
+DROP TABLE T_QF_ARMAZEM;
+DROP TABLE T_QF_PRODUTO;
+DROP TABLE T_QF_CATEGORIA;
+DROP TABLE T_QF_MARCA;
+DROP TABLE T_QF_PAGAMENTO;
+DROP TABLE T_QF_PEDIDO;
+DROP TABLE T_QF_CUPOM;
+DROP TABLE T_QF_ENDERECO;
+DROP TABLE T_QF_AUTENTICA;
+DROP TABLE T_QF_CLIENTE;
