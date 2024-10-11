@@ -7,3 +7,5 @@ CREATE TABLE T_PESSOA_PY (
     telefone VARCHAR2(15),
     endereco VARCHAR2(255)
 );
+
+SELECT * FROM T_PESSOA_PY;
