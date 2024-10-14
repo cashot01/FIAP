@@ -1,4 +1,4 @@
-# INTEGRANTES: CAUAN ARANEGA S PASSOS RM555466, GUSTAVO R LAZZURI RM556772, LUCAS FIALHO RM557884
+# INTEGRANTES: CAUAN ARANEGA S PASSOS RM555466, LUCAS FIALHO RM557884
 
 import os
 os.system("cls") 
@@ -64,7 +64,7 @@ def cadastrar_registro(cursor, conn, pk):
     email = input("Digite o email: ")
     telefone = input("Digite o telefone: ")
     endereco = input("Digite o endereço: ")
-    ativo = 'True'  # Todos os novos registros serão inicialmente ativos.
+    ativo = 'True'  
  
     cursor.execute("""
         INSERT INTO T_PESSOA_PY (id, nome, cpf, email, telefone, endereco, ativo)
@@ -98,5 +98,5 @@ def ativar_registro(cursor, conn, pk):
     conn.commit()
     print("Registro ativado com sucesso.")
  
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
