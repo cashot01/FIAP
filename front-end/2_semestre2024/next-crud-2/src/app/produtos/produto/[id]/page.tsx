@@ -1,5 +1,6 @@
 "use client"
 import { TipoProduto } from "@/types"
+import { headers } from "next/headers"
 import { useRouter } from "next/navigation"
 import React, { useEffect, useState } from "react"
 
@@ -37,6 +38,23 @@ export default function Produto({params }: {params: {id:number} }){
         e.preventDefault()
 
         try{
+            const cabecalho = {
+                method: 'PUT',
+                headers:{"Content-Type":"application/json"},
+                body: JSON.stringify(produto)
+            }
+            const response = await fetch(`http://localhost:3000/api/base-produtos/${id}`, cabecalho)
+            if(response.ok){
+                alert("Produto atualizado com sucesso")
+                setProduto({id:0, nome:"", preco:0, estoque:0})
+                navigate.push('/produtos')
+                
+            }else{
+                alert("Erro ao atualizar o produto")
+            }
+
+        }catch(error){
+            console.log("Erro ao atualizar o produto", error);
             
         }
     }
