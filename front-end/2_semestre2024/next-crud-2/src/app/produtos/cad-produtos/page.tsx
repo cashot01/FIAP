@@ -54,19 +54,19 @@ export default function CadastroProdutos(){
     }
 
     return(
-        <main>
-            <h1>Cadastro de Produtos</h1>
-            <p>Aqui inserimos um novo produto assim que chega na loja.</p>
-            <form onSubmit={handleSubmit}>
-                <div>
+        <main className="grow p-5">
+            <h1 className="text-3xl text-center font-bold mb-2 text-indigo-600">Cadastro de Produtos</h1>
+            <p className="text-xl text-center font-bold mb-4">Aqui inserimos um novo produto assim que chega na loja.</p>
+            <form className="w-1/3 m-auto border border-indigo-950 p-2 rounded-e-md" onSubmit={handleSubmit}>
+                <div className="flex flex-col p-2">
                     <label htmlFor="idNome">Nome</label>
                     <input type="text" name="nome" id="idNome" onChange={handleChange} value={produto.nome}/>
                 </div>
-                <div>
+                <div className="flex flex-col p-2">
                     <label htmlFor="idPreco">Preço</label>
                     <input type="number" step={'0.01'} name="preco" id="idPreco" onChange={handleChange} value={produto.preco} />
                 </div>
-                <div>
+                <div className="flex flex-col p-2">
                     <label htmlFor="idEstoque">Estoque</label>
                     <input type="number" name="estoque" id="idEstoque" onChange={handleChange} value={produto.estoque} />
                 </div>
