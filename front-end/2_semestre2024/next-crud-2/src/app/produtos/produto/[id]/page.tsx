@@ -62,20 +62,20 @@ export default function Produto({params }: {params: {id:number} }){
     return(
         <main className="grow p-5">
             <h1 className="text-3xl text-center text-indigo-600 mb-4 font-bold">Produto</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="idnome">Nome</label>
-                    <input type="text" name="nome" value={produto.nome} id="idnome" onChange={handleChange} />
+            <form className="w-1/3 m-auto p-2 border border-indigo-950 rounded-md" onSubmit={handleSubmit}>
+                <div className="flex flex-col p-2">
+                    <label className="text-gray-700" htmlFor="idnome">Nome</label>
+                    <input className="border border-gray-700 p-1 rounded-md" type="text" name="nome" value={produto.nome} id="idnome" onChange={handleChange} />
                 </div>
-                <div>
-                    <label htmlFor="idpreco">Preço</label>
-                    <input type="text" name="preco" value={produto.preco} id="idpreco" onChange={handleChange} />
+                <div className="flex flex-col p-2">
+                    <label className="text-gray-700" htmlFor="idpreco">Preço</label>
+                    <input className="border border-gray-700 p-1 rounded-md" type="text" name="preco" value={produto.preco} id="idpreco" onChange={handleChange} />
                 </div>
-                <div>
-                    <label htmlFor="idestoque">Estoque</label>
-                    <input type="text" name="estoque" value={produto.estoque} id="idestoque" onChange={handleChange} />
+                <div className="flex flex-col p-2">
+                    <label className="text-gray-700" htmlFor="idestoque">Estoque</label>
+                    <input className="border border-gray-700 p-1 rounded-md" type="text" name="estoque" value={produto.estoque} id="idestoque" onChange={handleChange} />
                 </div>
-                <button type="submit">Editar Produto</button>
+                <button className="bg-green-700 text-white text-xl p-2 block ms-auto me-2 rounded-md" type="submit">Editar Produto</button>
             </form>
         </main>
     )
