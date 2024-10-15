@@ -48,7 +48,7 @@ export default function Produto({params }: {params: {id:number} }){
                 alert("Produto atualizado com sucesso")
                 setProduto({id:0, nome:"", preco:0, estoque:0})
                 navigate.push('/produtos')
-                
+
             }else{
                 alert("Erro ao atualizar o produto")
             }
@@ -62,7 +62,7 @@ export default function Produto({params }: {params: {id:number} }){
     return(
         <main className="grow p-5">
             <h1 className="text-3xl text-center text-indigo-600 mb-4 font-bold">Produto</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="idnome">Nome</label>
                     <input type="text" name="nome" value={produto.nome} id="idnome" onChange={handleChange} />
