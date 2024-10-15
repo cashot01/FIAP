@@ -59,18 +59,18 @@ export default function CadastroProdutos(){
             <p className="text-xl text-center font-bold mb-4">Aqui inserimos um novo produto assim que chega na loja.</p>
             <form className="w-1/3 m-auto border border-indigo-950 p-2 rounded-e-md" onSubmit={handleSubmit}>
                 <div className="flex flex-col p-2">
-                    <label htmlFor="idNome">Nome</label>
-                    <input type="text" name="nome" id="idNome" onChange={handleChange} value={produto.nome}/>
+                    <label className="text-gray-700" htmlFor="idNome">Nome</label>
+                    <input className="border border-gray-700 p-1 rounded-md" type="text" name="nome" id="idNome" onChange={handleChange} value={produto.nome}/>
                 </div>
                 <div className="flex flex-col p-2">
-                    <label htmlFor="idPreco">Preço</label>
-                    <input type="number" step={'0.01'} name="preco" id="idPreco" onChange={handleChange} value={produto.preco} />
+                    <label className="text-gray-700" htmlFor="idPreco">Preço</label>
+                    <input className="border border-gray-700 p-1 rounded-md" type="number" step={'0.01'} name="preco" id="idPreco" onChange={handleChange} value={produto.preco} />
                 </div>
                 <div className="flex flex-col p-2">
-                    <label htmlFor="idEstoque">Estoque</label>
-                    <input type="number" name="estoque" id="idEstoque" onChange={handleChange} value={produto.estoque} />
+                    <label className="text-gray-700" htmlFor="idEstoque">Estoque</label>
+                    <input className="border border-gray-700 p-1 rounded-md" type="number" name="estoque" id="idEstoque" onChange={handleChange} value={produto.estoque} />
                 </div>
-                <button type="submit">Cadastrar Produto</button>
+                <button className="bg-green-700 text-white text-xl p-2 block ms-auto me-2 rounded-md" type="submit">Cadastrar Produto</button>
             </form>
         </main>
     )
