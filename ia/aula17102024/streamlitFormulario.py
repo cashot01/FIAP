@@ -29,7 +29,5 @@ def main():
         st.info("Este app é um exemplo de como criar um formulario medico em Streamlit")
 
 
-
-
 if __name__ == "__main__":
     main()
