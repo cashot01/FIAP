@@ -9,9 +9,11 @@ def main():
 
         genero = st.selectbox("Genero", options=("M", "F"))
 
-        bp = st.number_input("Blood Pressure", min_value=0, max_value=300, step=1)
+        bp = st.selectbox("Genero", options=("HIGH", "NORMAL", "LOW"))
 
         sodio = st.number_input("Nivel de sodio (mg/L)", min_value=0, max_value=200, step=1)
+
+        colesterol = st.selectbox("Colesterol", options=("HIGH", "NORMAL", "LOW"))
 
         submit_button = st.form_submit_button(label="Enviar")
 
@@ -22,6 +24,7 @@ def main():
         st.write(f"Genero: {genero}")
         st.write(f"Pressao Arterial: {bp}")
         st.write(f"Nivel de sodio: {sodio}")
+        st.write(f"Colesterol: {colesterol}")
 
     with st.sidebar:
         st.title("Sobre")
