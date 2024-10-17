@@ -126,3 +126,20 @@ WHERE t.nome= 'Fogo';
 -- LEFT JOIN
 SELECT p.nome nome_pokemon, t.nome tipo
 FROM Pokemons p LEFT JOIN Tipos t on t.tipoid = p.tipoid;
+
+
+-- RIGHT JOIN
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p RIGHT JOIN Tipos t on t.tipoid = p.tipoid;
+
+
+-- LEFT EXCLUINDING JOIN
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p LEFT JOIN Tipos t on t.tipoid = p.tipoid
+WHERE T.tipoid is NULL;
+
+
+-- RIGHT EXCLUINDING JOIN
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p RIGHT JOIN Tipos t on t.tipoid = p.tipoid
+WHERE P.tipoid is NULL;
