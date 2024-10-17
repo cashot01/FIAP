@@ -101,3 +101,28 @@ FROM Pokemons p, Tipos t;
 -- exemplo de definição de apelidos em colunas
 SELECT p.nome nome_pokemon, t.nome tipo
 FROM Pokemons p, Tipos t;
+
+
+-- JUNÇÃO - JOIN
+
+-- equi join - junção por igual
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p, Tipos t
+WHERE t.tipoid = p.tipoid;
+
+-- inner join
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p INNER JOIN Tipos t ON t.tipoid = p.tipoid;
+
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p, Tipos t
+WHERE t.tipoid = p.tipoid AND t.nome= 'Fogo';
+
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p INNER JOIN Tipos t on t.tipoid = p.tipoid
+WHERE t.nome= 'Fogo';
+
+
+-- LEFT JOIN
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p LEFT JOIN Tipos t on t.tipoid = p.tipoid;
