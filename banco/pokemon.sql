@@ -172,3 +172,8 @@ WHERE P.tipoid is NULL;
 -- CROSS JOIN
 SELECT p.nome nome_pokemon, t.nome tipo
 FROM Pokemons p, Tipos t;
+
+-- SELF JOIN
+SELECT p1.pokemonid, p1.nome nome_pokemon, p2.pokemonid, p2.nome nome_pokemon
+FROM Pokemons p1 INNER JOIN Pokemons p2 ON p1.tipoid = p2.tipoid
+WHERE p1.pokemonid < p2.pokemonid;
