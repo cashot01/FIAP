@@ -143,3 +143,27 @@ WHERE T.tipoid is NULL;
 SELECT p.nome nome_pokemon, t.nome tipo
 FROM Pokemons p RIGHT JOIN Tipos t on t.tipoid = p.tipoid
 WHERE P.tipoid is NULL;
+
+
+-- FULL JOIN
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p FULL JOIN Tipos t on t.tipoid = p.tipoid
+
+-- OU
+-- UNION É UTILIZAR PARA JUNTAR 2 OU MAIS CONSULTAS
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p LEFT JOIN Tipos t on t.tipoid = p.tipoid
+UNION
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p RIGHT JOIN Tipos t on t.tipoid = p.tipoid;
+
+
+-- OUTER JOIN ou EXCLUDING JOIN
+-- OUTER JOIN É LEFT EXCLUDING + RIGHT EXCLUDING JOIN
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p LEFT JOIN Tipos t on t.tipoid = p.tipoid
+WHERE T.tipoid is NULL
+UNION
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p RIGHT JOIN Tipos t on t.tipoid = p.tipoid
+WHERE P.tipoid is NULL;
