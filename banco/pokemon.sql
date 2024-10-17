@@ -78,3 +78,26 @@ SELECT * FROM Tipos;
 
 -- INSERT INTO Pokemons (PokemonID, Nome, TipoID, HP, Ataque, Defesa) 
 -- VALUES (18, 'Spearow', 6, 40, 60, 30);
+
+-- APELIDOS
+
+-- FALHA DE AMBIGUIDADE, POIS HA 2 COLUNAS COM O MESMO NOME ENTRE AS TABELAS
+SELECT nome
+FROM Pokemons p, Tipos t;
+
+-- UTILIZANDO APELIDOS PARA FACILITAR
+SELECT p.nome
+FROM Pokemons p, Tipos t;
+
+-- QUANDO N UTILIZO APELIDOS
+SELECT Pokemons.nome
+FROM Pokemons, Tipos;
+
+-- definindo apelidos nas colunas quando as mesmas tem o mesmo nome
+
+SELECT p.nome
+FROM Pokemons p, Tipos t;
+
+-- exemplo de definição de apelidos em colunas
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p, Tipos t;
