@@ -167,3 +167,8 @@ UNION
 SELECT p.nome nome_pokemon, t.nome tipo
 FROM Pokemons p RIGHT JOIN Tipos t on t.tipoid = p.tipoid
 WHERE P.tipoid is NULL;
+
+
+-- CROSS JOIN
+SELECT p.nome nome_pokemon, t.nome tipo
+FROM Pokemons p, Tipos t;
