@@ -7,7 +7,7 @@ def main():
         
         idade = st.number_input("Idade", min_value=0, max_value=120, step=1)
 
-        genero = st.selectbox("Genero", options=["M", "F"])
+        genero = st.selectbox("Genero", options=("M", "F"))
 
         bp = st.number_input("Blood Pressure", min_value=0, max_value=300, step=1)
 
