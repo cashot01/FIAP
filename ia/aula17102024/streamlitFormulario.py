@@ -9,7 +9,7 @@ def main():
 
         genero = st.selectbox("Genero", options=("M", "F"))
 
-        bp = st.selectbox("Genero", options=("HIGH", "NORMAL", "LOW"))
+        bp = st.selectbox("Pressao Arterial", options=("HIGH", "NORMAL", "LOW"))
 
         sodio = st.number_input("Nivel de sodio (mg/L)", min_value=0, max_value=200, step=1)
 
