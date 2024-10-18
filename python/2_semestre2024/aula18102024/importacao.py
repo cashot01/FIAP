@@ -13,6 +13,6 @@ dados  = {
 df = pd.DataFrame(dados)
 
 # salva o dataframe em uma planilha no excel
-nome_arquivo = "planilha.xls"
+nome_arquivo = "planilha.xlsx"
 df.to_excel(nome_arquivo, index = False)
 print(f"Arquivo {nome_arquivo} gerado")
