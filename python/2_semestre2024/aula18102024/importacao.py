@@ -1,5 +1,6 @@
 import os
 os.system("cls")
+# no terminal digitar -> pip install pandas openpyxl
 import pandas as pd
 
 #criando um dicionario com alguns dados
