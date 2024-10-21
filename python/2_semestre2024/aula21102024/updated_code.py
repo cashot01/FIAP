@@ -56,7 +56,7 @@ def cadastrar(cu: oracledb.Cursor, co: oracledb.Connection) -> None:
     finally:
         input("Digite para continuar: ")
 
-# Função de filtragem por Nome (LIKE), Salário (maior, menor, entre), e Data de Nascimento
+
 def filtrar_registros(cu: oracledb.Cursor) -> None:
     print("----- FILTRAR REGISTROS -----")
     print("1 – Nome (like)")
