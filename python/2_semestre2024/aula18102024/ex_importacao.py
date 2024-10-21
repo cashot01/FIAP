@@ -5,7 +5,7 @@ import oracledb
 import datetime
 
 def cadastro():
-
+    ...
 
 def main():
     try:
