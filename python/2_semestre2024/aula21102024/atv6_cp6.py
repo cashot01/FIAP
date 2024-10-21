@@ -1,4 +1,4 @@
-# Cauan Passos RM555466 | Lucas Fialho RM
+# Cauan Passos RM555466 | Lucas Fialho RM557884
 import os
 import pandas as pd
 import oracledb
