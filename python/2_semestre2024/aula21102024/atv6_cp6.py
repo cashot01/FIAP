@@ -120,7 +120,7 @@ def filtro_data_nasc(cu: oracledb.Cursor) -> None:
     else:
         print("Opção inválida!")
 
-# Função para exportar dados filtrados ou todos os registros
+
 def exportar_dados(cu: oracledb.Cursor) -> None:
     print("----- EXPORTAR DADOS -----")
     escolha = input("O que deseja exportar? (1) Todos os registros (2) Registros filtrados: ")
