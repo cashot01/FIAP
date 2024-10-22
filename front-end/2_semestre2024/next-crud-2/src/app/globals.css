@@ -15,6 +15,6 @@ table, th, td{
   @apply border-spacing-0 border border-indigo-950 text-center
 }
 
-th, td{
+th,td{
   @apply p-1
 }

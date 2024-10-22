@@ -17,22 +17,6 @@ export default function Produtos(){
         chamadaApi()
     },[])
 
-    const handleDelete = async (id:number)=>{
-
-        try{
-            const response = await fetch(`http://localhost:3000/api/base-produtos/${id}`, {method:"DELETE"})
-            if(response.ok){
-                window.location.reload()
-            }else{
-                alert('Error ao deletar o produto')
-                navigate.push('/produtos')
-            }
-        }catch(error){
-            console.error("Falha ao apagar registro.", error);
-            
-        }
-    }
-
     return(
         <main className="grow p-5">
             <h1 className="text-center text-4xl font-bold text-indigo-600 mb-4">Produtos</h1>
@@ -51,9 +35,7 @@ export default function Produtos(){
                                 <td>{p.preco}</td>
                                 <td>{p.estoque}</td>
                                 <td>
-                                    <Link className="text-red-600 " href={`/produtos/produto/${p.id}`}>Editar</Link>
-                                    {' | '}
-                                    <button onClick={() => handleDelete(p.id)}> Excluir</button>
+                                    <Link className="font-bold text-red-600" href={`/produtos/produto/${p.id}`}>Editar</Link>
                                 </td>
                             </tr>
                         ))
