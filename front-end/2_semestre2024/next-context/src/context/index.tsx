@@ -1,4 +1,5 @@
-import { createContext } from "react";
+"use client"
+import { createContext, useState } from "react";
 
 export type UserProps = {
     nome: string;
@@ -15,11 +16,26 @@ type AuthContextProps = {
 
 const AuthContext = createContext<AuthContextProps>({} as AuthContextProps)
 
-const AuthProvider = ({children}:{children:React.ReactNode})=>{
+const AuthProvider = ({children}: {children:React.ReactNode})=>{
+
+    const [user, setUser] = useState<UserProps>({
+        nome:"",
+        senha:""
+    })
+
+    const login = (user:UserProps)=>{
+        setUser(user)
+    }
+
+    const logout = ()=>{
+        setUser({nome:"", senha:""})
+    }
 
     return(
-        <AuthContext>
+        <AuthContext.Provider value={{user, login, logout}}>
             {children}
-        </AuthContext>
+        </AuthContext.Provider>
     )
 }
+
+export {AuthContext, AuthProvider}
