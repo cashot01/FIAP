@@ -22,18 +22,18 @@ export default function Home() {
   }
 
   return (
-   <main className="flex justify-center p-10">
-      <span>{user?.nome == "" ? "Fazer o login" : user?.nome}</span>
-
+   <main className="flex flex-col itens-center justify-center p-10">
+      <span className="text-2xl">{user?.nome == "" ? "Fazer o login" : user?.nome}</span>
+      {user?.nome == "" ? "" : (<button className="rounded-md bg-red-600 text-white p-2" onClick={logout}>Deslogar</button>)}
       <h1 className="text-center text-4xl font-bold text-indigo-800">Home</h1>
       
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input type="text" placeholder="Nome" name="nome" value={dados.nome} onChange={handleChange} />
+      <form className="w-96 border border-indigo-950 p-6" onSubmit={handleSubmit}>
+        <div className="py-2">
+          <input className="border-2 border-gray-400 p-2 rounded-md w-full" type="text" placeholder="Nome" name="nome" value={dados.nome} onChange={handleChange} />
         </div>
 
         <div>
-          <input type="password" placeholder="senha" name="senha" value={dados.senha} onChange={handleChange}  />
+          <input className="border-2 border-gray-400 p-2 rounded-md w-full" type="password" placeholder="senha" name="senha" value={dados.senha} onChange={handleChange}  />
         </div>
         <button type="submit">Logar</button>
       </form>
