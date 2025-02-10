@@ -40,19 +40,35 @@
 // console.log(dobro(10));
 
 // FUNÇÃO COM REST
-const soma = (...numeros) =>{
-    let aux = 0;
-    for(i of numeros){
-        aux += 1
-    }
-    return aux
-}
+// const soma = (...numeros) =>{
+//     let aux = 0;
+//     for(i of numeros){
+//         aux += 1
+//     }
+//     return aux
+// }
 
 
 // FUNÇÃO COM SPREAD
-const numerosV2 = [1,3,6,4]
-console.log("SPREAD " + soma(...numerosV2));
+// const numerosV2 = [1,3,6,4]
+// console.log("SPREAD " + soma(...numerosV2));
 // SPREAD - ESPALHAMENTO
+
+let somar = (a,b) => a + b
+console.log("Soma: " +somar(1,1));
+
+let subtrair = (b,c) => b - c
+console.log("Subtrair: " +subtrair(10,1));
+
+let dividir = (c,d) => c/d
+console.log("Divisão: " +dividir(100,25));
+
+let multiplicar = (d,e) => d*e
+console.log("Multiplicação: " +multiplicar(5,90));
+
+
+
+
 
 
 
