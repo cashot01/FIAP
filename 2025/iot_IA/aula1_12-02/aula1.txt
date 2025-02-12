@@ -11,3 +11,8 @@ Arduino:
     microcontrolador AVR ATmega
     UNO:
         16MHz 
+        Portas Analogicas:
+            0 até 1023 bits
+        Portas Digitais:
+            opção binaria -> 0 ou 1 / on ou off
+            
