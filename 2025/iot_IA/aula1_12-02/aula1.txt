@@ -2,3 +2,12 @@ Conceitos Básicos ELETRÔNICA
 Microcontroladores
 Arduino UNO
 Pinos de Entrada e Saída
+
+
+Conexão na rede -> coletar os dados 
+
+Arduino:
+    plataforma de prototipagem hardware livre
+    microcontrolador AVR ATmega
+    UNO:
+        16MHz 
