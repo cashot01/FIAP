@@ -4,4 +4,6 @@ gcp, azure , aws
 
 Docker - ajuda sistemas monoliticos para micro serviços 
 
-sistemas monolitos - para mudar algo tem q parar oprojeto inteiro
+sistemas monolitos - para mudar algo tem q parar oprojeto inteiro 
+
+virtual box
