@@ -1,0 +1,3 @@
+historia de virtualização
+
+gcp, azure , aws
