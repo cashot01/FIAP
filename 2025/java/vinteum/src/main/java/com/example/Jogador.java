@@ -9,8 +9,10 @@ public class Jogador {
     private boolean parou = false;
 
     public void receberCarta(Carta carta) {
+        var pontos = carta.getNumero();
+        if (pontos > 10) pontos = 10;
         cartas.add(carta);
-        pontos += carta.getNumero();
+        this.pontos += pontos;
     }
 
     public void parar() {
