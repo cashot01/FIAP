@@ -94,10 +94,14 @@ DECLARE
 	parcela_6x FLOAT := carro_restante / 6;
 	parcela_12x FLOAT := carro_restante / 12;
 	parcela_18x FLOAT := carro_restante / 18;
-	valor_final_6x FLOAT := parcela_6x * 1.10;
-	valor_final_12x FLOAT := parcela_12x * 1.15;
-	valor_final_18x FLOAT := parcela_18x * 1.20;
 	
+	-- valor_final_6x FLOAT := parcela_6x * 1.10;
+	-- valor_final_12x FLOAT := parcela_12x * 1.15;
+	-- valor_final_18x FLOAT := parcela_18x * 1.20;
+	
+	valor_final_6x FLOAT := (carro_restante * 1.10) / 6;
+    valor_final_12x FLOAT := (carro_restante * 1.15) / 12;
+    valor_final_18x FLOAT := (carro_restante * 1.20) / 18;
 
 
 BEGIN
