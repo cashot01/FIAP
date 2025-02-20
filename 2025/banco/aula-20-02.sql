@@ -117,6 +117,4 @@ BEGIN
 	dbms_output.put_line('Valor final 18x: R$ ' || valor_final_18x); 
 	dbms_output.put_line('');
 
-
-
 END;
