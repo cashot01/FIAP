@@ -62,11 +62,12 @@ SET SERVEROUTPUT ON;
 DECLARE
     CARRO FLOAT := '&DIGITE_VALOR_CARRO';
     PARCELAS NUMBER := 10;
+	carro_juros FLOAT := CARRO * 1.03;
     
 BEGIN
     dbms_output.put_line('VALOR CARRO: R$' || carro );
-    dbms_output.put_line('VALOR PARCELA EM 10X: R$' || (carro*1.03) / PARCELAS );
-    dbms_output.put_line('VALOR TOTAL COM JUROS: R$' || (carro*1.03)  );
+    dbms_output.put_line('VALOR PARCELA EM 10X: R$' || carro_juros / PARCELAS );
+    dbms_output.put_line('VALOR TOTAL COM JUROS: R$' || (carro_juros)  );
    
 END;
 
