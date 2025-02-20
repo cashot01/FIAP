@@ -88,11 +88,31 @@ C – Pagamento em 18 parcelas: 20%.
 SET SERVEROUTPUT ON;
 
 DECLARE
-	valor_carro FLOAT := '&Digite_Valor_Carro';
-	valor_entrada FLOAT := valor_carro * 0.20;
+	carro FLOAT := '&Digite_Valor_Carro';
+	entrada FLOAT := carro * 0.20;
+	carro_restante FLOAT := carro - entrada ;
+	parcela_6x FLOAT := carro_restante / 6;
+	parcela_12x FLOAT := carro_restante / 12;
+	parcela_18x FLOAT := carro_restante / 18;
+	valor_final_6x FLOAT := parcela_6x * 1.10;
+	valor_final_12x FLOAT := parcela_12x * 1.15;
+	valor_final_18x FLOAT := parcela_18x * 1.20;
+	
+
 
 BEGIN
-	dbms_output.put_line('Valor carro: R$ ' || valor_carro);
-	dbms_output.put_line('Entrada: R$ ' || valor_entrada);
+	dbms_output.put_line('Valor carro: R$ ' || carro);
+	dbms_output.put_line(' ' || entrada);
+	dbms_output.put_line('Entrada: R$ ' || entrada);
+	dbms_output.put_line('Parcela 6x: R$ ' || parcela_6x);
+	dbms_output.put_line('Valor final 6x: R$ ' || valor_final_6x);
+
+	dbms_output.put_line('Parcela 12x: R$ ' || parcela_12x);
+	dbms_output.put_line('Valor final 12x: R$ ' || valor_final_12x);
+
+	dbms_output.put_line('Parcela 18x: R$ ' || parcela_18x);
+	dbms_output.put_line('Valor final 18x: R$ ' || valor_final_18x);
+
+
 
 END;
