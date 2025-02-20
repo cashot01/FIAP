@@ -102,16 +102,20 @@ DECLARE
 
 BEGIN
 	dbms_output.put_line('Valor carro: R$ ' || carro);
-	dbms_output.put_line(' ' || entrada);
 	dbms_output.put_line('Entrada: R$ ' || entrada);
+	dbms_output.put_line('');
+
 	dbms_output.put_line('Parcela 6x: R$ ' || parcela_6x);
-	dbms_output.put_line('Valor final 6x: R$ ' || valor_final_6x);
+	dbms_output.put_line('Valor final 6x: R$ ' || valor_final_6x); 
+	dbms_output.put_line('');
 
 	dbms_output.put_line('Parcela 12x: R$ ' || parcela_12x);
-	dbms_output.put_line('Valor final 12x: R$ ' || valor_final_12x);
+	dbms_output.put_line('Valor final 12x: R$ ' || valor_final_12x); 
+	dbms_output.put_line('');
 
 	dbms_output.put_line('Parcela 18x: R$ ' || parcela_18x);
-	dbms_output.put_line('Valor final 18x: R$ ' || valor_final_18x);
+	dbms_output.put_line('Valor final 18x: R$ ' || valor_final_18x); 
+	dbms_output.put_line('');
 
 
 
