@@ -71,3 +71,28 @@ BEGIN
    
 END;
 
+/*
+Criar um bloco PL-SQL para calcular o valor de cada parcela de uma compra de um carro, nas seguintes condições: 
+- Parcelas para aquisição em 6 pagamentos. 
+- Parcelas para aquisição em 12 pagamentos. 
+- Parcelas para aquisição em 18 pagamentos. 
+OBSERVAÇÃO: 
+1 - Deverá ser dada uma entrada de 20% do valor da compra. 
+2 – Deverá ser aplicada uma taxa juros, no saldo restante, nas seguintes condições: 
+3 – No final informar o valor das parcelas para as 3 formas de pagamento, com o Valor de aquisição de 10.000 e o mesmo com entrada de dados via teclado (em tempo de execução).
+A – Pagamento em 6 parcelas: 10%. 
+B – Pagamento em 12 parcelas: 15%. 
+C – Pagamento em 18 parcelas: 20%.
+*/
+
+SET SERVEROUTPUT ON;
+
+DECLARE
+	valor_carro FLOAT := '&Digite_Valor_Carro';
+	valor_entrada FLOAT := valor_carro * 0.20;
+
+BEGIN
+	dbms_output.put_line('Valor carro: R$ ' || valor_carro);
+	dbms_output.put_line('Entrada: R$ ' || valor_entrada);
+
+END;
