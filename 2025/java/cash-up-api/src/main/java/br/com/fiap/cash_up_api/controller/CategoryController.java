@@ -12,6 +12,6 @@ public class CategoryController {
     // GET :8080/categories -> json
     @RequestMapping(method = {RequestMethod.GET}, path = "/categories", produces = "application/json")
     public String index(){
-        return "Lista de categorias";
+        return "Listar todas as categorias";
     }
 }
