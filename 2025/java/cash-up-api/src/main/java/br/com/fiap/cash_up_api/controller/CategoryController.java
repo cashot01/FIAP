@@ -3,6 +3,7 @@ package br.com.fiap.cash_up_api.controller;
 
 import br.com.fiap.cash_up_api.model.Category;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +25,10 @@ public class CategoryController {
     }
 
     // cadastrar categoria
+    @PostMapping("/categories")
+    public void create(){
+        System.out.println("Cadastrando Categoria");
+    }
 
     // apagar categoria
 }
