@@ -55,4 +55,45 @@ END;
 
 -----------------------------------------------------------------------------------------------------------------------
 
+CREATE TABLE ALUNO ( RA CHAR(9), 
+NOME VARCHAR2(50), 
+CONSTRAINT ALUNO_PK PRIMARY KEY(RA)); 
+
+SELECT * FROM ALUNO;
+
+INSERT INTO ALUNO (RA,NOME) VALUES ('111222333','Antonio Alves');
+INSERT INTO ALUNO (RA,NOME) VALUES ('222333444','Beatriz Bernardes'); 
+INSERT INTO ALUNO (RA,NOME) VALUES ('333444555','Cláudio Cardoso');
+
+-- E, finalmente, vamos criar um bloco PL/SQL que deverá imprimir na tela o nome do aluno cujo RA é igual a 333444555:
+DECLARE 
+	V_RA CHAR(9) := '333444555'; 
+	V_NOME VARCHAR2(50);
+BEGIN 
+	SELECT NOME INTO V_NOME FROM ALUNO WHERE RA = V_RA; 	
+    DBMS_OUTPUT.PUT_LINE ('O nome do aluno é: ' || V_NOME);
+END;
+
+DECLARE 
+	V_RA CHAR(9) := '444555666'; 
+	V_NOME VARCHAR2(50) := 'Daniela Dorneles'; 
+BEGIN 
+	INSERT INTO ALUNO (RA,NOME) VALUES (V_RA,V_NOME); 
+END;
+
+DECLARE 
+	V_RA CHAR(9) := '111222333'; 
+	V_NOME VARCHAR2(50) := 'Antonio Rodrigues'; 
+BEGIN 
+	UPDATE ALUNO SET NOME = V_NOME WHERE RA = V_RA; 
+END;
+
+DECLARE 
+	V_RA CHAR(9) := '444555666'; 
+BEGIN 
+DELETE FROM ALUNO WHERE RA = V_RA; 
+END;
+
+
+
 
