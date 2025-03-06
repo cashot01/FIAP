@@ -90,7 +90,7 @@ END;
 2. Em um intervalo numérico inteiro, informar quantos números são pares e quantos são ímpares.
 
 */
-
+/*
 DECLARE
     v_inicio NUMBER := 1; -- Início do intervalo
     v_fim NUMBER := 85; -- Fim do intervalo
@@ -111,6 +111,27 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Quantidade de números pares: ' || v_qtd_pares);
     DBMS_OUTPUT.PUT_LINE('Quantidade de números ímpares: ' || v_qtd_impares);
 END;
+*/
+
+DECLARE
+impar NUMBER := 0;
+par NUMBER := 0;
+
+BEGIN
+    FOR X IN 1 .. 1478 LOOP
+        IF MOD(X, 2) = 0 THEN
+            par := par + 1;
+        ELSE
+            impar := impar + 1;
+        END IF;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('Quantidade de números pares: ' || v_qtd_pares);
+    DBMS_OUTPUT.PUT_LINE('Quantidade de números ímpares: ' || v_qtd_impares);
+
+END;
+
+
 
 
 /*
