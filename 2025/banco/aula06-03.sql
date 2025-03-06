@@ -118,7 +118,7 @@ impar NUMBER := 0;
 par NUMBER := 0;
 
 BEGIN
-    FOR X IN 1 .. 1478 LOOP
+    FOR X IN 1 .. &Valor LOOP
         IF MOD(X, 2) = 0 THEN
             par := par + 1;
         ELSE
