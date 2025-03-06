@@ -11,4 +11,13 @@ commit;
 INSERT into cidade SELECT * from pf1788.cidade;
 commit;
 
+INSERT into tipo_endereco SELECT * from pf1788.tipo_endereco;
+commit;
+
+INSERT into endereco_cliente SELECT * from pf1788.endereco_cliente;
+commit;
+
+
 ALTER TABLE cidade MODIFY nom_cidade VARCHAR2(30);
+
+ALTER TABLE PEDIDO ADD STATUS VARCHAR2(30);
