@@ -24,4 +24,11 @@ public class Category {
     public String getIcon() {
         return icon;
     }
+
+    @Override
+    public String toString() {
+        return id + " - " + name + " - " + icon;
+    }
+
+    
 }
