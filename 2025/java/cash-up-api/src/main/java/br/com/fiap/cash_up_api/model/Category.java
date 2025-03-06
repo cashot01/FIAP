@@ -30,5 +30,9 @@ public class Category {
         return id + " - " + name + " - " + icon;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     
 }

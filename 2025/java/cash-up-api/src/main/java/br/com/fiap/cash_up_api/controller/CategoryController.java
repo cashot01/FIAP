@@ -3,6 +3,8 @@ package br.com.fiap.cash_up_api.controller;
 
 import br.com.fiap.cash_up_api.model.Category;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,9 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController // component
 public class CategoryController {
+    
+    private  final Logger log = LoggerFactory.getLogger(getClass());
 
     private List<Category> repository = new ArrayList<>();
 
@@ -29,6 +34,7 @@ public class CategoryController {
     // GET :8080/categories -> json
     @GetMapping("/categories")
     public List<Category> index(){
+        log.info("Buscando todas as categorias");
         return repository;
     }
 
@@ -36,7 +42,7 @@ public class CategoryController {
     @PostMapping("/categories")
     // @ResponseStatus(code = HttpStatus.CREATED)
     public ResponseEntity<Category> create(@RequestBody Category category){
-        System.out.println("Cadastrando Categoria " + category.getName());
+        log.info("Cadastrando categoria");
         repository.add(category);
         return ResponseEntity.status(201).body(category);
     }
@@ -44,10 +50,8 @@ public class CategoryController {
     // retornar uma categoria
     @GetMapping("/categories/{id}")
     public ResponseEntity<Category> get(@PathVariable Long id){
-        System.out.println("Buscando categoria " + id);
-        var category = repository.stream()
-            .filter(c -> c.getId().equals(id))
-            .findFirst();
+        log.info("Buscando categoria " + id);
+        var category = getCategory(id);
 
         if(category.isEmpty()){
             // return ResponseEntity.status(404).build();
@@ -62,10 +66,8 @@ public class CategoryController {
     // apagar categoria
     @DeleteMapping("/categories/{id}")
     public ResponseEntity<Object> destroy(@PathVariable Long id){
-        System.out.println("Apagando categoria " + id);
-        var category = repository.stream()
-                .filter(c -> c.getId().equals(id))
-                .findFirst();
+        log.info("Apagando categoria " + id);
+        var category = getCategory(id);
 
         if(category.isEmpty()){
             return ResponseEntity.notFound().build();
@@ -79,19 +81,24 @@ public class CategoryController {
     //editar categoria
     @PutMapping("/categories/{id}")
     public ResponseEntity<Category> update(@PathVariable Long id, @RequestBody Category category){
-        System.out.println("Atualizando categoria " + id + " " + category);
+        log.info("Atualizando categoria " + id + " " + category);
 
-        var categoryToUpdate = repository.stream()
-                .filter(c -> c.getId().equals(id))
-                .findFirst();
+        var categoryToUpdate = getCategory(id);
 
         if(categoryToUpdate.isEmpty()){
             return ResponseEntity.notFound().build();
         }
 
         repository.remove(categoryToUpdate.get());
+        category.setId(id);
         repository.add(category);
         return ResponseEntity.ok(category);
 
+    }
+
+    private Optional<Category> getCategory(Long id) {
+        return repository.stream()
+                .filter(c -> c.getId().equals(id))
+                .findFirst();
     }
 }
