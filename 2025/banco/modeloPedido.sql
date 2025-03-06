@@ -14,6 +14,8 @@ commit;
 INSERT into tipo_endereco SELECT * from pf1788.tipo_endereco;
 commit;
 
+
+
 INSERT into endereco_cliente SELECT * from pf1788.endereco_cliente;
 commit;
 
