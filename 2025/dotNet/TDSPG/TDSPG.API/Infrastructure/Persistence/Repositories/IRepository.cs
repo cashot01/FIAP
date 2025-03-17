@@ -1,13 +1,11 @@
-﻿using TDSPG.API.Domain.Entity;
-
-namespace TDSPG.API.Infrastructure.Persistence.Repositories
+﻿namespace TDSPG.API.Infrastructure.Persistence.Repositories
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<T> where T: class
     {
         Task<T> GetByIdAsync(Guid id);
         Task<IEnumerable<T>> GetAsync();
-        Task AddAsync(T establishment);
-        Task UpdateAsync(T establishment);
-        Task DeleteAsync(int id);
+        Task AddAsync(T entity);
+        Task UpdateAsync(T entity);
+        Task DeleteAsync(Guid id);
     }
 }

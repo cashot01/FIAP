@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TDSPG.API.Domain.Entity;
 using TDSPG.API.Infrastructure.Context;
@@ -15,16 +10,15 @@ namespace TDSPG.API.Controllers
     [ApiController]
     public class EstablishmentsController : ControllerBase
     {
-        private readonly TDSPGContext _context;
         private readonly IRepository<Establishment> _establishmentRepository;
 
         public EstablishmentsController(IRepository<Establishment> establishmentRepository)
         {
-            
             _establishmentRepository = establishmentRepository;
         }
 
         // GET: api/Establishments
+        //select * from Establishments
         [HttpGet]
         public async Task<IEnumerable<Establishment>> GetEstablishments()
         {
@@ -35,7 +29,7 @@ namespace TDSPG.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Establishment>> GetEstablishment(Guid id)
         {
-            var establishment = await _context.Establishments.FindAsync(id);
+            var establishment = await _establishmentRepository.GetByIdAsync(id);
 
             if (establishment == null)
             {
@@ -55,23 +49,7 @@ namespace TDSPG.API.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(establishment).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!EstablishmentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _establishmentRepository.UpdateAsync(establishment);
 
             return NoContent();
         }
@@ -81,8 +59,10 @@ namespace TDSPG.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Establishment>> PostEstablishment(Establishment establishment)
         {
-            _context.Establishments.Add(establishment);
-            await _context.SaveChangesAsync();
+            //"insert into Establ values()";
+            //"commit";
+
+            await _establishmentRepository.AddAsync(establishment);
 
             return CreatedAtAction("GetEstablishment", new { id = establishment.EstablishmentId }, establishment);
         }
@@ -91,21 +71,14 @@ namespace TDSPG.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEstablishment(Guid id)
         {
-            var establishment = await _context.Establishments.FindAsync(id);
+            var establishment = await _establishmentRepository.GetByIdAsync(id);
             if (establishment == null)
             {
                 return NotFound();
             }
-
-            _context.Establishments.Remove(establishment);
-            await _context.SaveChangesAsync();
+            await _establishmentRepository.DeleteAsync(id);
 
             return NoContent();
-        }
-
-        private bool EstablishmentExists(Guid id)
-        {
-            return _context.Establishments.Any(e => e.EstablishmentId == id);
         }
     }
 }
