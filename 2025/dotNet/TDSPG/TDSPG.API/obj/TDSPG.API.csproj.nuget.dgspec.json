@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj": {}
+    "C:\\Users\\cauan\\OneDrive\\Documentos\\GitHub\\FIAP\\2025\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj": {
+    "C:\\Users\\cauan\\OneDrive\\Documentos\\GitHub\\FIAP\\2025\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj",
+        "projectUniqueName": "C:\\Users\\cauan\\OneDrive\\Documentos\\GitHub\\FIAP\\2025\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj",
         "projectName": "TDSPG.API",
-        "projectPath": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj",
+        "projectPath": "C:\\Users\\cauan\\OneDrive\\Documentos\\GitHub\\FIAP\\2025\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj",
         "packagesPath": "C:\\Users\\cauan\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\obj\\",
+        "outputPath": "C:\\Users\\cauan\\OneDrive\\Documentos\\GitHub\\FIAP\\2025\\dotNet\\TDSPG\\TDSPG.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

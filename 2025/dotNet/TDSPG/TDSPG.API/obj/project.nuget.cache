@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LDijl5+hMhs=",
+  "dgSpecHash": "mlQwsDVwjDs=",
   "success": true,
-  "projectFilePath": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj",
+  "projectFilePath": "C:\\Users\\cauan\\OneDrive\\Documentos\\GitHub\\FIAP\\2025\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cauan\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.13\\microsoft.entityframeworkcore.8.0.13.nupkg.sha512",
     "C:\\Users\\cauan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.13\\microsoft.entityframeworkcore.abstractions.8.0.13.nupkg.sha512",
