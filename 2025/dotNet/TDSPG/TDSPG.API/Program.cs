@@ -1,5 +1,6 @@
-
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using TDSPG.API.Infrastructure.Context;
 
 namespace TDSPG.API
 {
@@ -11,13 +12,13 @@ namespace TDSPG.API
 
             // Add services to the container depency injector.
 
-            //// Criado uma vez e usamos toda vez que precisamos
+            ////Criado uma vez e usamos toda vez que precisamos
             //builder.Services.AddSingleton();
 
-            //// Tenho pre definido e termino de criar quando precisar
+            ////Tenho pre definido e termino de criar quando precisar
             //builder.Services.AddScoped();
 
-            //// Tenho pre definido e pre criado  quando precisar termino
+            ////Tenho pre definido e pre criado quando precisar termino
             //builder.Services.AddTransient();
 
             builder.Services.AddControllers();
@@ -28,9 +29,14 @@ namespace TDSPG.API
                 x.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = builder.Configuration["Swagger:Title"],
-                    Description = "Exemplos da aula de advanced .Net",
-                    Contact = new OpenApiContact() { Name = "Prof Keller", Email = "profthiago@fiap.com.br"}
+                    Description = "Exemplos da aula de Advanced .Net",
+                    Contact = new OpenApiContact() { Name = "Professor Thiago Keller", Email = "profthiago.vicco@fiap.com.br"}
                 });
+            });
+
+            builder.Services.AddDbContext<TDSPGContext>(options =>
+            {
+                options.UseOracle(builder.Configuration.GetConnectionString("Oracle"));
             });
 
             var app = builder.Build();
@@ -45,7 +51,6 @@ namespace TDSPG.API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

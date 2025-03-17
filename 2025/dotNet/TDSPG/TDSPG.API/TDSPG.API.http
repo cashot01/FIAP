@@ -1,4 +1,4 @@
-@TDSPG.API_HostAddress = http://localhost:5072
+@TDSPG.API_HostAddress = http://localhost:5197
 
 GET {{TDSPG.API_HostAddress}}/weatherforecast/
 Accept: application/json

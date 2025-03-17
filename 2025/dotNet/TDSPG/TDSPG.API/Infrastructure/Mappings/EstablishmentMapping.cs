@@ -14,6 +14,12 @@ namespace TDSPG.API.Infrastructure.Mappings
 
             builder
                 .Property(establishment => establishment.Name)
+                .HasMaxLength(100)
+                .IsRequired();
+
+            builder
+                .Property(establishment => establishment.Document)
+                .HasMaxLength(30)
                 .IsRequired();
         }
     }
