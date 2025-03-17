@@ -1,28 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Dev\\dotNet\\TDSPG\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|c:\\dev\\dotnet\\tdspg\\tdspg.api\\domain\\entity\\auditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|solutionrelative:tdspg.api\\domain\\entity\\auditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|c:\\dev\\dotnet\\tdspg\\tdspg.api\\infrastructure\\mappings\\establishmentmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|solutionrelative:tdspg.api\\infrastructure\\mappings\\establishmentmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|c:\\dev\\dotnet\\tdspg\\tdspg.api\\domain\\entity\\establishment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|solutionrelative:tdspg.api\\domain\\entity\\establishment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|c:\\dev\\dotnet\\tdspg\\tdspg.api\\domain\\enums\\establishmenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|solutionrelative:tdspg.api\\domain\\enums\\establishmenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|c:\\dev\\dotnet\\tdspg\\tdspg.api\\tdspg.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{ECCF463A-FCF5-47CC-85C0-2114B066AC33}|TDSPG.API\\TDSPG.API.csproj|solutionrelative:tdspg.api\\tdspg.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\cauan\\OneDrive\\Documentos\\GitHub\\FIAP\\2025\\dotNet\\TDSPG\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,76 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Auditor.cs",
-              "DocumentMoniker": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\Domain\\Entity\\Auditor.cs",
-              "RelativeDocumentMoniker": "TDSPG.API\\Domain\\Entity\\Auditor.cs",
-              "ToolTip": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\Domain\\Entity\\Auditor.cs",
-              "RelativeToolTip": "TDSPG.API\\Domain\\Entity\\Auditor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T12:41:29.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EstablishmentMapping.cs",
-              "DocumentMoniker": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\Infrastructure\\Mappings\\EstablishmentMapping.cs",
-              "RelativeDocumentMoniker": "TDSPG.API\\Infrastructure\\Mappings\\EstablishmentMapping.cs",
-              "ToolTip": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\Infrastructure\\Mappings\\EstablishmentMapping.cs",
-              "RelativeToolTip": "TDSPG.API\\Infrastructure\\Mappings\\EstablishmentMapping.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T12:32:10.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EstablishmentType.cs",
-              "DocumentMoniker": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\Domain\\Enums\\EstablishmentType.cs",
-              "RelativeDocumentMoniker": "TDSPG.API\\Domain\\Enums\\EstablishmentType.cs",
-              "ToolTip": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\Domain\\Enums\\EstablishmentType.cs",
-              "RelativeToolTip": "TDSPG.API\\Domain\\Enums\\EstablishmentType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T12:04:47.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Establishment.cs",
-              "DocumentMoniker": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\Domain\\Entity\\Establishment.cs",
-              "RelativeDocumentMoniker": "TDSPG.API\\Domain\\Entity\\Establishment.cs",
-              "ToolTip": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\Domain\\Entity\\Establishment.cs",
-              "RelativeToolTip": "TDSPG.API\\Domain\\Entity\\Establishment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T11:46:39.014Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TDSPG.API",
-              "DocumentMoniker": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj",
-              "RelativeDocumentMoniker": "TDSPG.API\\TDSPG.API.csproj",
-              "ToolTip": "C:\\Dev\\dotNet\\TDSPG\\TDSPG.API\\TDSPG.API.csproj",
-              "RelativeToolTip": "TDSPG.API\\TDSPG.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-24T11:42:31.825Z",
-              "EditorCaption": ""
             }
           ]
         }
