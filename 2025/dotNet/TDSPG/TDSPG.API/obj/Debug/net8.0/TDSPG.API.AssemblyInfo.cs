@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TDSPG.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef95c1457f65b1f5f65cfc970da7359021b04ea5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6decac84a7f4cce9dde2599d00e93b95011c94b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TDSPG.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TDSPG.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
