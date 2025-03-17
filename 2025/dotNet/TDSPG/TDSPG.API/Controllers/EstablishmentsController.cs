@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TDSPG.API.Domain.Entity;
 using TDSPG.API.Infrastructure.Context;
+using TDSPG.API.Infrastructure.Persistence.Repositories;
 
 namespace TDSPG.API.Controllers
 {
@@ -15,17 +16,19 @@ namespace TDSPG.API.Controllers
     public class EstablishmentsController : ControllerBase
     {
         private readonly TDSPGContext _context;
+        private readonly IRepository<Establishment> _establishmentRepository;
 
-        public EstablishmentsController(TDSPGContext context)
+        public EstablishmentsController(IRepository<Establishment> establishmentRepository)
         {
-            _context = context;
+            
+            _establishmentRepository = establishmentRepository;
         }
 
         // GET: api/Establishments
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Establishment>>> GetEstablishments()
+        public async Task<IEnumerable<Establishment>> GetEstablishments()
         {
-            return await _context.Establishments.ToListAsync();
+            return await _establishmentRepository.GetAsync();
         }
 
         // GET: api/Establishments/5
