@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,24 +18,27 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import br.com.fiap.cash_up_api.model.Category;
+import br.com.fiap.cash_up_api.repository.CategoryRepository;
 
 @RestController // component
 public class CategoryController {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
-    private List<Category> repository = new ArrayList<>();
+    @Autowired // injeção de dependencia
+    private CategoryRepository repository;
 
     @GetMapping("/categories")
     public List<Category> index() {
         log.info("Buscando todas categorias");
-        return repository;
+        return repository.findAll();
     }
 
     @PostMapping("/categories")
     public ResponseEntity<Category> create(@RequestBody Category category) {
         log.info("Cadastrando categoria " + category.getName());
-        repository.add(category);
+        repository.save(category);
+        // trocou o add pelo save
         return ResponseEntity.status(201).body(category);
     }
 
@@ -47,7 +51,8 @@ public class CategoryController {
     @DeleteMapping("/categories/{id}")
     public ResponseEntity<Object> destroy(@PathVariable Long id) {
         log.info("Apagando categoria " + id);
-        repository.remove(getCategory(id));
+        repository.delete(getCategory(id));
+        // trocou remove -> delete
         return ResponseEntity.noContent().build();
     }
 
@@ -55,21 +60,19 @@ public class CategoryController {
     public ResponseEntity<Category> update(@PathVariable Long id, @RequestBody Category category) {
         log.info("Atualizando categoria " + id + " " + category);
 
-        var categoryToUpdate = getCategory(id);
-        repository.remove(categoryToUpdate);
+        getCategory(id);
         category.setId(id);
-        repository.add(category);
+        repository.save(category);
         return ResponseEntity.ok(category);
     }
 
     private Category getCategory(Long id) {
-        return repository.stream()
-                .filter(c -> c.getId().equals(id))
-                .findFirst()
+        return repository.findById(id)
                 .orElseThrow(
                         () -> new ResponseStatusException(
                                 HttpStatus.NOT_FOUND,
                                 "Categoria não encontrada"));
+                // trocou o stream pelo findById
     }
 
 }
