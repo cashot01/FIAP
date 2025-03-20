@@ -12,7 +12,7 @@
 	<artifactId>cash-up-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cash-up-api</name>
-	<description>API do Saas CashUp - controle de finanças</description>
+	<description>API do SaaS CashUp - controle de finanças pessoais</description>
 	<url/>
 	<licenses>
 		<license/>
