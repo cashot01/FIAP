@@ -39,4 +39,7 @@ BEGIN
     commit;
 end;
  
+BEGIN
 CALL g_insert_pais(77, 'COSTA RICA UPDATE');
+DELETE FROM PAIS WHERE COD_PAIS = p_id_pais;
+END;                                                                                                                         
