@@ -19,7 +19,7 @@ export default function NavBar(props: NavBarProps) {
             <h1 className="text-3xl font-bold">CashUp</h1>
             <ul className="flex gap-4">
                 {links.map(link =>
-                    <li className={active === link.text ? activeClass : ""}>
+                    <li key={link.text} className={active === link.text ? activeClass : ""}>
                         <Link href={link.href}>{link.text}</Link>
                     </li>
                 )}
