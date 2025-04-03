@@ -2,9 +2,13 @@ package br.com.fiap.cash_up_api.controller;
 
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,13 +36,24 @@ public class CategoryController {
     private CategoryRepository repository;
 
     @GetMapping
+    @Cacheable("categories")
+    @Operation(
+            description = "Listar todas as categorias",
+            tags = "categories",
+            summary = "Lista de Categorias",
+            hidden = true
+    )
     public List<Category> index() {
         log.info("Buscando todas categorias");
         return repository.findAll();
     }
 
     @PostMapping
+    @CacheEvict(value = "categories", allEntries = true)
     @ResponseStatus(HttpStatus.CREATED)
+    @Operation(responses = {
+            @ApiResponse(responseCode = "400", description = "Falha na Validação")
+    })
     public Category create(@RequestBody @Valid Category category) {
         log.info("Cadastrando categoria " + category.getName());
         return repository.save(category);
