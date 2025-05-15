@@ -7,16 +7,22 @@ import java.util.List;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import br.com.fiap.cash_up_api.model.Category;
 import br.com.fiap.cash_up_api.model.Transaction;
 import br.com.fiap.cash_up_api.model.TransactionType;
+import br.com.fiap.cash_up_api.model.User;
+import br.com.fiap.cash_up_api.model.UserRole;
 import br.com.fiap.cash_up_api.repository.CategoryRepository;
 import br.com.fiap.cash_up_api.repository.TransactionRepository;
+import br.com.fiap.cash_up_api.repository.UserRepository;
 import jakarta.annotation.PostConstruct;
 
 @Component
+@Profile("dev")
 public class DatabaseSeeder {
 
     @Autowired
@@ -25,14 +31,36 @@ public class DatabaseSeeder {
     @Autowired
     private TransactionRepository transactionRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @PostConstruct
     public void init() {
+        var joao = User.builder()
+                        .email("joao@fiap.com.br")
+                        .password(passwordEncoder.encode("12345"))
+                        .role(UserRole.ADMIN)
+                        .build();
+
+        var maria = User.builder()
+                        .email("maria@fiap.com.br")
+                        .password(passwordEncoder.encode("12345"))
+                        .role(UserRole.USER)
+                        .build();
+
+        userRepository.saveAll(List.of(joao, maria));
+
         var categories = List.of(
-                Category.builder().name("Educação").icon("Book").build(),
-                Category.builder().name("Lazer").icon("Dices").build(),
-                Category.builder().name("Saúde").icon("Heart").build(),
-                Category.builder().name("Alimentação").icon("Apple").build(),
-                Category.builder().name("Transporte").icon("Bus").build());
+                Category.builder().name("Educação").icon("Book").user(joao).build(),
+                Category.builder().name("Lazer").icon("Dices").user(joao).build(),
+                Category.builder().name("Saúde").icon("Heart").user(joao).build(),
+                Category.builder().name("Alimentação").icon("Apple").user(joao).build(),
+                Category.builder().name("Transporte").icon("Bus").user(joao).build(),
+                Category.builder().name("Transporte").icon("Bus").user(maria).build())
+                ;
 
         categoryRepository.saveAll(categories);
 
@@ -69,6 +97,8 @@ public class DatabaseSeeder {
                     .build());
         }
         transactionRepository.saveAll(transactions);
+
+        
     }
 
 }
