@@ -1,9 +1,0 @@
-services:
-  postgres:
-    image: 'postgres:latest'
-    environment:
-      - 'POSTGRES_DB=epictask'
-      - 'POSTGRES_PASSWORD=epictask'
-      - 'POSTGRES_USER=epictask'
-    ports:
-      - '5432:5432'
