@@ -63,3 +63,16 @@ BEGIN
   VALUES ('PEDIDO_NOVOS', operacao, SYSDATE, nome_usuario);
 
 END;
+
+INSERT into PEDIDO_NOVOS (
+    COD_PEDIDO,
+    COD_CLIENTE,
+    COD_USUARIO
+) VALUES (
+    12345678,
+    2000,
+    1);
+
+SELECT * from PEDIDO_NOVOS WHERE COD_PEDIDO = 12345678;
+
+SELECT * from tb_auditoria;
