@@ -1,4 +1,4 @@
-package br.com.fiap.epictaskg.task;
+package br.com.fiap.epictaskg.poder;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,13 +14,13 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Task {
+public class Poder {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
-    private String description;
-    private int score;
-    private int status;
+    private String nome;
+    private String descricao;
+    private int nivel_inutulidade;
+    
 
 }
